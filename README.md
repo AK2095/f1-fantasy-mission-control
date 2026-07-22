@@ -1,20 +1,18 @@
 # 🏎️ F1 Fantasy Mission Control
 
-A decision dashboard for F1 Fantasy. It answers one question well: **what should my lineup be before this weekend's lock, and why?**
+A decision dashboard for F1 Fantasy. It answers one question well: **what should my team be before this weekend's lock, and why?**
 
-Live data, session-level weather, rolling driver form, and league position — refreshed automatically, with every number traceable to a named source.
+Live race data, session-level weather, betting markets, a risk-adjusted asset model, and an exhaustive team optimiser — refreshed automatically, with every figure traceable to a named source.
 
-**→ [Live site](https://f1-mission-control.vercel.app)**
+**→ [Live dashboard](https://f1-mission-control.vercel.app)**
 
 ---
 
-## Why this exists
+## Why it exists
 
-I play F1 Fantasy in an 8-team league. The decisions that matter — which driver to boost, when to burn a chip, whether to chase or protect a lead — all happen in the days before qualifying locks the lineup. The information needed to make them well is scattered across five sites.
+F1 Fantasy decisions happen in the days before qualifying locks the squad: which driver to boost, when to burn a chip, whether to chase a rival or protect a lead. The information needed to make them well is spread across five sites, and the most useful signals aren't published anywhere — they have to be derived.
 
-This pulls it into one page and adds the derived signals that aren't published anywhere: rolling form, positions-gained rates, reliability risk, and weather resolved to individual sessions rather than "the weekend."
-
-This is v2. [v1 failed](docs/POSTMORTEM.md) in an instructive way, and that postmortem drove most of the architecture below.
+This pulls it into one place and computes what's missing: rolling form, points-per-million efficiency, risk-adjusted return, and the single highest-scoring legal squad that fits the budget cap.
 
 ---
 
@@ -31,11 +29,11 @@ GitHub Actions (cron)  →  scripts/build-data.mjs  →  data/*.json  →  git c
 **There is no backend.** No database, no serverless functions, no secrets.
 
 - **GitHub Actions** is the compute layer — it runs the pipeline on a schedule
-- **Git is the database** — every refresh is a diffable, timestamped commit; the season accumulates in the commit log
-- **Vercel** is a CDN serving static files
-- **The browser** does all derivation, so the interactive parts are instant
+- **Git is the database** — every refresh is a diffable, timestamped commit, so the season accumulates in the commit log
+- **Vercel** serves static files from the edge
+- **The browser** does all derivation, so every interactive control responds instantly
 
-The tradeoff: data is fresh as of the last pipeline run rather than the current instant. For a game where lineups lock before qualifying, that costs nothing.
+The tradeoff: data is fresh as of the last pipeline run rather than the current instant. For a game where squads lock before qualifying, that costs nothing.
 
 ### Data sources
 
@@ -46,54 +44,51 @@ The tradeoff: data is fresh as of the last pipeline run rather than the current 
 | Race results & derived form | Jolpica-F1 | ✅ |
 | Session-level weather | [Open-Meteo](https://open-meteo.com/) | ✅ |
 | Betting markets (winner / pole / fastest lap) | [Polymarket](https://polymarket.com/) Gamma API | ✅ |
-| Fantasy prices & per-round scoring | [f1fantasytools.com](https://f1fantasytools.com) | ✅ (scrape) |
+| Fantasy prices & per-round scoring | [f1fantasytools.com](https://f1fantasytools.com) | ✅ (page scrape) |
 | Fantasy league standings | Manual entry | ❌ — no public API |
-| Lineup & chip inventory | Manual entry | ❌ |
+| Squad & chip inventory | Manual entry | ❌ |
 
-### The asset model
+F1 Fantasy publishes no public API. Rather than automate an authenticated session — fragile, and it requires storing credentials — the dashboard has an **Update League** panel. It takes about thirty seconds after each race and cannot break.
 
-f1fantasytools publishes no API, but its team-calculator page ships the full asset
-dataset in its server-rendered payload: official fantasy prices plus a per-round
-breakdown of all 16 fantasy scoring components.
+The **Data** tab states which figures are automated, which are hand-entered, and when each last changed.
 
-That breakdown is the valuable part. Summing components per round yields a
-points-per-round series for every driver and constructor, and the three Strategy
-Analyzer objectives fall out of it directly:
+---
 
-| Objective | Metric | Answers |
+## The asset model
+
+f1fantasytools publishes no API, but its team-calculator page ships the full asset dataset in its server-rendered payload: official fantasy prices plus a per-round breakdown of all 16 fantasy scoring components.
+
+That breakdown is the valuable part. Summing components per round yields a points-per-round series for every driver and constructor, and the analysis follows from it:
+
+| Metric | Definition | Answers |
 |---|---|---|
-| **Points** | mean points per round | Who has the highest ceiling? |
-| **Budget** | mean points per $M | Who frees up cap space? |
-| **Sharpe** | mean ÷ standard deviation | Who delivers *reliably*? |
+| **Mean** | average points per round | Who has the highest ceiling? |
+| **σ** | standard deviation of that series | How reliable are they? |
+| **Sharpe** | mean ÷ σ | Who delivers reward per unit of risk? |
+| **Points per $M** | mean ÷ price | Who frees up cap space? |
+| **Momentum** | last two rounds vs season mean | Who is trending, against their own baseline? |
 
-The three disagree, which is the point. Through Round 10, Mercedes leads on raw
-points (87.8/round) but Alpine leads on Sharpe (3.22) — a cheap constructor whose
-consistency the raw-points view buries. Which lens is correct depends on whether
-you are chasing or protecting a lead.
+The rankings disagree, which is the point. Through Round 10, Mercedes leads on raw points (87.8/round) while Alpine leads on Sharpe (3.22) — a cheap constructor whose consistency the points view buries. Which lens is correct depends on whether you're chasing or protecting a lead.
 
-Because it is a scrape of a rendered page rather than a contract, this is the most
-fragile source here. It fails soft: every other section is unaffected, and the
-provenance table reports the failure.
+### Team Builder
 
-F1 Fantasy publishes no public API. Rather than scrape an authenticated session — fragile, and it requires storing credentials — the site has an **Update League** panel. It takes about 30 seconds after each race, and it cannot break.
+Given the budget cap, the optimiser finds the highest-scoring legal squad — five drivers and two constructors — by **exhaustive search rather than sampling**, so the result is a true optimum rather than an approximation.
 
-The **Data Provenance** section on the page states which numbers are automated, which are hand-entered, and when each last changed. Nothing is presented as fresher than it is.
+It enumerates every 5-driver combination once (C(22,5) = 26,334), records the best score achievable at each cost, then tests all constructor pairs against that table. It reports the squad, the cost, the projected gain over the current squad, and the exact transfers required — flagged against the free-transfer allowance.
 
 ---
 
 ## Design rules
 
-These are load-bearing, and each one exists because v1 violated it.
+**No data in the presentation layer.** `assets/app.js` loads `data/*.json` and renders; it never contains values. This is what lets a scheduled job refresh the entire dashboard without touching a line of code.
 
-**1 · No data in the presentation layer.** `assets/app.js` loads `data/*.json` and renders. It never contains values. v1 inlined a state snapshot into the HTML "so the artifact is self-contained," which silently forked it from the file the automation updated — the dashboard then displayed a frozen copy for months.
+**The current round is derived, never stored.** Every run recomputes where the season stands from today's date against the calendar. There is no state to fall out of sync.
 
-**2 · Never store a pointer to "now."** The current round is derived from today's date against the calendar on every run. v1 stored `raceStartUTC` and gated every task on it, including the only task that could advance it. One missed Sunday deadlocked it permanently.
+**Silence is a bug.** A failed pipeline run exits non-zero so the failure surfaces. The UI independently checks freshness and says so when data is older than the current round.
 
-**3 · Silence is a bug.** A pipeline run that fails exits non-zero so GitHub emails about it. The UI independently checks freshness and shows a banner when data is older than the current round. v1's tasks no-op'd invisibly a dozen times.
+**Renderers are isolated.** Each section renders in its own error boundary, so one failure cannot blank the page.
 
-**4 · Renderers are isolated.** Each section renders in its own try/catch. One failure can't blank the page — v1's entire boot sequence died on a single silent exception.
-
-**5 · Color never carries meaning alone.** Constructor colors always accompany a driver code or team name; status colors always ship with an icon and label.
+**Colour never carries meaning alone.** Constructor colours always accompany a text code; drivers are circles and constructors squares in the scatter plot; status colours always ship with an icon and label.
 
 ---
 
@@ -104,7 +99,7 @@ node scripts/build-data.mjs   # fetch fresh data into data/
 node scripts/dev-server.mjs   # serve at http://localhost:4321
 ```
 
-No dependencies. No build step. Node 22+.
+No dependencies, no build step. Node 22+.
 
 ---
 
@@ -121,7 +116,9 @@ No dependencies. No build step. Node 22+.
 │   ├── standings.json      #   driver + constructor championship
 │   ├── results.json        #   per-round results
 │   ├── weather.json        #   forecast per session + scenario model
-│   ├── fantasy.json        #   manual: league, lineup, chips
+│   ├── markets.json        #   Polymarket probabilities
+│   ├── assets.json         #   prices, per-round scoring, derived metrics
+│   ├── fantasy.json        #   manual: league, squad, chips
 │   └── meta.json           #   provenance + per-source health
 ├── scripts/
 │   ├── build-data.mjs      # the pipeline
@@ -130,10 +127,6 @@ No dependencies. No build step. Node 22+.
     └── refresh-data.yml    # scheduled refresh
 ```
 
----
-
-## Status
-
-Phase 0 — live, real data, all sections rendering. Next: season-long history for backtesting, a client-side lineup optimizer, and a measured comparison of model recommendations against actual picks.
+League data is anonymised: teams are identified by team name only.
 
 Unofficial. Not affiliated with Formula 1.

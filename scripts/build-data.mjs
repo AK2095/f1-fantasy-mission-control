@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 /**
- * F1 Mission Control · data pipeline
- * ---------------------------------
+ * F1 Fantasy Mission Control · data pipeline
+ * ------------------------------------------
  * Fetches every automatable data source and writes plain JSON into /data.
- * Runs in GitHub Actions on a schedule; commits the result. Vercel redeploys.
+ * Runs in GitHub Actions on a schedule and commits the result; Vercel then
+ * redeploys from that commit.
  *
- * DESIGN RULE #1 — no stored pointer to "current round".
- *   v1 died because the only task that could advance the round was gated on
- *   the round already being current. Here, the current round is DERIVED from
- *   today's date against the calendar, every single run. It cannot deadlock.
+ * DESIGN RULE #1 — the current round is derived, never stored.
+ *   Every run recomputes where the season stands from today's date against
+ *   the calendar. Nothing persists a "current round" pointer, so the pipeline
+ *   has no state to fall out of sync with and no way to stall.
  *
- * DESIGN RULE #2 — never write a partial file.
- *   Each source writes its own file. One source failing leaves the others
- *   intact and is recorded in meta.json so the UI can show what went stale.
+ * DESIGN RULE #2 — sources fail independently.
+ *   Each source writes its own file. One failing leaves the others intact and
+ *   is recorded in meta.json, so the UI can report exactly what is unavailable
+ *   instead of silently showing stale numbers.
  */
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
@@ -104,8 +106,8 @@ async function buildCalendar() {
 }
 
 /**
- * Derive season position from the clock alone — the anti-deadlock rule.
- * "next" = first race whose start is still in the future.
+ * Derive season position from the clock alone.
+ * "next" = the first race whose start is still in the future.
  */
 function derivePosition(races) {
   const t = now.getTime();
@@ -242,7 +244,7 @@ async function buildWeather(position) {
     if (f) bySession[key] = { startUTC: iso, ...f };
   }
 
-  // Scenario model inputs — the thing that was hardcoded to zeros in v1.
+  // Scenario model inputs, derived from the race-hour forecast.
   const raceWx = bySession.race ?? {};
   const wetProb = Math.round(raceWx.precipProbability ?? 0);
   const scenario = {
@@ -273,10 +275,10 @@ async function buildWeather(position) {
 // ── 5 · betting markets (Polymarket) ───────────────────────
 /**
  * Polymarket publishes an open Gamma API. We pull every open market under the
- * `f1` tag and pick the ones belonging to the upcoming round, matched on the
- * race date in the slug — so this follows the calendar automatically instead of
- * pointing at a hardcoded event the way v1 did (its URL was pinned to a Miami
- * market that had already resolved).
+ * `f1` tag and select the ones belonging to the upcoming round, matched on the
+ * race date embedded in the slug. Resolving the event from the calendar means
+ * the section follows the season on its own and can never point at a market
+ * that has already settled.
  */
 async function buildMarkets(position) {
   const race = position.next;
@@ -357,9 +359,9 @@ async function buildMarkets(position) {
  *   budget  — mean points per $M (efficiency under the cost cap)
  *   sharpe  — mean / standard deviation (consistency; punishes DNF-prone assets)
  *
- * Because this is a scrape of a rendered page rather than a contract, it is the
- * most fragile source here. It fails soft: markets/weather/results are
- * unaffected, and meta.json records the failure so the UI can say so.
+ * Because this is a scrape of a rendered page rather than a published contract,
+ * it is the most fragile source here. It fails soft: markets, weather and
+ * results are unaffected, and meta.json records the failure so the UI reports it.
  */
 async function buildAssets() {
   const res = await fetch('https://f1fantasytools.com/team-calculator', {
@@ -502,8 +504,8 @@ async function main() {
   if (errors.length) {
     console.error(`\n⚠️  ${errors.length} source(s) failed:`);
     errors.forEach((e) => console.error(`   - ${e}`));
-    // Partial data is written and recorded, but the run is marked failed so
-    // GitHub emails us. Silence was v1's fatal flaw.
+    // Partial data is still written and recorded, but the run exits non-zero
+    // so the failure surfaces as a notification rather than passing quietly.
     process.exitCode = 1;
   } else {
     console.log('\n✓ all sources ok');
