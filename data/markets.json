@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T23:34:50.336Z",
+  "updatedAt": "2026-07-22T23:55:01.022Z",
   "available": true,
   "round": 11,
   "race": "Hungarian Grand Prix",
@@ -47,7 +47,7 @@
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.009,
+        "probability": 0.008,
         "volume": 2542.689939
       },
       {
@@ -150,7 +150,7 @@
       },
       {
         "name": "Lando Norris",
-        "probability": 0.0715,
+        "probability": 0.071,
         "volume": 1810.2683670000001
       },
       {
@@ -164,14 +164,14 @@
         "volume": 1909.2463430000003
       },
       {
-        "name": "Isack Hadjar",
-        "probability": 0.0165,
-        "volume": 193.8301
-      },
-      {
         "name": "Fernando Alonso",
         "probability": 0.0095,
         "volume": 309.091722
+      },
+      {
+        "name": "Isack Hadjar",
+        "probability": 0.009,
+        "volume": 193.8301
       },
       {
         "name": "Pierre Gasly",
@@ -263,7 +263,7 @@
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.125,
+        "probability": 0.115,
         "volume": 0
       },
       {
@@ -307,6 +307,11 @@
         "volume": 50
       },
       {
+        "name": "Fernando Alonso",
+        "probability": 0.016,
+        "volume": 96.69
+      },
+      {
         "name": "Alexander Albon",
         "probability": 0.016,
         "volume": 50
@@ -322,7 +327,17 @@
         "volume": 50
       },
       {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.016,
+        "volume": 50
+      },
+      {
         "name": "Nico Hulkenberg",
+        "probability": 0.016,
+        "volume": 50
+      },
+      {
+        "name": "Valtteri Bottas",
         "probability": 0.016,
         "volume": 50
       },
@@ -332,24 +347,9 @@
         "volume": 50
       },
       {
-        "name": "Fernando Alonso",
-        "probability": 0.0155,
-        "volume": 96.69
-      },
-      {
         "name": "Franco Colapinto",
         "probability": 0.0155,
         "volume": 84
-      },
-      {
-        "name": "Carlos Sainz Jr.",
-        "probability": 0.0155,
-        "volume": 50
-      },
-      {
-        "name": "Valtteri Bottas",
-        "probability": 0.0155,
-        "volume": 50
       },
       {
         "name": "Sergio Perez",
