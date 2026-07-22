@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1 Fantasy Mission Control</title>
+<meta name="description" content="A decision dashboard for F1 Fantasy — live race data, session weather, championship form, and league intelligence, refreshed automatically.">
+<meta name="color-scheme" content="dark light">
+<meta property="og:title" content="F1 Fantasy Mission Control">
+<meta property="og:description" content="Live F1 data, session-level weather, and league intelligence for fantasy lineup decisions.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🏎️</text></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">🏎️</span>
+    <span>Mission Control</span>
+  </div>
+  <div class="topbar-spacer"></div>
+  <button class="btn" id="btn-theme" title="Toggle light / dark">◐</button>
+  <button class="btn btn-primary" id="btn-update">Update League</button>
+</header>
+
+<main class="wrap">
+
+  <!-- Staleness / health. The check v1 never had. -->
+  <div id="banners"></div>
+
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-top">
+      <div>
+        <div class="hero-label" id="hero-label">—</div>
+        <h1 class="hero-race" id="hero-race">Loading…</h1>
+        <div class="hero-sub" id="hero-sub"></div>
+      </div>
+      <div class="countdown">
+        <div class="countdown-val" id="countdown-val">—</div>
+        <div class="countdown-lbl" id="countdown-lbl">until lineup lock</div>
+      </div>
+    </div>
+    <div class="hero-stats" id="hero-stats"></div>
+  </section>
+
+  <!-- ── Decision Engine ──────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">🎯 Decision Engine</div>
+      <div class="section-meta">Derived from live results, weather &amp; league position</div>
+    </div>
+    <div id="decisions"></div>
+  </section>
+
+  <!-- ── Race weekend ─────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">🏁 Race Weekend</div>
+      <div class="section-meta">Session times in your local timezone</div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="bar-label" style="margin-bottom:11px"><strong>Schedule &amp; forecast</strong></div>
+        <div id="sessions"></div>
+      </div>
+      <div class="card">
+        <div class="bar-label" style="margin-bottom:11px"><strong>Scenario model</strong> · Open-Meteo</div>
+        <div id="scenario"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── League ───────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">⚔️ League &amp; Rival Intelligence</div>
+      <div class="section-meta">Manually maintained · F1 Fantasy has no public API</div>
+    </div>
+    <div class="card"><div id="league"></div></div>
+  </section>
+
+  <!-- ── Lineup & chips ───────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">🎴 Lineup &amp; Chip Strategy</div>
+      <div class="section-meta">Budget cap and chip inventory</div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="bar-label" style="margin-bottom:11px"><strong>Active lineup</strong></div>
+        <div id="lineup"></div>
+      </div>
+      <div class="card"><div id="chips"></div></div>
+    </div>
+  </section>
+
+  <!-- ── Form ─────────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">📈 Driver Form Index</div>
+      <div class="section-meta">Rolling 3-race window · computed from race results</div>
+    </div>
+    <div class="card"><div id="form"></div></div>
+  </section>
+
+  <!-- ── Championship ─────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">🏆 Championship Standings</div>
+      <div class="section-meta">Jolpica-F1 · official classification</div>
+    </div>
+    <div class="grid grid-2" id="championship"></div>
+  </section>
+
+  <!-- ── Calendar ─────────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">🗓 Season Calendar</div>
+      <div class="section-meta">Current round derived from today's date — never a stored pointer</div>
+    </div>
+    <div class="card"><div id="calendar"></div></div>
+  </section>
+
+  <!-- ── Provenance ───────────────────────────────────── -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-title">📚 Data Provenance</div>
+      <div class="section-meta">What is automated, what is manual, and when each last changed</div>
+    </div>
+    <div class="card"><div id="provenance"></div></div>
+  </section>
+
+  <footer class="footer">
+    <span>F1 Fantasy Mission Control</span>
+    <span>·</span>
+    <span>Data: <a href="https://api.jolpi.ca/" rel="noopener">Jolpica-F1</a> &amp; <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a></span>
+    <span>·</span>
+    <span>Unofficial. Not affiliated with Formula 1.</span>
+  </footer>
+</main>
+
+<!-- ── Update League modal ────────────────────────────── -->
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title">Update League Standings</h2>
+    <p class="hint">
+      F1 Fantasy has no public API, so this is the one place you enter data by hand.
+      Open your league page, copy the numbers across, and save. Ranks are recalculated
+      from points automatically, so the order can never contradict the totals.
+    </p>
+
+    <div class="field">
+      <label for="modal-round">Standings current through round</label>
+      <input type="number" id="modal-round" min="0" max="24">
+    </div>
+
+    <div class="field">
+      <label>Teams &amp; points</label>
+      <div class="standings-editor" id="standings-editor"></div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn" id="btn-copy">Copy JSON</button>
+      <button class="btn" id="btn-cancel">Cancel</button>
+      <button class="btn btn-primary" id="btn-save">Save</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" style="display:none"></div>
+
+<script src="assets/app.js" type="module"></script>
+</body>
+</html>

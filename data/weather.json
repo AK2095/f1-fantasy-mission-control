@@ -1,0 +1,59 @@
+{
+  "updatedAt": "2026-07-22T22:16:52.314Z",
+  "available": true,
+  "round": 11,
+  "race": "Hungarian Grand Prix",
+  "circuit": "Hungaroring",
+  "locality": "Budapest",
+  "country": "Hungary",
+  "lat": 47.5789,
+  "lon": 19.2486,
+  "sessions": {
+    "fp1": {
+      "startUTC": "2026-07-24T11:30:00.000Z",
+      "precipProbability": 11,
+      "precipMm": 0,
+      "tempC": 22.8,
+      "windKph": 15.8,
+      "weatherCode": 1
+    },
+    "fp2": {
+      "startUTC": "2026-07-24T15:00:00.000Z",
+      "precipProbability": 2,
+      "precipMm": 0,
+      "tempC": 23.7,
+      "windKph": 17.6,
+      "weatherCode": 3
+    },
+    "fp3": {
+      "startUTC": "2026-07-25T10:30:00.000Z",
+      "precipProbability": 0,
+      "precipMm": 0,
+      "tempC": 24.6,
+      "windKph": 6.5,
+      "weatherCode": 0
+    },
+    "qualifying": {
+      "startUTC": "2026-07-25T14:00:00.000Z",
+      "precipProbability": 0,
+      "precipMm": 0,
+      "tempC": 27.1,
+      "windKph": 10.4,
+      "weatherCode": 0
+    },
+    "race": {
+      "startUTC": "2026-07-26T13:00:00.000Z",
+      "precipProbability": 9,
+      "precipMm": 0,
+      "tempC": 32.1,
+      "windKph": 18.1,
+      "weatherCode": 1
+    }
+  },
+  "scenario": {
+    "dryProb": 91,
+    "wetProb": 9,
+    "haltProb": 0
+  },
+  "provider": "Open-Meteo"
+}

@@ -1,0 +1,36 @@
+{
+  "season": 2026,
+  "updatedAt": "2026-07-22T22:16:52.314Z",
+  "lastCompletedRound": 10,
+  "nextRound": 11,
+  "roundsRemaining": 12,
+  "isRaceWeek": false,
+  "nextRace": {
+    "round": 11,
+    "name": "Hungarian Grand Prix",
+    "shortName": "Hungarian GP",
+    "circuitId": "hungaroring",
+    "circuit": "Hungaroring",
+    "locality": "Budapest",
+    "country": "Hungary",
+    "lat": 47.5789,
+    "lon": 19.2486,
+    "date": "2026-07-26",
+    "raceStartUTC": "2026-07-26T13:00:00.000Z",
+    "isSprint": false,
+    "sessions": {
+      "fp1": "2026-07-24T11:30:00.000Z",
+      "fp2": "2026-07-24T15:00:00.000Z",
+      "fp3": "2026-07-25T10:30:00.000Z",
+      "qualifying": "2026-07-25T14:00:00.000Z",
+      "race": "2026-07-26T13:00:00.000Z"
+    },
+    "lockUTC": "2026-07-25T14:00:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix"
+  },
+  "lastRace": {
+    "round": 10,
+    "name": "Belgian Grand Prix",
+    "date": "2026-07-19"
+  }
+}

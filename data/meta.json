@@ -1,0 +1,29 @@
+{
+  "builtAt": "2026-07-22T22:16:52.314Z",
+  "builtBy": "local",
+  "commit": null,
+  "sources": {
+    "calendar": {
+      "ok": true,
+      "fetchedAt": "2026-07-22T22:16:52.314Z",
+      "rounds": 22
+    },
+    "standings": {
+      "ok": true,
+      "fetchedAt": "2026-07-22T22:16:52.314Z",
+      "throughRound": 10
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-07-22T22:16:52.314Z",
+      "circuit": "Hungaroring"
+    },
+    "results": {
+      "ok": true,
+      "fetchedAt": "2026-07-22T22:16:52.314Z",
+      "rounds": 10
+    }
+  },
+  "errors": [],
+  "staleAfterHours": 36
+}
