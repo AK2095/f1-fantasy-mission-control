@@ -45,8 +45,35 @@ The tradeoff: data is fresh as of the last pipeline run rather than the current 
 | Championship standings | Jolpica-F1 | ✅ |
 | Race results & derived form | Jolpica-F1 | ✅ |
 | Session-level weather | [Open-Meteo](https://open-meteo.com/) | ✅ |
+| Betting markets (winner / pole / fastest lap) | [Polymarket](https://polymarket.com/) Gamma API | ✅ |
+| Fantasy prices & per-round scoring | [f1fantasytools.com](https://f1fantasytools.com) | ✅ (scrape) |
 | Fantasy league standings | Manual entry | ❌ — no public API |
 | Lineup & chip inventory | Manual entry | ❌ |
+
+### The asset model
+
+f1fantasytools publishes no API, but its team-calculator page ships the full asset
+dataset in its server-rendered payload: official fantasy prices plus a per-round
+breakdown of all 16 fantasy scoring components.
+
+That breakdown is the valuable part. Summing components per round yields a
+points-per-round series for every driver and constructor, and the three Strategy
+Analyzer objectives fall out of it directly:
+
+| Objective | Metric | Answers |
+|---|---|---|
+| **Points** | mean points per round | Who has the highest ceiling? |
+| **Budget** | mean points per $M | Who frees up cap space? |
+| **Sharpe** | mean ÷ standard deviation | Who delivers *reliably*? |
+
+The three disagree, which is the point. Through Round 10, Mercedes leads on raw
+points (87.8/round) but Alpine leads on Sharpe (3.22) — a cheap constructor whose
+consistency the raw-points view buries. Which lens is correct depends on whether
+you are chasing or protecting a lead.
+
+Because it is a scrape of a rendered page rather than a contract, this is the most
+fragile source here. It fails soft: every other section is unaffected, and the
+provenance table reports the failure.
 
 F1 Fantasy publishes no public API. Rather than scrape an authenticated session — fragile, and it requires storing credentials — the site has an **Update League** panel. It takes about 30 seconds after each race, and it cannot break.
 

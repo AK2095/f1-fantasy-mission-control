@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>F1 Fantasy Mission Control</title>
-<meta name="description" content="A decision dashboard for F1 Fantasy — live race data, session weather, championship form, and league intelligence, refreshed automatically.">
+<meta name="description" content="A decision dashboard for F1 Fantasy — live race data, session weather, betting markets, and a risk-adjusted asset model, refreshed automatically.">
 <meta name="color-scheme" content="dark light">
 <meta property="og:title" content="F1 Fantasy Mission Control">
-<meta property="og:description" content="Live F1 data, session-level weather, and league intelligence for fantasy lineup decisions.">
+<meta property="og:description" content="Live F1 data, session-level weather, Polymarket odds, and a Sharpe-ranked fantasy asset model.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🏎️</text></svg>">
 <link rel="stylesheet" href="assets/styles.css">
@@ -16,99 +16,171 @@
 
 <header class="topbar">
   <div class="brand">
-    <span class="brand-mark">🏎️</span>
-    <span>Mission Control</span>
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 15.5 5 8h4.2l-1 2.6h3.3L13 8h4.2l-3 7.5H10l1.1-2.8H7.8L6.7 15.5H2Zm14.6 0L19.6 8H22l-3 7.5h-2.4Z"/></svg>
+    </span>
+    <span class="brand-text">
+      <span class="brand-name">Mission Control</span>
+      <span class="brand-sub">F1 Fantasy</span>
+    </span>
   </div>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="#weekend">Weekend</a>
+    <a href="#markets-section">Markets</a>
+    <a href="#strategy-section">Strategy</a>
+    <a href="#consider-section">Consider</a>
+    <a href="#league-section">League</a>
+    <a href="#championship-section">Championship</a>
+    <a href="#data">Data</a>
+  </nav>
+
   <div class="topbar-spacer"></div>
-  <button class="btn" id="btn-theme" title="Toggle light / dark">◐</button>
-  <button class="btn btn-primary" id="btn-update">Update League</button>
+  <div class="topbar-actions">
+    <button class="btn btn-icon" id="btn-theme" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
+    <button class="btn btn-primary" id="btn-update">Update League</button>
+  </div>
 </header>
 
 <main class="wrap">
 
-  <!-- Staleness / health. The check v1 never had. -->
+  <!-- Health / staleness. Silent when everything is current. -->
   <div id="banners"></div>
 
   <!-- ── Hero ─────────────────────────────────────────── -->
-  <section class="hero" id="hero">
-    <div class="hero-top">
-      <div>
-        <div class="hero-label" id="hero-label">—</div>
-        <h1 class="hero-race" id="hero-race">Loading…</h1>
-        <div class="hero-sub" id="hero-sub"></div>
-      </div>
-      <div class="countdown">
-        <div class="countdown-val" id="countdown-val">—</div>
-        <div class="countdown-lbl" id="countdown-lbl">until lineup lock</div>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="hero-top">
+        <div>
+          <div class="hero-eyebrow" id="hero-eyebrow">Loading</div>
+          <h1 class="hero-race" id="hero-race">—</h1>
+          <div class="hero-sub" id="hero-sub"></div>
+        </div>
+        <div class="countdown">
+          <div class="countdown-val" id="countdown-val">—</div>
+          <div class="countdown-lbl" id="countdown-lbl">until lineup lock</div>
+        </div>
       </div>
     </div>
     <div class="hero-stats" id="hero-stats"></div>
   </section>
 
-  <!-- ── Decision Engine ──────────────────────────────── -->
-  <section class="section">
-    <div class="section-head">
-      <div class="section-title">🎯 Decision Engine</div>
-      <div class="section-meta">Derived from live results, weather &amp; league position</div>
-    </div>
-    <div id="decisions"></div>
-  </section>
-
   <!-- ── Race weekend ─────────────────────────────────── -->
-  <section class="section">
+  <section class="section" id="weekend">
     <div class="section-head">
-      <div class="section-title">🏁 Race Weekend</div>
-      <div class="section-meta">Session times in your local timezone</div>
+      <h2 class="section-title">Race Weekend</h2>
+      <div class="section-meta">Session times shown in your local timezone</div>
     </div>
     <div class="grid grid-2">
       <div class="card">
-        <div class="bar-label" style="margin-bottom:11px"><strong>Schedule &amp; forecast</strong></div>
+        <div class="card-head">
+          <div class="card-title">Schedule &amp; forecast</div>
+          <div class="card-meta">Open-Meteo</div>
+        </div>
         <div id="sessions"></div>
       </div>
       <div class="card">
-        <div class="bar-label" style="margin-bottom:11px"><strong>Scenario model</strong> · Open-Meteo</div>
+        <div class="card-head">
+          <div class="card-title">Scenario model</div>
+          <div class="card-meta">Race-hour probabilities</div>
+        </div>
         <div id="scenario"></div>
       </div>
     </div>
   </section>
 
-  <!-- ── League ───────────────────────────────────────── -->
-  <section class="section">
+  <!-- ── Market intelligence ──────────────────────────── -->
+  <section class="section" id="markets-section">
     <div class="section-head">
-      <div class="section-title">⚔️ League &amp; Rival Intelligence</div>
-      <div class="section-meta">Manually maintained · F1 Fantasy has no public API</div>
+      <h2 class="section-title">Market Intelligence</h2>
+      <div class="section-meta">Polymarket · live order-book probabilities</div>
     </div>
-    <div class="card"><div id="league"></div></div>
+    <p class="section-sub">
+      What real money thinks will happen. The market resolves to the current round automatically from the
+      calendar — v1 pointed at a hardcoded event that had already settled.
+    </p>
+    <div class="card">
+      <div class="card-head">
+        <div class="segmented" id="market-tabs" role="tablist"></div>
+      </div>
+      <div id="markets"></div>
+    </div>
   </section>
 
-  <!-- ── Lineup & chips ───────────────────────────────── -->
-  <section class="section">
+  <!-- ── Strategy analyzer ────────────────────────────── -->
+  <section class="section" id="strategy-section">
     <div class="section-head">
-      <div class="section-title">🎴 Lineup &amp; Chip Strategy</div>
-      <div class="section-meta">Budget cap and chip inventory</div>
+      <h2 class="section-title">Strategy Analyzer</h2>
+      <div class="section-meta">f1fantasytools · official prices &amp; per-round scoring</div>
+    </div>
+    <p class="section-sub" id="strategy-blurb"></p>
+    <div class="card">
+      <div class="card-head">
+        <div class="segmented" id="objective-tabs" role="tablist"></div>
+        <div class="card-meta">Your assets are highlighted</div>
+      </div>
+      <div id="strategy"></div>
+    </div>
+    <div class="card" style="margin-top: var(--s4)">
+      <div class="card-head">
+        <div class="card-title">Risk / reward</div>
+        <div class="card-meta">Every active asset · hover for detail</div>
+      </div>
+      <div id="risk-chart"></div>
+    </div>
+  </section>
+
+  <!-- ── Things to consider ───────────────────────────── -->
+  <section class="section" id="consider-section">
+    <div class="section-head">
+      <h2 class="section-title">Things to Consider</h2>
+      <div class="section-meta">Derived signals, not editorial</div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card card-tight">
+        <div class="card-head"><div class="card-title">Form &amp; momentum</div></div>
+        <div class="panel-list" id="consider-form"></div>
+      </div>
+      <div class="card card-tight">
+        <div class="card-head"><div class="card-title">Value</div></div>
+        <div class="panel-list" id="consider-value"></div>
+      </div>
+      <div class="card card-tight">
+        <div class="card-head"><div class="card-title">Strategy signals</div></div>
+        <div class="panel-list" id="consider-strategy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── League ───────────────────────────────────────── -->
+  <section class="section" id="league-section">
+    <div class="section-head">
+      <h2 class="section-title">League &amp; Lineup</h2>
+      <div class="section-meta">League standings are entered manually — no public API</div>
     </div>
     <div class="grid grid-2">
       <div class="card">
-        <div class="bar-label" style="margin-bottom:11px"><strong>Active lineup</strong></div>
-        <div id="lineup"></div>
+        <div class="card-head"><div class="card-title">League standings</div></div>
+        <div id="league"></div>
       </div>
-      <div class="card"><div id="chips"></div></div>
+      <div class="card">
+        <div class="card-head"><div class="card-title">Chip inventory</div></div>
+        <div id="chips"></div>
+      </div>
     </div>
-  </section>
-
-  <!-- ── Form ─────────────────────────────────────────── -->
-  <section class="section">
-    <div class="section-head">
-      <div class="section-title">📈 Driver Form Index</div>
-      <div class="section-meta">Rolling 3-race window · computed from race results</div>
+    <div class="card" style="margin-top: var(--s4)">
+      <div class="card-head">
+        <div class="card-title">Active lineup</div>
+        <div class="card-meta">Mean &amp; Sharpe from the asset model</div>
+      </div>
+      <div id="lineup"></div>
     </div>
-    <div class="card"><div id="form"></div></div>
   </section>
 
   <!-- ── Championship ─────────────────────────────────── -->
-  <section class="section">
+  <section class="section" id="championship-section">
     <div class="section-head">
-      <div class="section-title">🏆 Championship Standings</div>
+      <h2 class="section-title">Championship</h2>
       <div class="section-meta">Jolpica-F1 · official classification</div>
     </div>
     <div class="grid grid-2" id="championship"></div>
@@ -117,16 +189,16 @@
   <!-- ── Calendar ─────────────────────────────────────── -->
   <section class="section">
     <div class="section-head">
-      <div class="section-title">🗓 Season Calendar</div>
+      <h2 class="section-title">Season Calendar</h2>
       <div class="section-meta">Current round derived from today's date — never a stored pointer</div>
     </div>
     <div class="card"><div id="calendar"></div></div>
   </section>
 
   <!-- ── Provenance ───────────────────────────────────── -->
-  <section class="section">
+  <section class="section" id="data">
     <div class="section-head">
-      <div class="section-title">📚 Data Provenance</div>
+      <h2 class="section-title">Data Provenance</h2>
       <div class="section-meta">What is automated, what is manual, and when each last changed</div>
     </div>
     <div class="card"><div id="provenance"></div></div>
@@ -134,9 +206,14 @@
 
   <footer class="footer">
     <span>F1 Fantasy Mission Control</span>
-    <span>·</span>
-    <span>Data: <a href="https://api.jolpi.ca/" rel="noopener">Jolpica-F1</a> &amp; <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a></span>
-    <span>·</span>
+    <span class="sep">·</span>
+    <span>
+      <a href="https://api.jolpi.ca/" rel="noopener">Jolpica-F1</a>,
+      <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>,
+      <a href="https://polymarket.com/" rel="noopener">Polymarket</a>,
+      <a href="https://f1fantasytools.com" rel="noopener">f1fantasytools</a>
+    </span>
+    <span class="sep">·</span>
     <span>Unofficial. Not affiliated with Formula 1.</span>
   </footer>
 </main>
@@ -146,9 +223,9 @@
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <h2 id="modal-title">Update League Standings</h2>
     <p class="hint">
-      F1 Fantasy has no public API, so this is the one place you enter data by hand.
-      Open your league page, copy the numbers across, and save. Ranks are recalculated
-      from points automatically, so the order can never contradict the totals.
+      F1 Fantasy publishes no public API, so this is the one place data is entered by hand.
+      Copy the numbers from your league page and save. Ranks are recalculated from points
+      automatically, so the order can never contradict the totals.
     </p>
 
     <div class="field">
@@ -169,7 +246,7 @@
   </div>
 </div>
 
-<div id="toast" style="display:none"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/app.js" type="module"></script>
 </body>

@@ -270,6 +270,186 @@ async function buildWeather(position) {
   return { bySession, scenario };
 }
 
+// ── 5 · betting markets (Polymarket) ───────────────────────
+/**
+ * Polymarket publishes an open Gamma API. We pull every open market under the
+ * `f1` tag and pick the ones belonging to the upcoming round, matched on the
+ * race date in the slug — so this follows the calendar automatically instead of
+ * pointing at a hardcoded event the way v1 did (its URL was pinned to a Miami
+ * market that had already resolved).
+ */
+async function buildMarkets(position) {
+  const race = position.next;
+  if (!race) {
+    await write('markets.json', { updatedAt: now.toISOString(), available: false });
+    return null;
+  }
+
+  const events = await getJSON('https://gamma-api.polymarket.com/events?closed=false&limit=60&tag_slug=f1');
+
+  const priceOf = (m) => {
+    try {
+      const p = JSON.parse(m.outcomePrices ?? '[]');
+      const outcomes = JSON.parse(m.outcomes ?? '[]');
+      const yes = outcomes.findIndex((o) => String(o).toLowerCase() === 'yes');
+      return p.length ? Number(p[yes === -1 ? 0 : yes]) : null;
+    } catch { return null; }
+  };
+
+  const pickEvent = (kind) =>
+    events.find((e) => (e.slug ?? '').startsWith(`f1-`) && e.slug.includes(kind) && e.slug.includes(race.date)) ??
+    events.find((e) => (e.slug ?? '').includes(kind) && (e.title ?? '').toLowerCase().includes(race.name.toLowerCase().replace(' grand prix', '')));
+
+  const extract = (evt) => {
+    if (!evt) return null;
+    const runners = (evt.markets ?? [])
+      .map((m) => ({
+        name: m.groupItemTitle ?? null,
+        probability: priceOf(m),
+        volume: Number(m.volume ?? 0),
+      }))
+      // Placeholder rows ("Driver A", "Other") carry no price — drop them.
+      .filter((r) => r.name && r.probability != null && !/^Driver [A-Z]$/.test(r.name))
+      .sort((a, b) => b.probability - a.probability);
+    if (!runners.length) return null;
+    return {
+      title: evt.title,
+      slug: evt.slug,
+      endDate: evt.endDate ?? null,
+      totalVolume: runners.reduce((s, r) => s + r.volume, 0),
+      runners,
+    };
+  };
+
+  const winner = extract(pickEvent('winner'));
+  const pole = extract(pickEvent('pole-position'));
+  const fastestLap = extract(pickEvent('fastest-lap'));
+
+  sources.markets = {
+    ok: Boolean(winner),
+    fetchedAt: now.toISOString(),
+    ...(winner ? { runners: winner.runners.length } : { error: 'no winner market matched this round' }),
+  };
+  if (!winner) errors.push('markets: no Polymarket winner market matched this round');
+
+  await write('markets.json', {
+    updatedAt: now.toISOString(),
+    available: Boolean(winner),
+    round: race.round,
+    race: race.name,
+    provider: 'Polymarket',
+    winner, pole, fastestLap,
+  });
+  return winner;
+}
+
+// ── 6 · fantasy asset model (f1fantasytools) ───────────────
+/**
+ * f1fantasytools.com publishes no API, but its team-calculator page ships the
+ * full asset dataset in its server-rendered payload: official fantasy prices
+ * plus a per-round breakdown of all 16 fantasy scoring components.
+ *
+ * That breakdown is the valuable part. Summing components per round gives a
+ * points-per-round series for every asset, and from that series we derive the
+ * three objectives the Strategy Analyzer offers:
+ *
+ *   points  — mean points per round (raw upside)
+ *   budget  — mean points per $M (efficiency under the cost cap)
+ *   sharpe  — mean / standard deviation (consistency; punishes DNF-prone assets)
+ *
+ * Because this is a scrape of a rendered page rather than a contract, it is the
+ * most fragile source here. It fails soft: markets/weather/results are
+ * unaffected, and meta.json records the failure so the UI can say so.
+ */
+async function buildAssets() {
+  const res = await fetch('https://f1fantasytools.com/team-calculator', {
+    headers: { 'User-Agent': 'f1-mission-control/2.0 (personal dashboard; hourly)' },
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) throw new Error(`f1fantasytools → HTTP ${res.status}`);
+  const html = await res.text();
+
+  // Reassemble the streamed RSC payload, then pull the arrays out of it.
+  const chunks = [...html.matchAll(/self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)/g)];
+  const blob = chunks.map((m) => JSON.parse(`"${m[1]}"`)).join('');
+
+  const arrayAfter = (key) => {
+    const k = blob.indexOf(`"${key}":[`);
+    if (k === -1) return null;
+    const start = blob.indexOf('[', k);
+    let depth = 0;
+    for (let j = start; j < blob.length; j++) {
+      if (blob[j] === '[') depth++;
+      else if (blob[j] === ']' && --depth === 0) return JSON.parse(blob.slice(start, j + 1));
+    }
+    return null;
+  };
+
+  const raw = [...(arrayAfter('drivers') ?? []), ...(arrayAfter('constructors') ?? [])];
+  if (!raw.length) throw new Error('no asset arrays found in payload (page structure likely changed)');
+
+  const mean = (a) => (a.length ? a.reduce((s, v) => s + v, 0) / a.length : 0);
+  const stdev = (a) => {
+    if (a.length < 2) return 0;
+    const m = mean(a);
+    return Math.sqrt(mean(a.map((v) => (v - m) ** 2)));
+  };
+
+  const assets = raw
+    .filter((a) => a.isActive !== false)
+    .map((a) => {
+      const rr = a.raceResults ?? {};
+      const series = Object.values(rr);
+      const rounds = series.length ? series[0].length : 0;
+      // Total fantasy points per round = sum of all scoring components.
+      const perRound = Array.from({ length: rounds }, (_, i) =>
+        series.reduce((s, comp) => s + (comp[i] ?? 0), 0)
+      );
+
+      const avg = mean(perRound);
+      const sd = stdev(perRound);
+      const price = Number(a.price) || 0;
+      const last2 = a.lastTwoTotalPoints ?? [];
+
+      return {
+        code: a.abbreviation,
+        id: a.id,
+        type: a.type,
+        color: a.color,
+        price,
+        perRound,
+        totalPoints: perRound.reduce((s, v) => s + v, 0),
+        avgPoints: Number(avg.toFixed(2)),
+        stdev: Number(sd.toFixed(2)),
+        // Risk-adjusted return. Zero-variance assets would divide by zero.
+        sharpe: sd > 0 ? Number((avg / sd).toFixed(2)) : null,
+        pointsPerMillion: price > 0 ? Number((avg / price).toFixed(2)) : null,
+        worstRound: perRound.length ? Math.min(...perRound) : null,
+        bestRound: perRound.length ? Math.max(...perRound) : null,
+        negativeRounds: perRound.filter((v) => v < 0).length,
+        last2Avg: last2.length ? Number(mean(last2).toFixed(1)) : null,
+        // Momentum: recent form against season baseline.
+        momentum: last2.length && avg ? Number((mean(last2) - avg).toFixed(1)) : null,
+      };
+    })
+    .sort((a, b) => b.avgPoints - a.avgPoints);
+
+  sources.assets = {
+    ok: true,
+    fetchedAt: now.toISOString(),
+    assets: assets.length,
+    rounds: assets[0]?.perRound.length ?? 0,
+  };
+  await write('assets.json', {
+    updatedAt: now.toISOString(),
+    provider: 'f1fantasytools.com',
+    note: 'Official fantasy prices and per-round scoring. Derived metrics (avgPoints, stdev, sharpe, pointsPerMillion, momentum) are computed here, not published by the source.',
+    rounds: assets[0]?.perRound.length ?? 0,
+    assets,
+  });
+  return assets;
+}
+
 // ── main ───────────────────────────────────────────────────────────────────
 async function main() {
   console.log(`F1 Mission Control · data build · ${now.toISOString()}`);
@@ -281,14 +461,17 @@ async function main() {
       `next: R${position.nextRound ?? '—'} ${position.next?.shortName ?? 'season over'}`
   );
 
+  const NAMES = ['standings', 'results', 'weather', 'markets', 'assets'];
   const settled = await Promise.allSettled([
     buildStandings(),
     buildResults(position),
     buildWeather(position),
+    buildMarkets(position),
+    buildAssets(),
   ]);
   settled.forEach((s, i) => {
     if (s.status === 'rejected') {
-      const name = ['standings', 'results', 'weather'][i];
+      const name = NAMES[i];
       sources[name] = { ok: false, fetchedAt: now.toISOString(), error: String(s.reason.message) };
       errors.push(`${name}: ${s.reason.message}`);
     }
