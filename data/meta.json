@@ -1,37 +1,37 @@
 {
-  "builtAt": "2026-07-22T23:55:01.022Z",
+  "builtAt": "2026-07-22T23:56:18.680Z",
   "builtBy": "github-actions",
-  "commit": "496d338",
+  "commit": "f311c09",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
       "rounds": 22
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
       "throughRound": 10
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
       "runners": 22
-    },
-    "assets": {
-      "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
-      "assets": 33,
-      "rounds": 10
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
       "circuit": "Hungaroring"
+    },
+    "assets": {
+      "ok": true,
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
+      "assets": 33,
+      "rounds": 10
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-07-22T23:55:01.022Z",
+      "fetchedAt": "2026-07-22T23:56:18.680Z",
       "rounds": 10
     }
   },
