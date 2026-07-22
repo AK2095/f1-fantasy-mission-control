@@ -1,0 +1,58 @@
+name: Refresh data
+
+# The replacement for v1's six local scheduled tasks.
+#
+# v1's fatal flaw: every task was gated on a stored "current round" pointer that
+# only one task could advance ‚Äî and that task was itself gated on the pointer
+# being current. Miss one Sunday and it deadlocked forever, silently, on a laptop
+# that had to be awake and logged in.
+#
+# Here the round is derived from the clock every run, this runs on GitHub's
+# machines, and a failure fails the workflow loudly instead of no-op'ing.
+
+on:
+  schedule:
+    # Race weekends (Thu-Sun): hourly, 06:00-22:00 UTC.
+    - cron: '0 6-22 * * 4,5,6,0'
+    # Weekdays: once daily.
+    - cron: '0 7 * * 1,2,3'
+  workflow_dispatch:        # manual trigger ‚Äî one tap from the GitHub mobile app
+  push:
+    branches: [main]
+    paths: ['scripts/**']   # re-run whenever the pipeline itself changes
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build data
+        run: node scripts/build-data.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name  "f1-mission-control[bot]"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No data changes this run."
+          else
+            SUMMARY=$(node -e "
+              const s = require('./data/season.json');
+              process.stdout.write(\`R\${s.lastCompletedRound} done ¬∑ next R\${s.nextRound ?? '-'} \${s.nextRace?.shortName ?? 'season over'}\`);
+            ")
+            git commit -m "data: $SUMMARY"
+            git push
+          fi
