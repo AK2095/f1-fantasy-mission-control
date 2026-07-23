@@ -62,6 +62,10 @@
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
 
+  /* Header height — the race bar and the mobile tab sheet both anchor to it,
+     so it lives in one place rather than being repeated as a magic number. */
+  --topbar-h: 64px;
+
   --ease: cubic-bezier(.2, .8, .2, 1);
 }
 
@@ -108,7 +112,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 76px;
+  scroll-padding-top: calc(var(--topbar-h) + 12px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -177,8 +181,12 @@ body {
   height: 2px; background: var(--accent); border-radius: 2px;
 }
 
-.menu-toggle { display: none; }
+/* .btn sets display:inline-flex later at equal specificity, so this needs
+   the extra element to win on desktop. */
+.topbar .menu-toggle { display: none; }
 .menu-toggle svg { width: 17px; height: 17px; }
+
+.label-narrow { display: none; }
 
 .topbar-spacer { flex: 1; }
 .topbar-actions { display: flex; gap: var(--s2); flex-shrink: 0; }
@@ -229,7 +237,7 @@ body {
    Race context bar — the lock deadline follows you everywhere
    ───────────────────────────────────────────────────────── */
 .racebar {
-  position: sticky; top: 55px; z-index: 55;
+  position: sticky; top: var(--topbar-h); z-index: 55;
   display: flex; align-items: center; gap: var(--s3);
   padding: var(--s2) var(--s5);
   background: color-mix(in srgb, var(--surface-2) 92%, transparent);
@@ -642,22 +650,28 @@ input:hover, textarea:hover { border-color: var(--line-2); }
 /* ─────────────────────────────────────────────────────────
    Responsive
    ───────────────────────────────────────────────────────── */
-@media (max-width: 1000px) {
-  .menu-toggle { display: inline-flex; }
+/* The tab row needs ~1041px alongside the brand and actions. Collapse to the
+   sheet a little above that so the tabs never render squeezed. */
+@media (max-width: 1100px) {
+  .topbar .menu-toggle { display: inline-flex; }
 
   /* Tabs become a slide-down sheet under the header. */
   .tabs {
-    position: fixed; left: 0; right: 0; top: 55px; z-index: 58;
+    position: fixed; left: 0; right: 0; top: var(--topbar-h); z-index: 58;
     margin: 0; flex-direction: column; gap: 0;
     padding: var(--s2);
     background: var(--surface-1);
     border-bottom: 1px solid var(--line-2);
     box-shadow: var(--shadow-3);
-    max-height: calc(100vh - 55px); overflow-y: auto;
+    max-height: calc(100vh - var(--topbar-h)); overflow-y: auto;
     transform: translateY(-8px); opacity: 0; pointer-events: none;
     transition: opacity .16s var(--ease), transform .16s var(--ease);
   }
   body.menu-open .tabs { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  body.menu-open::after {
+    content: ''; position: fixed; inset: var(--topbar-h) 0 0; z-index: 57;
+    background: rgba(0,0,0,.5);
+  }
   .tab {
     width: 100%; text-align: left; border-radius: var(--r-sm);
     padding: var(--s3) var(--s4); font-size: .92rem;
@@ -675,7 +689,8 @@ input:hover, textarea:hover { border-color: var(--line-2); }
   html, body { overflow-x: hidden; }
   .wrap { padding: 0 var(--s4) var(--s7); }
   .topbar { padding: var(--s3) var(--s4); gap: var(--s2); }
-  .hide-sm { display: none; }
+  .label-wide { display: none; }
+  .label-narrow { display: inline; }
   .brand-name { font-size: .88rem; }
   .racebar { padding: var(--s2) var(--s4); font-size: .78rem; }
   .racebar-name { max-width: 40vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -706,3 +721,23 @@ input:hover, textarea:hover { border-color: var(--line-2); }
   .topbar, .modal-backdrop, .toast, .btn { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ─────────────────────────────────────────────────────────
+   Prose (About)
+   ───────────────────────────────────────────────────────── */
+.prose > * { max-width: 74ch; }   /* readable measure without shrinking the card */
+.prose h3 {
+  font-size: .95rem; font-weight: 680; letter-spacing: -0.015em;
+  margin: var(--s5) 0 var(--s2);
+}
+.prose h3:first-child { margin-top: 0; }
+.prose p { margin: 0 0 var(--s3); color: var(--ink-2); font-size: .9rem; line-height: 1.68; }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--ink); font-weight: 620; }
+.prose em { color: var(--ink); font-style: italic; }
+.prose ul { margin: 0; padding-left: var(--s5); }
+.prose li {
+  color: var(--ink-2); font-size: .9rem; line-height: 1.68;
+  margin-bottom: var(--s3);
+}
+.prose li::marker { color: var(--ink-muted); }

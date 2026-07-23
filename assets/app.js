@@ -22,7 +22,7 @@ const TABS = [
   ['consider', 'Consider'],
   ['league',   'League'],
   ['season',   'Season'],
-  ['data',     'Data'],
+  ['about',    'About'],
 ];
 
 const state = {
