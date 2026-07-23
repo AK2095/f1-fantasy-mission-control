@@ -1,4 +1,4 @@
-# 🏎️ F1 Fantasy Mission Control
+# AK's F1 Mission Control
 
 A decision dashboard for F1 Fantasy. It answers one question well: **what should my team be before this weekend's lock, and why?**
 
