@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T14:05:02.233Z",
+  "updatedAt": "2026-07-23T16:28:18.101Z",
   "available": true,
   "round": 11,
   "race": "Hungarian Grand Prix",
@@ -11,39 +11,39 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-07-24T11:30:00.000Z",
-      "precipProbability": 11,
+      "precipProbability": 5,
       "precipMm": 0,
-      "tempC": 21.3,
-      "windKph": 14,
-      "weatherCode": 0
+      "tempC": 21.2,
+      "windKph": 15.8,
+      "weatherCode": 3
     },
     "fp2": {
       "startUTC": "2026-07-24T15:00:00.000Z",
-      "precipProbability": 6,
+      "precipProbability": 2,
       "precipMm": 0,
-      "tempC": 23.4,
-      "windKph": 16.9,
+      "tempC": 23.1,
+      "windKph": 18,
       "weatherCode": 2
     },
     "fp3": {
       "startUTC": "2026-07-25T10:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 24.3,
-      "windKph": 7.6,
+      "tempC": 24,
+      "windKph": 9,
       "weatherCode": 0
     },
     "qualifying": {
       "startUTC": "2026-07-25T14:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 27.7,
-      "windKph": 5,
+      "tempC": 27.6,
+      "windKph": 6.5,
       "weatherCode": 0
     },
     "race": {
       "startUTC": "2026-07-26T13:00:00.000Z",
-      "precipProbability": 11,
+      "precipProbability": 8,
       "precipMm": 0,
       "tempC": 32.9,
       "windKph": 20.5,
@@ -51,8 +51,8 @@
     }
   },
   "scenario": {
-    "dryProb": 89,
-    "wetProb": 11,
+    "dryProb": 92,
+    "wetProb": 8,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
