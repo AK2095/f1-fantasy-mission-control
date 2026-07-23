@@ -188,6 +188,45 @@
     </div>
   </section>
 
+
+  <!-- ════════ TRACK RECORD ════════ -->
+  <section class="view" id="view-backtest" hidden>
+    <div class="section">
+      <div class="section-head">
+        <h2 class="section-title">Track Record</h2>
+        <div class="section-meta" id="backtest-range"></div>
+      </div>
+      <p class="section-sub">
+        Does the Team Builder actually work? For every completed round, the model is rebuilt using
+        <strong>only the rounds before it</strong>, asked to pick a squad, and then scored against what
+        really happened. No result depends on information that was unavailable at the time.
+      </p>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Points per round by strategy</div>
+          <div class="card-meta">Higher is better</div>
+        </div>
+        <div id="backtest-table"></div>
+      </div>
+
+      <div class="card" style="margin-top: var(--s4)">
+        <div class="card-head">
+          <div class="card-title">Round by round</div>
+          <div class="card-meta">Hover any point for detail</div>
+        </div>
+        <div id="backtest-chart"></div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top: var(--s4)">
+        <div class="card">
+          <div class="panel-list" id="backtest-excluded"></div>
+        </div>
+        <div class="card prose" id="backtest-caveats"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ════════ MARKETS ════════ -->
   <section class="view" id="view-markets" hidden>
     <div class="section">

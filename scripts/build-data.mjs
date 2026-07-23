@@ -18,6 +18,7 @@
  */
 
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
+import { optimiseSquad } from '../assets/optimizer.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -452,6 +453,167 @@ async function buildAssets() {
   return assets;
 }
 
+// ── 7 · walk-forward backtest ──────────────────────────────
+/**
+ * Does the optimiser actually work?
+ *
+ * For each completed round it rebuilds the asset model using ONLY the rounds
+ * before it, picks a squad, then scores that squad against what actually
+ * happened in that round. No information from round N is available when
+ * choosing the squad for round N, which is what makes it a fair test rather
+ * than a curve fit.
+ *
+ * Every strategy is scored the same way and faces the same budget cap, so the
+ * comparison between them is sound even where the absolute level is not — see
+ * `caveats` in the output, which the UI renders rather than hides.
+ */
+function buildBacktest(assets, fantasy) {
+  const rounds = assets[0]?.perRound?.length ?? 0;
+  const MIN_TRAIN = 3;                       // need some history before predicting
+  if (rounds <= MIN_TRAIN) return null;
+
+  const cap = fantasy?.budget?.cap ?? 100;
+  const drivers = assets.filter((a) => a.type === 'driver');
+  const constructors = assets.filter((a) => a.type === 'constructor');
+
+  // "What if I had done nothing" baselines, drawn from point-in-time squad
+  // snapshots. Only snapshots recorded BEFORE a given round are used for that
+  // round, so a squad chosen with hindsight can never flatter itself.
+  const snapshots = (fantasy?.history ?? [])
+    .filter((h) => Array.isArray(h.squad) && h.squad.length)
+    .map((h) => ({
+      round: h.round,
+      label: `Your R${h.round} squad, held`,
+      squad: assets.filter((a) => h.squad.some((s) => s.code === a.code)),
+    }))
+    .filter((h) => h.squad.length)
+    .sort((a, b) => a.round - b.round);
+
+  const meanOver = (a, upto) => {
+    const slice = a.perRound.slice(0, upto);
+    return slice.length ? slice.reduce((s, v) => s + v, 0) / slice.length : 0;
+  };
+  const stdevOver = (a, upto) => {
+    const slice = a.perRound.slice(0, upto);
+    if (slice.length < 2) return 0;
+    const m = meanOver(a, upto);
+    return Math.sqrt(slice.reduce((s, v) => s + (v - m) ** 2, 0) / slice.length);
+  };
+  const actual = (squad, r) => squad.reduce((s, a) => s + (a.perRound[r] ?? 0), 0);
+
+  const strategies = [
+    { key: 'points',   label: 'Optimiser · points',
+      score: (a, t) => meanOver(a, t) },
+    { key: 'sharpe',   label: 'Optimiser · Sharpe',
+      score: (a, t) => { const sd = stdevOver(a, t); return sd > 0 ? meanOver(a, t) / sd : 0; } },
+    { key: 'expensive', label: 'Most expensive squad',
+      score: (a) => a.price },
+  ];
+
+  const perRound = [];
+  for (let t = MIN_TRAIN; t < rounds; t++) {
+    const row = { round: t + 1, results: {} };
+
+    for (const s of strategies) {
+      const pick = optimiseSquad({ drivers, constructors, cap, score: (a) => s.score(a, t) });
+      if (!pick) continue;
+      row.results[s.key] = {
+        scored: Number(actual(pick.squad, t).toFixed(1)),
+        squad: pick.squad.map((a) => a.code),
+        cost: Number(pick.cost.toFixed(1)),
+      };
+    }
+
+    // Perfect hindsight: the best squad if you had known this round's scores.
+    const oracle = optimiseSquad({ drivers, constructors, cap, score: (a) => a.perRound[t] ?? 0 });
+    if (oracle) {
+      row.results.oracle = {
+        scored: Number(actual(oracle.squad, t).toFixed(1)),
+        squad: oracle.squad.map((a) => a.code),
+        cost: Number(oracle.cost.toFixed(1)),
+      };
+    }
+
+    // Doing nothing, but only using a squad that already existed by this round.
+    // A snapshot taken at round R knows nothing about rounds after R.
+    for (const snap of snapshots) {
+      if (snap.round > t) continue;          // not yet chosen at this point
+      row.results[`held${snap.round}`] = {
+        scored: Number(actual(snap.squad, t).toFixed(1)),
+        squad: snap.squad.map((a) => a.code),
+        cost: Number(snap.squad.reduce((s, a) => s + a.price, 0).toFixed(1)),
+      };
+    }
+
+    // Field average: the mean asset, filling every slot.
+    const avgD = drivers.reduce((s, a) => s + (a.perRound[t] ?? 0), 0) / (drivers.length || 1);
+    const avgC = constructors.reduce((s, a) => s + (a.perRound[t] ?? 0), 0) / (constructors.length || 1);
+    row.results.field = { scored: Number((avgD * 5 + avgC * 2).toFixed(1)), squad: [], cost: null };
+
+    perRound.push(row);
+  }
+
+  // Totals, share of the achievable ceiling, and — critically — whether each
+  // strategy actually respected the budget the optimiser had to respect.
+  //
+  // Historical prices are not available, so a squad chosen months ago is
+  // costed at today's values. Assets that have performed well have grown more
+  // expensive, which can push a past squad far above the current cap. Scoring
+  // an over-cap squad against a capped optimiser is not a like-for-like test,
+  // so those rows are reported but excluded from the ranking.
+  const heldKeys = snapshots.map((h) => `held${h.round}`);
+  const keys = ['points', 'sharpe', 'expensive', ...heldKeys, 'field', 'oracle'];
+  const totals = {};
+  for (const k of keys) {
+    const rows = perRound.map((r) => r.results[k]).filter(Boolean);
+    if (!rows.length) continue;
+    const sum = rows.reduce((s, r) => s + r.scored, 0);
+    const cost = rows[0].cost;
+    const overCap = cost != null && cost > cap + 1e-6;
+    totals[k] = {
+      total: Number(sum.toFixed(1)),
+      perRound: Number((sum / rows.length).toFixed(1)),
+      rounds: rows.length,
+      cost: cost ?? null,
+      overCap,
+      // A squad that could not legally be fielded under the current cap is not
+      // a fair comparison for a strategy that had to fit inside it.
+      comparable: !overCap,
+    };
+  }
+  for (const k of keys) {
+    if (totals[k] && totals.oracle?.perRound) {
+      totals[k].shareOfCeiling = Number(((totals[k].perRound / totals.oracle.perRound) * 100).toFixed(1));
+    }
+  }
+
+  const labels = {
+    points: 'Optimiser · points', sharpe: 'Optimiser · Sharpe',
+    expensive: 'Most expensive squad',
+    field: 'Field average', oracle: 'Perfect hindsight (ceiling)',
+  };
+  for (const h of snapshots) labels[`held${h.round}`] = h.label;
+
+  sources.backtest = { ok: true, fetchedAt: now.toISOString(), rounds: perRound.length };
+  return {
+    updatedAt: now.toISOString(),
+    trainedFromRound: 1,
+    firstTestedRound: MIN_TRAIN + 1,
+    lastTestedRound: rounds,
+    cap,
+    labels,
+    totals,
+    perRound,
+    caveats: [
+      'Historical prices are not published, so past squads are costed at current values. Assets that performed well have since become more expensive, which can push a past squad above today\'s cap. Any strategy whose squad exceeds the cap is marked and excluded from the ranking, because it was never constrained the way the optimiser is.',
+      'The same budget cap is applied to every round and every strategy. That keeps the comparison between strategies fair even though the cap itself has grown over the season.',
+      'Scores exclude DRS boost multipliers, chips and transfer penalties, none of which are recorded per round. Every strategy is measured on the same basis, so the ranking holds, but absolute totals are lower than a real F1 Fantasy score.',
+      'Each round is chosen using only rounds before it, so no result depends on information that was unavailable at the time.',
+      'A held-squad baseline is only scored from the round after it was recorded onwards, so a squad picked with hindsight cannot flatter itself. Compare per-round averages rather than totals, since baselines cover different numbers of rounds.',
+    ],
+  };
+}
+
 // ── main ───────────────────────────────────────────────────────────────────
 async function main() {
   console.log(`F1 Mission Control · data build · ${now.toISOString()}`);
@@ -471,6 +633,7 @@ async function main() {
     buildMarkets(position),
     buildAssets(),
   ]);
+  const assets = settled[4].status === 'fulfilled' ? settled[4].value : null;
   settled.forEach((s, i) => {
     if (s.status === 'rejected') {
       const name = NAMES[i];
@@ -478,6 +641,18 @@ async function main() {
       errors.push(`${name}: ${s.reason.message}`);
     }
   });
+
+  // backtest.json — does the optimiser beat the alternatives?
+  if (assets?.length) {
+    try {
+      const fantasy = JSON.parse(await readFile(join(DATA, 'fantasy.json'), 'utf8'));
+      const bt = buildBacktest(assets, fantasy);
+      if (bt) await write('backtest.json', bt);
+    } catch (err) {
+      sources.backtest = { ok: false, fetchedAt: now.toISOString(), error: String(err.message) };
+      errors.push(`backtest: ${err.message}`);
+    }
+  }
 
   // season.json — the derived state the UI reads for "where are we".
   await write('season.json', {

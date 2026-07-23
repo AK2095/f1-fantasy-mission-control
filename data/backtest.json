@@ -1,0 +1,593 @@
+{
+  "updatedAt": "2026-07-23T04:11:09.369Z",
+  "trainedFromRound": 1,
+  "firstTestedRound": 4,
+  "lastTestedRound": 10,
+  "cap": 113.1,
+  "labels": {
+    "points": "Optimiser · points",
+    "sharpe": "Optimiser · Sharpe",
+    "expensive": "Most expensive squad",
+    "field": "Field average",
+    "oracle": "Perfect hindsight (ceiling)",
+    "held4": "Your R4 squad, held",
+    "held10": "Your R10 squad, held"
+  },
+  "totals": {
+    "points": {
+      "total": 1303,
+      "perRound": 186.1,
+      "rounds": 7,
+      "cost": 113.1,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 62.1
+    },
+    "sharpe": {
+      "total": 1110,
+      "perRound": 158.6,
+      "rounds": 7,
+      "cost": 113.1,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 52.9
+    },
+    "expensive": {
+      "total": 1123,
+      "perRound": 160.4,
+      "rounds": 7,
+      "cost": 113.1,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 53.5
+    },
+    "held4": {
+      "total": 1509,
+      "perRound": 251.5,
+      "rounds": 6,
+      "cost": 186.3,
+      "overCap": true,
+      "comparable": false,
+      "shareOfCeiling": 83.9
+    },
+    "field": {
+      "total": 783,
+      "perRound": 111.9,
+      "rounds": 7,
+      "cost": null,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 37.3
+    },
+    "oracle": {
+      "total": 2098,
+      "perRound": 299.7,
+      "rounds": 7,
+      "cost": 108.2,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 100
+    }
+  },
+  "perRound": [
+    {
+      "round": 4,
+      "results": {
+        "points": {
+          "scored": 212,
+          "squad": [
+            "ANT",
+            "LAW",
+            "LIN",
+            "BEA",
+            "PER",
+            "MER",
+            "FER"
+          ],
+          "cost": 113.1
+        },
+        "sharpe": {
+          "scored": 186,
+          "squad": [
+            "LEC",
+            "GAS",
+            "OCO",
+            "COL",
+            "PER",
+            "MER",
+            "ALP"
+          ],
+          "cost": 113.1
+        },
+        "expensive": {
+          "scored": 184,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 344,
+          "squad": [
+            "NOR",
+            "PER",
+            "ALB",
+            "ALO",
+            "STR",
+            "MER",
+            "MCL"
+          ],
+          "cost": 108.2
+        },
+        "field": {
+          "scored": 155.6,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 5,
+      "results": {
+        "points": {
+          "scored": 209,
+          "squad": [
+            "ANT",
+            "SAI",
+            "BEA",
+            "PER",
+            "ALB",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.6
+        },
+        "sharpe": {
+          "scored": 117,
+          "squad": [
+            "RUS",
+            "LEC",
+            "OCO",
+            "SAI",
+            "PER",
+            "MER",
+            "CAD"
+          ],
+          "cost": 112.6
+        },
+        "expensive": {
+          "scored": 93,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 278,
+          "squad": [
+            "ANT",
+            "COL",
+            "LAW",
+            "BOT",
+            "STR",
+            "MER",
+            "FER"
+          ],
+          "cost": 110.9
+        },
+        "held4": {
+          "scored": 256,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 113,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 6,
+      "results": {
+        "points": {
+          "scored": 148,
+          "squad": [
+            "ANT",
+            "SAI",
+            "BEA",
+            "PER",
+            "ALB",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.6
+        },
+        "sharpe": {
+          "scored": 212,
+          "squad": [
+            "ANT",
+            "OCO",
+            "COL",
+            "SAI",
+            "PER",
+            "MER",
+            "ALP"
+          ],
+          "cost": 112.5
+        },
+        "expensive": {
+          "scored": 32,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 302,
+          "squad": [
+            "ANT",
+            "GAS",
+            "HAD",
+            "LIN",
+            "ALO",
+            "MER",
+            "VRB"
+          ],
+          "cost": 109.9
+        },
+        "held4": {
+          "scored": 117,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 44,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 7,
+      "results": {
+        "points": {
+          "scored": 109,
+          "squad": [
+            "ANT",
+            "OCO",
+            "LIN",
+            "PER",
+            "ALB",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.9
+        },
+        "sharpe": {
+          "scored": 126,
+          "squad": [
+            "ANT",
+            "OCO",
+            "COL",
+            "SAI",
+            "PER",
+            "MER",
+            "ALP"
+          ],
+          "cost": 112.5
+        },
+        "expensive": {
+          "scored": 178,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 274,
+          "squad": [
+            "HAM",
+            "LIN",
+            "SAI",
+            "BOR",
+            "PER",
+            "FER",
+            "MCL"
+          ],
+          "cost": 111.1
+        },
+        "held4": {
+          "scored": 197,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 76.1,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 8,
+      "results": {
+        "points": {
+          "scored": 205,
+          "squad": [
+            "ANT",
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.9
+        },
+        "sharpe": {
+          "scored": 117,
+          "squad": [
+            "HAM",
+            "OCO",
+            "COL",
+            "SAI",
+            "PER",
+            "MER",
+            "ALP"
+          ],
+          "cost": 111.8
+        },
+        "expensive": {
+          "scored": 149,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 277,
+          "squad": [
+            "VER",
+            "BOR",
+            "ALB",
+            "ALO",
+            "HUL",
+            "MER",
+            "RED"
+          ],
+          "cost": 112.8
+        },
+        "held4": {
+          "scored": 313,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 95.2,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 9,
+      "results": {
+        "points": {
+          "scored": 270,
+          "squad": [
+            "ANT",
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.9
+        },
+        "sharpe": {
+          "scored": 232,
+          "squad": [
+            "ANT",
+            "HAM",
+            "OCO",
+            "COL",
+            "LAW",
+            "ALP",
+            "VRB"
+          ],
+          "cost": 112.5
+        },
+        "expensive": {
+          "scored": 212,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 310,
+          "squad": [
+            "LEC",
+            "COL",
+            "LAW",
+            "BOR",
+            "STR",
+            "MER",
+            "FER"
+          ],
+          "cost": 113.1
+        },
+        "held4": {
+          "scored": 362,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 173.6,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 10,
+      "results": {
+        "points": {
+          "scored": 150,
+          "squad": [
+            "ANT",
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "MER",
+            "FER"
+          ],
+          "cost": 112.9
+        },
+        "sharpe": {
+          "scored": 120,
+          "squad": [
+            "HAM",
+            "OCO",
+            "COL",
+            "LIN",
+            "BOR",
+            "MER",
+            "ALP"
+          ],
+          "cost": 111.8
+        },
+        "expensive": {
+          "scored": 275,
+          "squad": [
+            "NOR",
+            "LIN",
+            "SAI",
+            "BOR",
+            "ALO",
+            "FER",
+            "RED"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 313,
+          "squad": [
+            "NOR",
+            "HAD",
+            "BEA",
+            "ALO",
+            "HUL",
+            "FER",
+            "RED"
+          ],
+          "cost": 112.6
+        },
+        "held4": {
+          "scored": 264,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "RUS",
+            "LEC",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 186.3
+        },
+        "field": {
+          "scored": 125.5,
+          "squad": [],
+          "cost": null
+        }
+      }
+    }
+  ],
+  "caveats": [
+    "Historical prices are not published, so past squads are costed at current values. Assets that performed well have since become more expensive, which can push a past squad above today's cap. Any strategy whose squad exceeds the cap is marked and excluded from the ranking, because it was never constrained the way the optimiser is.",
+    "The same budget cap is applied to every round and every strategy. That keeps the comparison between strategies fair even though the cap itself has grown over the season.",
+    "Scores exclude DRS boost multipliers, chips and transfer penalties, none of which are recorded per round. Every strategy is measured on the same basis, so the ranking holds, but absolute totals are lower than a real F1 Fantasy score.",
+    "Each round is chosen using only rounds before it, so no result depends on information that was unavailable at the time.",
+    "A held-squad baseline is only scored from the round after it was recorded onwards, so a squad picked with hindsight cannot flatter itself. Compare per-round averages rather than totals, since baselines cover different numbers of rounds."
+  ]
+}

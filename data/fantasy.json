@@ -1,5 +1,5 @@
 {
-  "_comment": "Manually maintained. F1 Fantasy has no public API, so this file is the one human-in-the-loop input. Edit it here, or use the 'Update League' panel on the site and paste the exported JSON back in. Everything else in /data is fetched automatically. Manager names are intentionally omitted — teams are identified by team name only.",
+  "_comment": "Manually maintained. F1 Fantasy has no public API, so this file is the one human-in-the-loop input. Edit it here, or use the 'Update League' panel on the site and paste the exported JSON back in. Everything else in /data is fetched automatically. Manager names are intentionally omitted \u2014 teams are identified by team name only.",
   "updatedAt": "2026-07-22T22:34:00.000Z",
   "updatedThroughRound": 10,
   "league": {
@@ -11,33 +11,234 @@
     "teamName": "AMG_AK"
   },
   "standings": [
-    { "rank": 1, "team": "AMG_AK", "points": 2532, "isMe": true },
-    { "rank": 2, "team": "SuperFastLex", "points": 2464, "isMe": false },
-    { "rank": 3, "team": "Force Philadelphia", "points": 2285, "isMe": false },
-    { "rank": 4, "team": "Hawaii Hamilton", "points": 1911, "isMe": false },
-    { "rank": 5, "team": "No Lane Nori", "points": 1906, "isMe": false },
-    { "rank": 6, "team": "Forza Chiacchio", "points": 1872, "isMe": false },
-    { "rank": 7, "team": "Rawdawg Racing Club", "points": 1805, "isMe": false },
-    { "rank": 8, "team": "Bandit's Booookaaahhhke", "points": 1132, "isMe": false }
+    {
+      "rank": 1,
+      "team": "AMG_AK",
+      "points": 2532,
+      "isMe": true
+    },
+    {
+      "rank": 2,
+      "team": "SuperFastLex",
+      "points": 2464,
+      "isMe": false
+    },
+    {
+      "rank": 3,
+      "team": "Force Philadelphia",
+      "points": 2285,
+      "isMe": false
+    },
+    {
+      "rank": 4,
+      "team": "Hawaii Hamilton",
+      "points": 1911,
+      "isMe": false
+    },
+    {
+      "rank": 5,
+      "team": "No Lane Nori",
+      "points": 1906,
+      "isMe": false
+    },
+    {
+      "rank": 6,
+      "team": "Forza Chiacchio",
+      "points": 1872,
+      "isMe": false
+    },
+    {
+      "rank": 7,
+      "team": "Rawdawg Racing Club",
+      "points": 1805,
+      "isMe": false
+    },
+    {
+      "rank": 8,
+      "team": "Bandit's Booookaaahhhke",
+      "points": 1132,
+      "isMe": false
+    }
   ],
   "chips": {
     "active": null,
-    "burned": ["Limitless"],
-    "remaining": ["Extra DRS Boost", "Wildcard", "No Negative", "Autopilot"]
+    "burned": [
+      "Limitless"
+    ],
+    "remaining": [
+      "Extra DRS Boost",
+      "Wildcard",
+      "No Negative",
+      "Autopilot"
+    ]
   },
   "rivalChips": {
-    "Force Philadelphia": { "burned": ["Extra DRS Boost"], "remaining": ["Wildcard", "Limitless", "No Negative", "Autopilot"] },
-    "SuperFastLex": { "burned": [], "remaining": ["unknown"] }
+    "Force Philadelphia": {
+      "burned": [
+        "Extra DRS Boost"
+      ],
+      "remaining": [
+        "Wildcard",
+        "Limitless",
+        "No Negative",
+        "Autopilot"
+      ]
+    },
+    "SuperFastLex": {
+      "burned": [],
+      "remaining": [
+        "unknown"
+      ]
+    }
   },
   "lineup": [
-    { "name": "Kimi Antonelli", "code": "ANT", "constructorId": "mercedes", "price": 25.6, "role": "2X DRS Boost" },
-    { "name": "Arvid Lindblad", "code": "LIN", "constructorId": "rb", "price": 7.4, "role": "Driver" },
-    { "name": "Nico Hülkenberg", "code": "HUL", "constructorId": "audi", "price": 3.0, "role": "Driver" },
-    { "name": "Gabriel Bortoleto", "code": "BOR", "constructorId": "audi", "price": 7.2, "role": "Driver" },
-    { "name": "Liam Lawson", "code": "LAW", "constructorId": "rb", "price": 9.7, "role": "Driver" },
-    { "name": "Ferrari", "code": "FER", "constructorId": "ferrari", "price": 26.3, "role": "Constructor" },
-    { "name": "Mercedes", "code": "MER", "constructorId": "mercedes", "price": 32.3, "role": "Constructor" }
+    {
+      "name": "Kimi Antonelli",
+      "code": "ANT",
+      "constructorId": "mercedes",
+      "price": 25.6,
+      "role": "2X DRS Boost"
+    },
+    {
+      "name": "Arvid Lindblad",
+      "code": "LIN",
+      "constructorId": "rb",
+      "price": 7.4,
+      "role": "Driver"
+    },
+    {
+      "name": "Nico H\u00fclkenberg",
+      "code": "HUL",
+      "constructorId": "audi",
+      "price": 3.0,
+      "role": "Driver"
+    },
+    {
+      "name": "Gabriel Bortoleto",
+      "code": "BOR",
+      "constructorId": "audi",
+      "price": 7.2,
+      "role": "Driver"
+    },
+    {
+      "name": "Liam Lawson",
+      "code": "LAW",
+      "constructorId": "rb",
+      "price": 9.7,
+      "role": "Driver"
+    },
+    {
+      "name": "Ferrari",
+      "code": "FER",
+      "constructorId": "ferrari",
+      "price": 26.3,
+      "role": "Constructor"
+    },
+    {
+      "name": "Mercedes",
+      "code": "MER",
+      "constructorId": "mercedes",
+      "price": 32.3,
+      "role": "Constructor"
+    }
   ],
-  "budget": { "cap": 113.1 },
-  "freeTransfers": { "available": 3, "of": 3 }
+  "budget": {
+    "cap": 113.1
+  },
+  "freeTransfers": {
+    "available": 3,
+    "of": 3
+  },
+  "history": [
+    {
+      "round": 4,
+      "raceName": "Miami Grand Prix",
+      "recordedAt": "2026-05-03T18:30:00.000Z",
+      "points": 1169,
+      "rank": 1,
+      "source": "snapshot",
+      "squad": [
+        {
+          "code": "NOR",
+          "name": "Lando Norris",
+          "role": "Driver"
+        },
+        {
+          "code": "ANT",
+          "name": "Kimi Antonelli",
+          "role": "Driver"
+        },
+        {
+          "code": "PIA",
+          "name": "Oscar Piastri",
+          "role": "Driver"
+        },
+        {
+          "code": "LEC",
+          "name": "Charles Leclerc",
+          "role": "2X DRS Boost"
+        },
+        {
+          "code": "RUS",
+          "name": "George Russell",
+          "role": "Driver"
+        },
+        {
+          "code": "FER",
+          "name": "Ferrari",
+          "role": "Constructor"
+        },
+        {
+          "code": "MER",
+          "name": "Mercedes",
+          "role": "Constructor"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "raceName": "Belgian Grand Prix",
+      "recordedAt": "2026-07-22T22:34:00.000Z",
+      "points": 2532,
+      "rank": 1,
+      "source": "snapshot",
+      "squad": [
+        {
+          "code": "ANT",
+          "name": "Kimi Antonelli",
+          "role": "2X DRS Boost"
+        },
+        {
+          "code": "LIN",
+          "name": "Arvid Lindblad",
+          "role": "Driver"
+        },
+        {
+          "code": "HUL",
+          "name": "Nico H\u00fclkenberg",
+          "role": "Driver"
+        },
+        {
+          "code": "BOR",
+          "name": "Gabriel Bortoleto",
+          "role": "Driver"
+        },
+        {
+          "code": "LAW",
+          "name": "Liam Lawson",
+          "role": "Driver"
+        },
+        {
+          "code": "FER",
+          "name": "Ferrari",
+          "role": "Constructor"
+        },
+        {
+          "code": "MER",
+          "name": "Mercedes",
+          "role": "Constructor"
+        }
+      ]
+    }
+  ]
 }

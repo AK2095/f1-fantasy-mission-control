@@ -7,17 +7,18 @@
    dashboard without touching a line of code.
    ============================================================ */
 
-const DATA_FILES = ['season', 'calendar', 'standings', 'results', 'weather', 'markets', 'assets', 'fantasy', 'meta'];
+import { optimiseSquad, SQUAD } from './optimizer.mjs';
+
+const DATA_FILES = ['season', 'calendar', 'standings', 'results', 'weather', 'markets',
+                    'assets', 'fantasy', 'backtest', 'meta'];
 const LS_KEY = 'f1mc.fantasy.override';
 const HOUR = 36e5;
-
-/** F1 Fantasy squad shape. */
-const SQUAD = { drivers: 5, constructors: 2 };
 
 const TABS = [
   ['overview', 'Overview'],
   ['builder',  'Team Builder'],
   ['strategy', 'Strategy'],
+  ['backtest', 'Track Record'],
   ['markets',  'Markets'],
   ['consider', 'Consider'],
   ['league',   'League'],
@@ -50,6 +51,9 @@ const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 const cls = (id) => `c-${(id || 'unknown').replace(/[^a-z0-9_]/gi, '_').toLowerCase()}`;
+
+/** el() plus inline styles. Avoids chaining off append(), which returns undefined. */
+const styled = (node, styles) => { Object.assign(node.style, styles); return node; };
 
 const scrollWrap = (node) => {
   const box = el('div', 'table-scroll');
@@ -235,96 +239,20 @@ function stalenessReport() {
   return issues;
 }
 
-// ══════════════════════════════════════════════════════════
-//  Team optimiser
-//  Exact, not heuristic: enumerate every 5-driver combination
-//  once (C(22,5) = 26,334), keep the best score at each cost,
-//  then test all constructor pairs against that table.
-// ══════════════════════════════════════════════════════════
+// ── team optimisation ──────────────────────────────────────
+/** Wraps the shared optimiser with this app's asset model and budget. */
 function optimiseTeam(objectiveKey) {
-  const drivers = driversOnly().filter((d) => d.price > 0);
-  const constructors = constructorsOnly().filter((c) => c.price > 0);
   const cap = state.data.fantasy?.budget?.cap ?? 100;
-  if (drivers.length < SQUAD.drivers || constructors.length < SQUAD.constructors) return null;
-
-  // Score being optimised. Budget mode still maximises total points —
-  // efficiency is already expressed by the cap constraint itself.
   const score = (a) => (objectiveKey === 'sharpe' ? (a.sharpe ?? 0) : a.avgPoints);
-
-  // Costs in tenths of a $M, so budget comparisons stay integer-exact.
-  const T = (v) => Math.round(v * 10);
-  const capT = T(cap);
-
-  // Sort by score descending so the branch-and-bound prune is effective.
-  const D = [...drivers].sort((a, b) => score(b) - score(a));
-  const suffixBest = new Array(D.length + 1).fill(0);
-  for (let i = D.length - 1; i >= 0; i--) suffixBest[i] = score(D[i]) + suffixBest[i + 1];
-
-  // bestAtCost[c] = best driver-quintet score achievable at exactly cost c
-  const bestAtCost = new Float64Array(capT + 1).fill(-1);
-  const pickAtCost = new Array(capT + 1).fill(null);
-
-  const chosen = [];
-  (function search(start, count, costT, total) {
-    if (count === SQUAD.drivers) {
-      if (total > bestAtCost[costT]) {
-        bestAtCost[costT] = total;
-        pickAtCost[costT] = chosen.slice();
-      }
-      return;
-    }
-    const need = SQUAD.drivers - count;
-    for (let i = start; i <= D.length - need; i++) {
-      // Prune: even taking the best remaining picks cannot beat the incumbent.
-      const optimistic = total + (suffixBest[i] - suffixBest[i + need]);
-      if (optimistic <= bestAtCost[capT] && bestAtCost[capT] > 0 && need > 1) { /* keep scanning */ }
-      const nc = costT + T(D[i].price);
-      if (nc > capT) continue;
-      chosen.push(D[i]);
-      search(i + 1, count + 1, nc, total + score(D[i]));
-      chosen.pop();
-    }
-  })(0, 0, 0, 0);
-
-  // Prefix maximum: best quintet at cost ≤ c, carrying its picks.
-  const prefBest = new Float64Array(capT + 1).fill(-1);
-  const prefPick = new Array(capT + 1).fill(null);
-  let run = -1, runPick = null;
-  for (let c = 0; c <= capT; c++) {
-    if (bestAtCost[c] > run) { run = bestAtCost[c]; runPick = pickAtCost[c]; }
-    prefBest[c] = run; prefPick[c] = runPick;
-  }
-
-  // Every constructor pair against the driver table.
-  let best = null;
-  for (let i = 0; i < constructors.length; i++) {
-    for (let j = i + 1; j < constructors.length; j++) {
-      const pairCost = T(constructors[i].price) + T(constructors[j].price);
-      const remain = capT - pairCost;
-      if (remain < 0) continue;
-      const dScore = prefBest[remain];
-      if (dScore < 0 || !prefPick[remain]) continue;
-      const total = dScore + score(constructors[i]) + score(constructors[j]);
-      if (!best || total > best.total) {
-        best = {
-          total,
-          drivers: prefPick[remain],
-          constructors: [constructors[i], constructors[j]],
-        };
-      }
-    }
-  }
+  const best = optimiseSquad({ drivers: driversOnly(), constructors: constructorsOnly(), cap, score });
   if (!best) return null;
-
-  const squad = [...best.drivers, ...best.constructors];
   return {
     objective: objectiveKey,
     drivers: best.drivers,
     constructors: best.constructors,
-    cost: squad.reduce((s, a) => s + a.price, 0),
+    cost: best.cost,
     cap,
-    projectedPoints: squad.reduce((s, a) => s + a.avgPoints, 0),
-    meanSharpe: squad.reduce((s, a) => s + (a.sharpe ?? 0), 0) / squad.length,
+    projectedPoints: best.squad.reduce((s, a) => s + a.avgPoints, 0),
   };
 }
 
@@ -716,6 +644,150 @@ function renderStrategy() {
      <span class="legend-item">Upper-left = high return, low risk</span>`));
 }
 
+
+/* ── Track Record (walk-forward backtest) ─────────────────── */
+function renderBacktest() {
+  const bt = state.data.backtest;
+  const host = $('#backtest-table');
+  const chartHost = $('#backtest-chart');
+  const caveatHost = $('#backtest-caveats');
+  const excluded = $('#backtest-excluded');
+  [host, chartHost, caveatHost, excluded].forEach((n) => n && (n.innerHTML = ''));
+  if (!host) return;
+
+  if (!bt?.totals) {
+    host.append(el('div', 'empty', '<strong>No track record yet</strong>Needs at least four completed rounds.'));
+    return;
+  }
+
+  $('#backtest-range').textContent =
+    `Rounds ${bt.firstTestedRound}–${bt.lastTestedRound} · cap $${bt.cap.toFixed(1)}M`;
+
+  const entries = Object.entries(bt.totals);
+  const comparable = entries.filter(([, t]) => t.comparable).sort((a, b) => b[1].perRound - a[1].perRound);
+  const notComparable = entries.filter(([, t]) => !t.comparable);
+  const ceiling = bt.totals.oracle?.perRound ?? 1;
+
+  const table = el('table');
+  table.innerHTML = `<thead><tr><th>Strategy</th><th class="num">Pts / round</th>
+    <th class="num">Squad cost</th><th>Share of ceiling</th><th class="num"></th></tr></thead>`;
+  const tb = el('tbody');
+  for (const [key, t] of comparable) {
+    const isOptimiser = key === 'points' || key === 'sharpe';
+    const isCeiling = key === 'oracle';
+    const tr = el('tr', isOptimiser ? 'is-mine' : '');
+    const pct = (t.perRound / ceiling) * 100;
+    tr.innerHTML =
+      `<td class="strong">${esc(bt.labels[key] ?? key)}</td>
+       <td class="num strong">${t.perRound.toFixed(1)}</td>
+       <td class="num">${t.cost != null ? `$${t.cost.toFixed(1)}M` : '—'}</td>
+       <td><div class="bar-track" style="min-width:120px"><div class="bar-fill" style="width:${pct}%;
+            --fill:${isCeiling ? 'var(--ink-3)' : isOptimiser ? 'var(--accent)' : 'var(--series-1)'}"></div></div></td>
+       <td class="num">${t.shareOfCeiling?.toFixed(1) ?? '—'}%</td>`;
+    tb.append(tr);
+  }
+  table.append(tb);
+  host.append(scrollWrap(table));
+
+  // Headline: how the optimiser did against the best comparable alternative.
+  const opt = bt.totals.points;
+  const rivals = comparable.filter(([k]) => k !== 'points' && k !== 'oracle');
+  const bestRival = rivals[0];
+  if (opt && bestRival) {
+    const delta = opt.perRound - bestRival[1].perRound;
+    const pct = (delta / bestRival[1].perRound) * 100;
+    host.append(styled(el('div', `banner is-${delta > 0 ? 'good' : 'critical'}`,
+      `<span class="banner-icon">${delta > 0 ? '✓' : '⛔'}</span>
+       <div><div class="banner-title">Optimiser ${delta > 0 ? 'beats' : 'loses to'} the best comparable alternative by
+         ${Math.abs(delta).toFixed(1)} pts per round (${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%)</div>
+       <div class="banner-text">Measured against ${esc(bt.labels[bestRival[0]] ?? bestRival[0])}, over
+         ${opt.rounds} rounds, choosing each round using only the rounds before it.</div></div>`),
+      { marginTop: 'var(--s4)' }));
+  }
+
+  if (notComparable.length) {
+    excluded.append(el('div', 'card-title', 'Excluded from the ranking'));
+    for (const [key, t] of notComparable) {
+      const over = ((t.cost / bt.cap) - 1) * 100;
+      excluded.append(el('div', 'panel-item',
+        `<div class="panel-item-head">
+           <span class="pill is-warning">Not comparable</span>
+           <span class="panel-item-title">${esc(bt.labels[key] ?? key)}</span></div>
+         <div class="panel-item-body">
+           Scored <strong>${t.perRound.toFixed(1)}</strong> pts per round, but that squad costs
+           <strong>$${t.cost.toFixed(1)}M</strong> at current prices — <strong>${over.toFixed(0)}% above</strong>
+           the $${bt.cap.toFixed(1)}M cap every other strategy had to respect.
+           Historical prices are not published, and assets that performed well have grown more expensive
+           since, so a past squad cannot be costed as it stood at the time. Ranking it against a
+           budget-constrained strategy would not be a like-for-like test.
+         </div>`));
+    }
+  }
+
+  // Per-round comparison chart.
+  const series = [
+    { key: 'oracle', label: 'Perfect hindsight', color: 'var(--ink-3)', dash: '3 3' },
+    { key: 'points', label: 'Optimiser · points', color: 'var(--accent)' },
+    { key: 'expensive', label: 'Most expensive', color: 'var(--series-1)' },
+    { key: 'field', label: 'Field average', color: 'var(--series-3)' },
+  ].filter((s) => bt.perRound.some((r) => r.results[s.key]));
+  chartHost.append(lineChart(bt.perRound, series));
+  chartHost.append(el('div', 'legend', series.map((s) =>
+    `<span class="legend-item"><span class="legend-swatch" style="--sw:${s.color}"></span>${esc(s.label)}</span>`).join('')));
+
+  caveatHost.append(el('div', 'card-title', 'How to read this'));
+  const ul = el('ul');
+  for (const c of bt.caveats ?? []) ul.append(el('li', null, esc(c)));
+  caveatHost.append(ul);
+}
+
+/** Multi-series line chart over rounds. */
+function lineChart(rows, series) {
+  const W = 760, H = 320, M = { t: 16, r: 18, b: 38, l: 46 };
+  const iw = W - M.l - M.r, ih = H - M.t - M.b;
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, role: 'img',
+    'aria-label': 'Points per round by strategy' });
+  if (!rows.length) return svg;
+
+  const all = rows.flatMap((r) => series.map((s) => r.results[s.key]?.scored).filter((v) => v != null));
+  const maxY = Math.max(...all, 1) * 1.08;
+  const x = (i) => M.l + (rows.length === 1 ? iw / 2 : (i / (rows.length - 1)) * iw);
+  const y = (v) => M.t + ih - (v / maxY) * ih;
+
+  for (let i = 0; i <= 4; i++) {
+    const gy = M.t + (ih / 4) * i;
+    svg.append(svgEl('line', { class: 'chart-grid', x1: M.l, x2: M.l + iw, y1: gy, y2: gy }));
+    const t = svgEl('text', { class: 'chart-tick', x: M.l - 8, y: gy + 3.5, 'text-anchor': 'end' });
+    t.textContent = (maxY - (maxY / 4) * i).toFixed(0);
+    svg.append(t);
+  }
+  rows.forEach((r, i) => {
+    const t = svgEl('text', { class: 'chart-tick', x: x(i), y: M.t + ih + 16, 'text-anchor': 'middle' });
+    t.textContent = `R${r.round}`;
+    svg.append(t);
+  });
+  svg.append(svgEl('line', { class: 'chart-axis', x1: M.l, x2: M.l, y1: M.t, y2: M.t + ih }));
+  svg.append(svgEl('line', { class: 'chart-axis', x1: M.l, x2: M.l + iw, y1: M.t + ih, y2: M.t + ih }));
+
+  for (const s of series) {
+    const pts = rows.map((r, i) => [i, r.results[s.key]?.scored]).filter(([, v]) => v != null);
+    if (!pts.length) continue;
+    svg.append(svgEl('path', {
+      class: 'spark-line', stroke: s.color, 'stroke-width': 2, 'stroke-dasharray': s.dash ?? null,
+      d: pts.map(([i, v], n) => `${n ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' '),
+    }));
+    for (const [i, v] of pts) {
+      const c = svgEl('circle', { cx: x(i), cy: y(v), r: 3.4, fill: s.color,
+                                  stroke: 'var(--surface-1)', 'stroke-width': 1.5 });
+      const title = svgEl('title');
+      title.textContent = `${s.label} · R${rows[i].round} · ${v} pts`;
+      c.append(title);
+      svg.append(c);
+    }
+  }
+  return svg;
+}
+
 /* ── Markets ──────────────────────────────────────────────── */
 function renderMarkets() {
   const m = state.data.markets;
@@ -1004,12 +1076,12 @@ function renderLineup() {
   const spend = f.lineup.reduce((s, l) => s + (l.price || 0), 0);
   const cap = f.budget?.cap ?? 100;
   const projected = f.lineup.reduce((s, l) => s + (assetIdx.get(l.code)?.avgPoints ?? 0), 0);
-  bHost.append(el('div', 'card',
+  bHost.append(styled(el('div', 'card',
     `<p class="note" style="margin:0">
        Committed <strong>$${spend.toFixed(1)}M</strong> of $${cap.toFixed(1)}M ·
        <span class="${spend > cap ? 'delta-down' : 'delta-up'}">$${(cap - spend).toFixed(1)}M ${spend > cap ? 'over cap' : 'free'}</span> ·
        projecting <strong>${projected.toFixed(1)}</strong> pts per round from season means.
-     </p>`)).style.marginTop = 'var(--s4)';
+     </p>`), { marginTop: 'var(--s4)' }));
 }
 
 function renderChips() {
@@ -1189,17 +1261,39 @@ function saveModal() {
   const myTeam = (state.data.fantasy?.me?.teamName ?? '').toLowerCase();
   (standings.find((s) => s.team.toLowerCase() === myTeam) ?? standings[0]).isMe = true;
 
+  const round = Number($('#modal-round').value) || 0;
+  const me = standings.find((x) => x.isMe);
+
+  // Append a point-in-time snapshot of the squad. This is what makes the
+  // Track Record possible: without a record of what was actually fielded,
+  // there is nothing to measure the model against later.
+  const history = [...(state.data.fantasy?.history ?? [])];
+  const snapshot = {
+    round,
+    raceName: state.data.calendar?.races?.find((r) => r.round === round)?.name ?? null,
+    recordedAt: new Date().toISOString(),
+    points: me?.points ?? null,
+    rank: me?.rank ?? null,
+    source: 'update-panel',
+    squad: (state.data.fantasy?.lineup ?? []).map((l) => ({
+      code: l.code, name: l.name, role: l.role, price: l.price,
+    })),
+    chipsBurned: [...(state.data.fantasy?.chips?.burned ?? [])],
+  };
+  const existing = history.findIndex((h) => h.round === round);
+  if (existing >= 0) history[existing] = snapshot; else history.push(snapshot);
+  history.sort((a, b) => a.round - b.round);
+
   const payload = {
-    ...state.data.fantasy, standings,
-    updatedThroughRound: Number($('#modal-round').value) || 0,
+    ...state.data.fantasy, standings, history,
+    updatedThroughRound: round,
     updatedAt: new Date().toISOString(),
   };
   localStorage.setItem(LS_KEY, JSON.stringify(payload));
   state.data.fantasy = { ...payload, _local: true };
-  $('#modal-backdrop').hidden = false;
   $('#modal-backdrop').hidden = true;
   renderAll();
-  toast('League updated locally. Use “Copy JSON” to persist it across devices.');
+  toast(`Saved. Round ${round} squad recorded — use “Copy JSON” to persist it.`);
 }
 
 function copyJSON() {
@@ -1255,7 +1349,7 @@ function renderAll() {
   const steps = [
     ['banners', renderBanners], ['hero', renderHero], ['decisions', renderDecisions],
     ['sessions', renderSessions], ['scenario', renderScenario], ['builder', renderBuilder],
-    ['strategy', renderStrategy], ['markets', renderMarkets], ['consider', renderConsider],
+    ['strategy', renderStrategy], ['backtest', renderBacktest], ['markets', renderMarkets], ['consider', renderConsider],
     ['league', renderLeague], ['lineup', renderLineup], ['chips', renderChips],
     ['championship', renderChampionship], ['calendar', renderCalendar], ['provenance', renderProvenance],
   ];
