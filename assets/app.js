@@ -10,7 +10,7 @@
 import { optimiseSquad, SQUAD } from './optimizer.mjs';
 
 const DATA_FILES = ['season', 'calendar', 'standings', 'results', 'weather', 'markets',
-                    'assets', 'fantasy', 'backtest', 'meta'];
+                    'assets', 'fantasy', 'backtest', 'headtohead', 'meta'];
 const LS_KEY = 'f1mc.fantasy.override';
 const HOUR = 36e5;
 
@@ -788,6 +788,74 @@ function lineChart(rows, series) {
   return svg;
 }
 
+
+/* ── Head-to-head vs the real league ──────────────────────── */
+function renderHeadToHead() {
+  const h = state.data.headtohead;
+  const host = $('#h2h-table');
+  const headline = $('#h2h-headline');
+  const caveatHost = $('#h2h-caveats');
+  const roundsHost = $('#h2h-rounds');
+  [host, headline, caveatHost, roundsHost].forEach((n) => n && (n.innerHTML = ''));
+  if (!host) return;
+
+  if (!h?.table?.length) {
+    host.append(el('div', 'empty', '<strong>No head-to-head data</strong>Needs the league export.'));
+    return;
+  }
+
+  $('#h2h-range').textContent =
+    `${h.rounds.length} rounds · starting budget $${h.startingBudget}M`;
+
+  const wr = h.headline.winRate;
+  headline.append(el('div', `banner is-${wr >= 50 ? 'good' : 'critical'}`,
+    `<span class="banner-icon">${wr >= 50 ? '✓' : '⛔'}</span>
+     <div><div class="banner-title">The model won ${h.headline.wins} of ${h.headline.of} head-to-heads (${wr}%)</div>
+     <div class="banner-text">Scored against what eight real managers actually did, using F1 Fantasy's own
+       numbers. Each matchup gives the model the exact budget that team had that round, so neither side
+       is advantaged by spending power.</div></div>`));
+
+  const table = el('table');
+  table.innerHTML = `<thead><tr><th>Manager</th><th class="num">Their points</th>
+    <th class="num">Model</th><th class="num">Difference</th><th class="num">Rounds won</th></tr></thead>`;
+  const tb = el('tbody');
+  for (const e of h.table) {
+    const isMe = /AMG/i.test(e.team);
+    const tr = el('tr', isMe ? 'is-me' : '');
+    tr.innerHTML =
+      `<td class="strong">${esc(e.team)}${isMe ? ' <span class="pill is-accent">you</span>' : ''}</td>
+       <td class="num strong">${e.teamTotal.toLocaleString()}</td>
+       <td class="num">${e.modelTotal.toLocaleString()}</td>
+       <td class="num ${e.delta >= 0 ? 'delta-up' : 'delta-down'}">${e.delta >= 0 ? '+' : ''}${e.delta}</td>
+       <td class="num">${e.wins}/${e.rounds}</td>`;
+    tb.append(tr);
+  }
+  table.append(tb);
+  host.append(scrollWrap(table));
+
+  const rt = el('table');
+  rt.innerHTML = `<thead><tr><th>Round</th><th>Grand Prix</th><th class="num">Model won</th><th>Rate</th></tr></thead>`;
+  const rtb = el('tbody');
+  for (const r of h.rounds) {
+    const pct = (r.modelWins / r.of) * 100;
+    const tr = el('tr');
+    tr.innerHTML =
+      `<td><span class="pos">${esc(r.round)}</span></td>
+       <td class="strong">${esc(r.raceName)}</td>
+       <td class="num">${r.modelWins}/${r.of}</td>
+       <td><div class="bar-track" style="min-width:110px"><div class="bar-fill"
+           style="width:${pct}%; --fill:${pct >= 50 ? 'var(--good)' : 'var(--critical)'}"></div></div></td>`;
+    rtb.append(tr);
+  }
+  rt.append(rtb);
+  roundsHost.append(scrollWrap(rt));
+
+  caveatHost.append(el('div', 'card-title', 'How this was measured'));
+  const ul = el('ul');
+  for (const c of h.caveats ?? []) ul.append(el('li', null, esc(c)));
+  caveatHost.append(ul);
+}
+
 /* ── Markets ──────────────────────────────────────────────── */
 function renderMarkets() {
   const m = state.data.markets;
@@ -1349,7 +1417,7 @@ function renderAll() {
   const steps = [
     ['banners', renderBanners], ['hero', renderHero], ['decisions', renderDecisions],
     ['sessions', renderSessions], ['scenario', renderScenario], ['builder', renderBuilder],
-    ['strategy', renderStrategy], ['backtest', renderBacktest], ['markets', renderMarkets], ['consider', renderConsider],
+    ['strategy', renderStrategy], ['backtest', renderBacktest], ['h2h', renderHeadToHead], ['markets', renderMarkets], ['consider', renderConsider],
     ['league', renderLeague], ['lineup', renderLineup], ['chips', renderChips],
     ['championship', renderChampionship], ['calendar', renderCalendar], ['provenance', renderProvenance],
   ];

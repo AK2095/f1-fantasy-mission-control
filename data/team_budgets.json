@@ -1,0 +1,338 @@
+{
+ "Force Philadelphia": {
+  "1": {
+   "cost": 99.9,
+   "limitless": false
+  },
+  "2": {
+   "cost": 101.8,
+   "limitless": false
+  },
+  "3": {
+   "cost": 102.6,
+   "limitless": false
+  },
+  "4": {
+   "cost": 105.5,
+   "limitless": false
+  },
+  "5": {
+   "cost": 109.9,
+   "limitless": false
+  },
+  "6": {
+   "cost": 104.4,
+   "limitless": false
+  },
+  "7": {
+   "cost": 107.5,
+   "limitless": false
+  },
+  "8": {
+   "cost": 111.8,
+   "limitless": false
+  },
+  "9": {
+   "cost": 113.3,
+   "limitless": false
+  },
+  "10": {
+   "cost": 114.0,
+   "limitless": false
+  }
+ },
+ "SuperFastLex": {
+  "1": {
+   "cost": 100.0,
+   "limitless": false
+  },
+  "2": {
+   "cost": 101.1,
+   "limitless": false
+  },
+  "3": {
+   "cost": 104.4,
+   "limitless": false
+  },
+  "4": {
+   "cost": 107.3,
+   "limitless": false
+  },
+  "5": {
+   "cost": 109.4,
+   "limitless": false
+  },
+  "6": {
+   "cost": 109.3,
+   "limitless": false
+  },
+  "7": {
+   "cost": 110.2,
+   "limitless": false
+  },
+  "8": {
+   "cost": 111.5,
+   "limitless": false
+  },
+  "9": {
+   "cost": 112.4,
+   "limitless": false
+  },
+  "10": {
+   "cost": 114.5,
+   "limitless": false
+  }
+ },
+ "No Lane Nori": {
+  "1": {
+   "cost": 99.2,
+   "limitless": false
+  },
+  "2": {
+   "cost": 98.9,
+   "limitless": false
+  },
+  "3": {
+   "cost": 102.2,
+   "limitless": false
+  },
+  "4": {
+   "cost": 105.1,
+   "limitless": false
+  },
+  "5": {
+   "cost": 106.8,
+   "limitless": false
+  },
+  "6": {
+   "cost": 107.3,
+   "limitless": false
+  },
+  "7": {
+   "cost": 107.2,
+   "limitless": false
+  },
+  "8": {
+   "cost": 107.1,
+   "limitless": false
+  },
+  "9": {
+   "cost": 107.6,
+   "limitless": false
+  },
+  "10": {
+   "cost": 109.9,
+   "limitless": false
+  }
+ },
+ "AMG  AK": {
+  "1": {
+   "cost": 97.2,
+   "limitless": false
+  },
+  "2": {
+   "cost": 98.4,
+   "limitless": false
+  },
+  "3": {
+   "cost": 103.4,
+   "limitless": false
+  },
+  "4": {
+   "cost": 181.6,
+   "limitless": true
+  },
+  "5": {
+   "cost": 105.4,
+   "limitless": false
+  },
+  "6": {
+   "cost": 106.3,
+   "limitless": false
+  },
+  "7": {
+   "cost": 106.4,
+   "limitless": false
+  },
+  "8": {
+   "cost": 107.3,
+   "limitless": false
+  },
+  "9": {
+   "cost": 106.0,
+   "limitless": false
+  },
+  "10": {
+   "cost": 109.2,
+   "limitless": false
+  }
+ },
+ "Forza Chiacchio": {
+  "1": {
+   "cost": 99.3,
+   "limitless": false
+  },
+  "2": {
+   "cost": 98.4,
+   "limitless": false
+  },
+  "3": {
+   "cost": 99.3,
+   "limitless": false
+  },
+  "4": {
+   "cost": 100.6,
+   "limitless": false
+  },
+  "5": {
+   "cost": 101.9,
+   "limitless": false
+  },
+  "6": {
+   "cost": 101.8,
+   "limitless": false
+  },
+  "7": {
+   "cost": 101.1,
+   "limitless": false
+  },
+  "8": {
+   "cost": 100.8,
+   "limitless": false
+  },
+  "9": {
+   "cost": 100.6,
+   "limitless": false
+  },
+  "10": {
+   "cost": 100.5,
+   "limitless": false
+  }
+ },
+ "Hawaii Hamilton": {
+  "1": {
+   "cost": 99.5,
+   "limitless": false
+  },
+  "2": {
+   "cost": 97.9,
+   "limitless": false
+  },
+  "3": {
+   "cost": 94.7,
+   "limitless": false
+  },
+  "4": {
+   "cost": 92.7,
+   "limitless": false
+  },
+  "5": {
+   "cost": 90.1,
+   "limitless": false
+  },
+  "6": {
+   "cost": 88.7,
+   "limitless": false
+  },
+  "7": {
+   "cost": 86.7,
+   "limitless": false
+  },
+  "8": {
+   "cost": 87.3,
+   "limitless": false
+  },
+  "9": {
+   "cost": 88.3,
+   "limitless": false
+  },
+  "10": {
+   "cost": 89.7,
+   "limitless": false
+  }
+ },
+ "Rawdawg Racing Club": {
+  "1": {
+   "cost": 96.3,
+   "limitless": false
+  },
+  "2": {
+   "cost": 97.1,
+   "limitless": false
+  },
+  "3": {
+   "cost": 91.6,
+   "limitless": false
+  },
+  "4": {
+   "cost": 94.8,
+   "limitless": false
+  },
+  "5": {
+   "cost": 96.8,
+   "limitless": false
+  },
+  "6": {
+   "cost": 95.6,
+   "limitless": false
+  },
+  "7": {
+   "cost": 95.2,
+   "limitless": false
+  },
+  "8": {
+   "cost": 95.2,
+   "limitless": false
+  },
+  "9": {
+   "cost": 95.2,
+   "limitless": false
+  },
+  "10": {
+   "cost": 96.8,
+   "limitless": false
+  }
+ },
+ "Bandit's Booookaaahhhkeee": {
+  "1": {
+   "cost": 99.3,
+   "limitless": false
+  },
+  "2": {
+   "cost": 96.9,
+   "limitless": false
+  },
+  "3": {
+   "cost": 95.1,
+   "limitless": false
+  },
+  "4": {
+   "cost": 94.5,
+   "limitless": false
+  },
+  "5": {
+   "cost": 93.3,
+   "limitless": false
+  },
+  "6": {
+   "cost": 91.3,
+   "limitless": false
+  },
+  "7": {
+   "cost": 89.1,
+   "limitless": false
+  },
+  "8": {
+   "cost": 90.1,
+   "limitless": false
+  },
+  "9": {
+   "cost": 91.1,
+   "limitless": false
+  },
+  "10": {
+   "cost": 92.9,
+   "limitless": false
+  }
+ }
+}

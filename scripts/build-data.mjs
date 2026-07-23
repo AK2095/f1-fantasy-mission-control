@@ -453,6 +453,55 @@ async function buildAssets() {
   return assets;
 }
 
+
+// ── 6b · per-round price history ───────────────────────────
+/**
+ * Fantasy prices move every round: an asset that performs well gets more
+ * expensive, and every team's budget moves with the value of what it holds.
+ * A single fixed cap is therefore the wrong model for any historical test.
+ *
+ * f1fantasytools' statistics page carries per-round prices for every asset,
+ * which is what makes a budget-accurate backtest possible.
+ */
+async function buildPriceHistory() {
+  const res = await fetch('https://f1fantasytools.com/statistics', {
+    headers: { 'User-Agent': 'f1-mission-control/2.0 (personal dashboard; hourly)' },
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) throw new Error(`statistics page → HTTP ${res.status}`);
+  const html = await res.text();
+  const chunks = [...html.matchAll(/self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)/g)];
+  const blob = chunks.map((m) => JSON.parse(`"${m[1]}"`)).join('');
+
+  const key = '"raceResults":{';
+  const at = blob.indexOf(key);
+  if (at === -1) throw new Error('no raceResults block (page structure changed)');
+  const start = blob.indexOf('{', at + key.length - 1);
+  let depth = 0, end = -1;
+  for (let j = start; j < blob.length; j++) {
+    if (blob[j] === '{') depth++;
+    else if (blob[j] === '}' && --depth === 0) { end = j + 1; break; }
+  }
+  const raw = JSON.parse(blob.slice(start, end));
+
+  const byRound = {};
+  for (const [rd, payload] of Object.entries(raw)) {
+    const row = {};
+    for (const grp of ['drivers', 'constructors']) {
+      for (const a of payload[grp] ?? []) {
+        row[a.abbreviation] = { price: a.price, priceChange: a.priceChange ?? null, type: a.type };
+      }
+    }
+    if (Object.keys(row).length) byRound[rd] = row;
+  }
+  const rounds = Object.keys(byRound).length;
+  if (!rounds) throw new Error('no priced rounds found');
+
+  sources.prices = { ok: true, fetchedAt: now.toISOString(), rounds };
+  await write('prices_by_round.json', byRound);
+  return byRound;
+}
+
 // ── 7 · walk-forward backtest ──────────────────────────────
 /**
  * Does the optimiser actually work?
@@ -614,6 +663,152 @@ function buildBacktest(assets, fantasy) {
   };
 }
 
+
+// ── 8 · head-to-head against real league results ───────────
+/**
+ * The decisive test: what the optimiser would have scored against what eight
+ * real managers actually scored, using F1 Fantasy's own numbers.
+ *
+ * Budgets are not fixed. Every team starts the season on the same $100M, and
+ * from there each team's budget tracks the value of what it holds — good picks
+ * appreciate and fund better squads, poor ones erode it. Comparing a model on a
+ * flat cap against managers whose real budgets ranged from $86.7M to $114.5M
+ * would be meaningless, so for every head-to-head the optimiser is given the
+ * exact budget that team had, computed from their squad at that round's prices.
+ *
+ * Where a team played Limitless the budget constraint was lifted for that race,
+ * and the optimiser is given the same freedom.
+ */
+function buildHeadToHead(exportData, pricesByRound) {
+  if (!exportData?.teams?.length || !pricesByRound) return null;
+
+  // The export and the price feed disagree on one constructor's abbreviation.
+  const ALIAS = { RBS: 'VRB' };
+  const priceAt = (rd, code) => pricesByRound[String(rd)]?.[ALIAS[code] ?? code]?.price ?? null;
+  const typeAt = (rd, code) => pricesByRound[String(rd)]?.[ALIAS[code] ?? code]?.type ?? null;
+
+  const roundKeys = [...new Set(exportData.teams.flatMap((t) => Object.keys(t.races)))].sort();
+  const roundNum = (rk) => Number(rk.replace(/\D/g, ''));
+
+  // Base points per asset per round, straight from the export.
+  const scored = new Map();
+  for (const t of exportData.teams) {
+    for (const [rk, r] of Object.entries(t.races)) {
+      for (const p of [...r.drivers, ...r.constructors]) scored.set(`${p.tla}|${rk}`, p.base_points);
+    }
+  }
+  const codes = [...new Set([...scored.keys()].map((k) => k.split('|')[0]))];
+
+  const poolFor = (rd) => codes
+    .map((c) => ({
+      code: c,
+      type: typeAt(rd, c),
+      price: priceAt(rd, c),
+      byRound: Object.fromEntries(roundKeys.map((rk) => [rk, scored.get(`${c}|${rk}`) ?? null])),
+    }))
+    .filter((a) => a.price != null && a.type);
+
+  const rounds = [];
+  for (let i = 1; i < roundKeys.length; i++) {
+    const rk = roundKeys[i];
+    const rd = roundNum(rk);
+    const train = roundKeys.slice(0, i);
+    const pool = poolFor(rd);
+    const drivers = pool.filter((a) => a.type === 'driver');
+    const constructors = pool.filter((a) => a.type === 'constructor');
+    if (drivers.length < 5 || constructors.length < 2) continue;
+
+    const mean = (a) => {
+      const v = train.map((t) => a.byRound[t]).filter((x) => x != null);
+      return v.length ? v.reduce((s, x) => s + x, 0) / v.length : 0;
+    };
+
+    const matchups = [];
+    for (const t of exportData.teams) {
+      const race = t.races[rk];
+      if (!race || race.joined_late_no_lineup) continue;
+
+      const squadPrices = [...race.drivers, ...race.constructors].map((p) => priceAt(rd, p.tla));
+      if (squadPrices.some((v) => v == null)) continue;
+      const limitless = (race.chips_used ?? []).includes('Limitless');
+      const budget = limitless ? 999 : squadPrices.reduce((s, v) => s + v, 0);
+
+      const pick = optimiseSquad({ drivers, constructors, cap: budget, score: mean });
+      if (!pick) continue;
+      const captain = [...pick.drivers].sort((a, b) => mean(b) - mean(a))[0];
+      const modelScore = pick.squad.reduce((s, a) => {
+        const v = a.byRound[rk] ?? 0;
+        return s + (a.code === captain?.code ? v * 2 : v);
+      }, 0);
+
+      matchups.push({
+        team: t.team_name.replace(/\s+/g, ' ').trim(),
+        teamScored: race.race_points_total,
+        teamCaptain: race.captain,
+        budget: Number(budget === 999 ? squadPrices.reduce((s, v) => s + v, 0).toFixed(1) : budget.toFixed(1)),
+        limitless,
+        modelScored: Number(modelScore.toFixed(1)),
+        modelSquad: pick.squad.map((a) => a.code),
+        modelCaptain: captain?.code ?? null,
+        modelWins: modelScore > race.race_points_total,
+      });
+    }
+    if (!matchups.length) continue;
+
+    rounds.push({
+      round: rk,
+      raceName: exportData.completed_races?.find((c) => c.code === rk)?.name ?? rk,
+      matchups,
+      modelWins: matchups.filter((m) => m.modelWins).length,
+      of: matchups.length,
+    });
+  }
+  if (!rounds.length) return null;
+
+  const wins = rounds.reduce((s, r) => s + r.modelWins, 0);
+  const total = rounds.reduce((s, r) => s + r.of, 0);
+
+  // Season view: each team's real total against the model given that team's budget.
+  const perTeam = {};
+  for (const r of rounds) {
+    for (const m of r.matchups) {
+      const e = (perTeam[m.team] ??= { team: m.team, teamTotal: 0, modelTotal: 0, rounds: 0, wins: 0 });
+      e.teamTotal += m.teamScored;
+      e.modelTotal += m.modelScored;
+      e.rounds += 1;
+      if (m.modelWins) e.wins += 1;
+    }
+  }
+  const table = Object.values(perTeam)
+    .map((e) => ({
+      ...e,
+      teamTotal: Number(e.teamTotal.toFixed(0)),
+      modelTotal: Number(e.modelTotal.toFixed(0)),
+      delta: Number((e.modelTotal - e.teamTotal).toFixed(0)),
+    }))
+    .sort((a, b) => b.teamTotal - a.teamTotal);
+
+  sources.headToHead = { ok: true, fetchedAt: now.toISOString(), rounds: rounds.length };
+  return {
+    updatedAt: now.toISOString(),
+    source: 'F1 Fantasy league export + f1fantasytools per-round prices',
+    extractedAt: exportData.extracted_at ?? null,
+    startingBudget: 100,
+    testedRounds: rounds.map((r) => r.round),
+    headline: { wins, of: total, winRate: Number(((wins / total) * 100).toFixed(1)) },
+    rounds,
+    table,
+    caveats: [
+      'Scoring is F1 Fantasy\'s own, including captain multipliers, chips and transfer penalties exactly as the game applied them. All 80 team-races in the export reconcile.',
+      'Budgets are not fixed. Every team starts on $100M and diverges as asset prices move; real budgets ranged from $86.7M to $114.5M. Each head-to-head gives the optimiser the exact budget that team had at that round, computed from their squad at that round\'s prices.',
+      'Where a team played Limitless the budget constraint was lifted for that race, and the optimiser was given the same freedom.',
+      'Each round is predicted using only the rounds before it, so no pick depends on information unavailable at the time.',
+      'The optimiser can only choose assets some team in the league owned that round, since those are the only ones with recorded scores. A strong asset nobody owned is invisible to it.',
+      'One team\'s export (Hawaii Hamilton) totals 1083 against 1911 in the app, so their rounds are understated and the model is flattered in those head-to-heads. The other seven reconcile exactly.',
+    ],
+  };
+}
+
 // ── main ───────────────────────────────────────────────────────────────────
 async function main() {
   console.log(`F1 Mission Control · data build · ${now.toISOString()}`);
@@ -625,15 +820,17 @@ async function main() {
       `next: R${position.nextRound ?? '—'} ${position.next?.shortName ?? 'season over'}`
   );
 
-  const NAMES = ['standings', 'results', 'weather', 'markets', 'assets'];
+  const NAMES = ['standings', 'results', 'weather', 'markets', 'assets', 'prices'];
   const settled = await Promise.allSettled([
     buildStandings(),
     buildResults(position),
     buildWeather(position),
     buildMarkets(position),
     buildAssets(),
+    buildPriceHistory(),
   ]);
   const assets = settled[4].status === 'fulfilled' ? settled[4].value : null;
+  const prices = settled[5].status === 'fulfilled' ? settled[5].value : null;
   settled.forEach((s, i) => {
     if (s.status === 'rejected') {
       const name = NAMES[i];
@@ -651,6 +848,22 @@ async function main() {
     } catch (err) {
       sources.backtest = { ok: false, fetchedAt: now.toISOString(), error: String(err.message) };
       errors.push(`backtest: ${err.message}`);
+    }
+  }
+
+  // headtohead.json — the optimiser against real league results.
+  // Needs the per-round price history, not the current-price asset model,
+  // because each team's budget has to be reconstructed as it stood that round.
+  if (prices) {
+    try {
+      const exportRaw = await readFile(join(DATA, 'f1_fantasy_league_export.json'), 'utf8');
+      const h2h = buildHeadToHead(JSON.parse(exportRaw), prices);
+      if (h2h) await write('headtohead.json', h2h);
+    } catch (err) {
+      if (err.code !== 'ENOENT') {
+        sources.headToHead = { ok: false, fetchedAt: now.toISOString(), error: String(err.message) };
+        errors.push(`headToHead: ${err.message}`);
+      }
     }
   }
 

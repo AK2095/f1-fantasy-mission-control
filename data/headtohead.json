@@ -1,0 +1,1538 @@
+{
+  "updatedAt": "2026-07-23T04:59:07.139Z",
+  "source": "F1 Fantasy league export + f1fantasytools per-round prices",
+  "extractedAt": "2026-07-23T04:41:50.822Z",
+  "startingBudget": 100,
+  "testedRounds": [
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "headline": {
+    "wins": 30,
+    "of": 72,
+    "winRate": 41.7
+  },
+  "rounds": [
+    {
+      "round": "R02",
+      "raceName": "Chinese Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 468,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 101.8,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": false
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 410,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 101.1,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 391,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 98.9,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 376,
+          "teamCaptain": "Carlos Sainz",
+          "budget": 98.4,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 330,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 98.4,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 15,
+          "teamCaptain": "Max Verstappen",
+          "budget": 97.9,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 239,
+          "teamCaptain": "Carlos Sainz",
+          "budget": 97.1,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": true
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 126,
+          "teamCaptain": "George Russell",
+          "budget": 96.9,
+          "limitless": false,
+          "modelScored": 244,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "OCO",
+            "VER",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "VER",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 3,
+      "of": 8
+    },
+    {
+      "round": "R03",
+      "raceName": "Japanese Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 219,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 102.6,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": false
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 224,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 104.4,
+          "limitless": false,
+          "modelScored": 269,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "ANT",
+            "PER",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 151,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 102.2,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": true
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 275,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 103.4,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 196,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 99.3,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 122,
+          "teamCaptain": "Max Verstappen",
+          "budget": 94.7,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 187,
+          "teamCaptain": "Liam Lawson",
+          "budget": 91.6,
+          "limitless": false,
+          "modelScored": 166,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 157,
+          "teamCaptain": "George Russell",
+          "budget": 95.1,
+          "limitless": false,
+          "modelScored": 161,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "PER",
+            "COL",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "BEA",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 4,
+      "of": 8
+    },
+    {
+      "round": "R04",
+      "raceName": "Miami Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 233,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 105.5,
+          "limitless": false,
+          "modelScored": 269,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 217,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 107.3,
+          "limitless": false,
+          "modelScored": 237,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "OCO",
+            "HUL",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 158,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 105.1,
+          "limitless": false,
+          "modelScored": 269,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 394,
+          "teamCaptain": "Charles Leclerc",
+          "budget": 181.6,
+          "limitless": true,
+          "modelScored": 386,
+          "modelSquad": [
+            "RUS",
+            "LEC",
+            "ANT",
+            "HAM",
+            "VER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 154,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 100.6,
+          "limitless": false,
+          "modelScored": 195,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 166,
+          "teamCaptain": "Max Verstappen",
+          "budget": 92.7,
+          "limitless": false,
+          "modelScored": 147,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "HUL",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": false
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 172,
+          "teamCaptain": "Liam Lawson",
+          "budget": 94.8,
+          "limitless": false,
+          "modelScored": 189,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 127,
+          "teamCaptain": "George Russell",
+          "budget": 94.5,
+          "limitless": false,
+          "modelScored": 179,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "OCO",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 6,
+      "of": 8
+    },
+    {
+      "round": "R05",
+      "raceName": "Canadian Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 235,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 109.9,
+          "limitless": false,
+          "modelScored": 194,
+          "modelSquad": [
+            "LAW",
+            "PER",
+            "COL",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 250,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 109.4,
+          "limitless": false,
+          "modelScored": 194,
+          "modelSquad": [
+            "LAW",
+            "PER",
+            "COL",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 228,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 106.8,
+          "limitless": false,
+          "modelScored": 176,
+          "modelSquad": [
+            "BOR",
+            "PER",
+            "COL",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 274,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 105.4,
+          "limitless": false,
+          "modelScored": 135,
+          "modelSquad": [
+            "LIN",
+            "BOR",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 238,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 101.9,
+          "limitless": false,
+          "modelScored": 212,
+          "modelSquad": [
+            "LAW",
+            "OCO",
+            "PER",
+            "COL",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "SAI",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 119,
+          "teamCaptain": "Max Verstappen",
+          "budget": 90.1,
+          "limitless": false,
+          "modelScored": 192,
+          "modelSquad": [
+            "BOR",
+            "OCO",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "OCO",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 182,
+          "teamCaptain": "Liam Lawson",
+          "budget": 96.8,
+          "limitless": false,
+          "modelScored": 167,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "OCO",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "OCO",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 93,
+          "teamCaptain": "George Russell",
+          "budget": 93.3,
+          "limitless": false,
+          "modelScored": 210,
+          "modelSquad": [
+            "LAW",
+            "OCO",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "OCO",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 2,
+      "of": 8
+    },
+    {
+      "round": "R06",
+      "raceName": "Monaco Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 164,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 104.4,
+          "limitless": false,
+          "modelScored": 238,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "BOR",
+            "HUL",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 192,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 109.3,
+          "limitless": false,
+          "modelScored": 210,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 151,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.3,
+          "limitless": false,
+          "modelScored": 207,
+          "modelSquad": [
+            "LAW",
+            "ANT",
+            "BOR",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 195,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 106.3,
+          "limitless": false,
+          "modelScored": 202,
+          "modelSquad": [
+            "ANT",
+            "BOR",
+            "PER",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 144,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 101.8,
+          "limitless": false,
+          "modelScored": 95,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "PER",
+            "COL",
+            "SAI",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "SAI",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 20,
+          "teamCaptain": "Max Verstappen",
+          "budget": 88.7,
+          "limitless": false,
+          "modelScored": 115,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "COL",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 144,
+          "teamCaptain": "Liam Lawson",
+          "budget": 95.6,
+          "limitless": false,
+          "modelScored": 85,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "COL",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 50,
+          "teamCaptain": "George Russell",
+          "budget": 91.3,
+          "limitless": false,
+          "modelScored": 78,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "BOR",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "COL",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 6,
+      "of": 8
+    },
+    {
+      "round": "R07",
+      "raceName": "Barcelona Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 99,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.5,
+          "limitless": false,
+          "modelScored": 123,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "ANT",
+            "BOR",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": true
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 245,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 110.2,
+          "limitless": false,
+          "modelScored": 124,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "ANT",
+            "BOR",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 107,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.2,
+          "limitless": false,
+          "modelScored": 106,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 81,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 106.4,
+          "limitless": false,
+          "modelScored": 109,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "HUL",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": true
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 169,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 101.1,
+          "limitless": false,
+          "modelScored": 74,
+          "modelSquad": [
+            "LIN",
+            "ANT",
+            "HUL",
+            "PER",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "ANT",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 107,
+          "teamCaptain": "Max Verstappen",
+          "budget": 86.7,
+          "limitless": false,
+          "modelScored": 122,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 148,
+          "teamCaptain": "Liam Lawson",
+          "budget": 95.2,
+          "limitless": false,
+          "modelScored": 148,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "OCO",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "OCO",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 121,
+          "teamCaptain": "George Russell",
+          "budget": 89.1,
+          "limitless": false,
+          "modelScored": 123,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "COL",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 4,
+      "of": 8
+    },
+    {
+      "round": "R08",
+      "raceName": "Austrian Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 210,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 111.8,
+          "limitless": false,
+          "modelScored": 138,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 201,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 111.5,
+          "limitless": false,
+          "modelScored": 138,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 164,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.1,
+          "limitless": false,
+          "modelScored": 120,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 204,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.3,
+          "limitless": false,
+          "modelScored": 120,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 109,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 100.8,
+          "limitless": false,
+          "modelScored": 118,
+          "modelSquad": [
+            "LIN",
+            "HUL",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": true
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 158,
+          "teamCaptain": "Max Verstappen",
+          "budget": 87.3,
+          "limitless": false,
+          "modelScored": 132,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "BOT",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": false
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 152,
+          "teamCaptain": "Liam Lawson",
+          "budget": 95.2,
+          "limitless": false,
+          "modelScored": 152,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "OCO",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "OCO",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 144,
+          "teamCaptain": "George Russell",
+          "budget": 90.1,
+          "limitless": false,
+          "modelScored": 91,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "PER",
+            "NOR",
+            "RBS",
+            "FER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        }
+      ],
+      "modelWins": 1,
+      "of": 8
+    },
+    {
+      "round": "R09",
+      "raceName": "British Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 294,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 113.3,
+          "limitless": false,
+          "modelScored": 256,
+          "modelSquad": [
+            "LAW",
+            "BOR",
+            "PER",
+            "COL",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 324,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 112.4,
+          "limitless": false,
+          "modelScored": 241,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "OCO",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 252,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 107.6,
+          "limitless": false,
+          "modelScored": 219,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "HUL",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 299,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 106,
+          "limitless": false,
+          "modelScored": 215,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "HUL",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 218,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 100.6,
+          "limitless": false,
+          "modelScored": 205,
+          "modelSquad": [
+            "BOR",
+            "HUL",
+            "PER",
+            "BOT",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 122,
+          "teamCaptain": "Max Verstappen",
+          "budget": 88.3,
+          "limitless": false,
+          "modelScored": 259,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "HUL",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 285,
+          "teamCaptain": "Liam Lawson",
+          "budget": 95.2,
+          "limitless": false,
+          "modelScored": 210,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BOR",
+            "PER",
+            "NOR",
+            "RBS",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 222,
+          "teamCaptain": "George Russell",
+          "budget": 91.1,
+          "limitless": false,
+          "modelScored": 282,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "BOR",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 2,
+      "of": 8
+    },
+    {
+      "round": "R10",
+      "raceName": "Belgian Grand Prix",
+      "matchups": [
+        {
+          "team": "Force Philadelphia",
+          "teamScored": 112,
+          "teamCaptain": "George Russell",
+          "budget": 114,
+          "limitless": false,
+          "modelScored": 137,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "BOR",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": true
+        },
+        {
+          "team": "SuperFastLex",
+          "teamScored": 156,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 114.5,
+          "limitless": false,
+          "modelScored": 137,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "BOR",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "No Lane Nori",
+          "teamScored": 180,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 109.9,
+          "limitless": false,
+          "modelScored": 117,
+          "modelSquad": [
+            "LIN",
+            "BEA",
+            "BOR",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "AMG AK",
+          "teamScored": 209,
+          "teamCaptain": "Kimi Antonelli",
+          "budget": 109.2,
+          "limitless": false,
+          "modelScored": 111,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "HUL",
+            "PER",
+            "NOR",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "NOR",
+          "modelWins": false
+        },
+        {
+          "team": "Forza Chiacchio",
+          "teamScored": 166,
+          "teamCaptain": "Lewis Hamilton",
+          "budget": 100.5,
+          "limitless": false,
+          "modelScored": 124,
+          "modelSquad": [
+            "LAW",
+            "BEA",
+            "OCO",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": false
+        },
+        {
+          "team": "Hawaii Hamilton",
+          "teamScored": 173,
+          "teamCaptain": "Max Verstappen",
+          "budget": 89.7,
+          "limitless": false,
+          "modelScored": 119,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "HUL",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": false
+        },
+        {
+          "team": "Rawdawg Racing Club",
+          "teamScored": 121,
+          "teamCaptain": "Liam Lawson",
+          "budget": 96.8,
+          "limitless": false,
+          "modelScored": 121,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "BEA",
+            "OCO",
+            "PER",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": false
+        },
+        {
+          "team": "Bandit's Booookaaahhhkeee",
+          "teamScored": 94,
+          "teamCaptain": "George Russell",
+          "budget": 92.9,
+          "limitless": false,
+          "modelScored": 119,
+          "modelSquad": [
+            "LAW",
+            "LIN",
+            "HUL",
+            "PER",
+            "COL",
+            "FER",
+            "MER"
+          ],
+          "modelCaptain": "LAW",
+          "modelWins": true
+        }
+      ],
+      "modelWins": 2,
+      "of": 8
+    }
+  ],
+  "table": [
+    {
+      "team": "AMG AK",
+      "teamTotal": 2307,
+      "modelTotal": 1688,
+      "rounds": 9,
+      "wins": 2,
+      "delta": -619
+    },
+    {
+      "team": "SuperFastLex",
+      "teamTotal": 2219,
+      "modelTotal": 1794,
+      "rounds": 9,
+      "wins": 3,
+      "delta": -425
+    },
+    {
+      "team": "Force Philadelphia",
+      "teamTotal": 2034,
+      "modelTotal": 1765,
+      "rounds": 9,
+      "wins": 4,
+      "delta": -269
+    },
+    {
+      "team": "No Lane Nori",
+      "teamTotal": 1782,
+      "modelTotal": 1624,
+      "rounds": 9,
+      "wins": 3,
+      "delta": -158
+    },
+    {
+      "team": "Forza Chiacchio",
+      "teamTotal": 1724,
+      "modelTotal": 1433,
+      "rounds": 9,
+      "wins": 2,
+      "delta": -291
+    },
+    {
+      "team": "Rawdawg Racing Club",
+      "teamTotal": 1630,
+      "modelTotal": 1482,
+      "rounds": 9,
+      "wins": 2,
+      "delta": -148
+    },
+    {
+      "team": "Bandit's Booookaaahhhkeee",
+      "teamTotal": 1134,
+      "modelTotal": 1487,
+      "rounds": 9,
+      "wins": 8,
+      "delta": 353
+    },
+    {
+      "team": "Hawaii Hamilton",
+      "teamTotal": 1002,
+      "modelTotal": 1496,
+      "rounds": 9,
+      "wins": 6,
+      "delta": 494
+    }
+  ],
+  "caveats": [
+    "Scoring is F1 Fantasy's own, including captain multipliers, chips and transfer penalties exactly as the game applied them. All 80 team-races in the export reconcile.",
+    "Budgets are not fixed. Every team starts on $100M and diverges as asset prices move; real budgets ranged from $86.7M to $114.5M. Each head-to-head gives the optimiser the exact budget that team had at that round, computed from their squad at that round's prices.",
+    "Where a team played Limitless the budget constraint was lifted for that race, and the optimiser was given the same freedom.",
+    "Each round is predicted using only the rounds before it, so no pick depends on information unavailable at the time.",
+    "The optimiser can only choose assets some team in the league owned that round, since those are the only ones with recorded scores. A strong asset nobody owned is invisible to it.",
+    "One team's export (Hawaii Hamilton) totals 1083 against 1911 in the app, so their rounds are understated and the model is flattered in those head-to-heads. The other seven reconcile exactly."
+  ]
+}
