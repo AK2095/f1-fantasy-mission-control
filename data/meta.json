@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-07-23T20:14:11.658Z",
+  "builtAt": "2026-07-23T22:06:00.941Z",
   "builtBy": "github-actions",
-  "commit": "ce056d0",
+  "commit": "073f566",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "rounds": 22
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "runners": 22
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
-      "circuit": "Hungaroring"
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "throughRound": 10
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
+      "circuit": "Hungaroring"
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "assets": 33,
-      "rounds": 10
-    },
-    "results": {
-      "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
       "rounds": 10
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
+      "rounds": 10
+    },
+    "results": {
+      "ok": true,
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "rounds": 10
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "rounds": 7
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-07-23T20:14:11.658Z",
+      "fetchedAt": "2026-07-23T22:06:00.941Z",
       "rounds": 9
     }
   },
