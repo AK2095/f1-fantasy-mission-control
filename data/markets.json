@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T21:05:57.463Z",
+  "updatedAt": "2026-07-24T23:03:10.245Z",
   "available": true,
   "round": 11,
   "race": "Hungarian Grand Prix",
@@ -8,12 +8,12 @@
     "title": "Hungarian Grand Prix: Driver Winner",
     "slug": "f1-hungarian-grand-prix-winner-2026-07-26",
     "endDate": "2026-08-02T13:00:00Z",
-    "totalVolume": 138802.93336099983,
+    "totalVolume": 142620.09731699977,
     "runners": [
       {
         "name": "Lewis Hamilton",
         "probability": 0.285,
-        "volume": 12637.907337999999
+        "volume": 12981.045264999999
       },
       {
         "name": "Charles Leclerc",
@@ -23,17 +23,17 @@
       {
         "name": "Kimi Antonelli",
         "probability": 0.265,
-        "volume": 39325.442157999976
+        "volume": 40838.74252199998
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.065,
-        "volume": 9427.109304000001
+        "probability": 0.07,
+        "volume": 10819.966445000002
       },
       {
         "name": "George Russell",
-        "probability": 0.06,
-        "volume": 15945.303957000002
+        "probability": 0.065,
+        "volume": 16345.303953000002
       },
       {
         "name": "Lando Norris",
@@ -42,13 +42,13 @@
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.027,
-        "volume": 7570.354940999997
+        "probability": 0.0275,
+        "volume": 7629.178468999997
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.006,
-        "volume": 3486.5326040000004
+        "probability": 0.0065,
+        "volume": 3595.5776040000005
       },
       {
         "name": "Fernando Alonso",
@@ -126,41 +126,41 @@
     "title": "Hungarian Grand Prix: Driver Pole Position",
     "slug": "f1-hungarian-grand-prix-driver-pole-position-2026-07-25",
     "endDate": "2026-08-01T14:00:00Z",
-    "totalVolume": 40936.123344,
+    "totalVolume": 42363.304993,
     "runners": [
       {
         "name": "Lewis Hamilton",
-        "probability": 0.335,
-        "volume": 2136.2101180000004
+        "probability": 0.32,
+        "volume": 2262.7570080000005
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.27,
-        "volume": 2473.0439370000017
+        "probability": 0.29,
+        "volume": 2742.3786960000016
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.245,
-        "volume": 9214.172569999999
+        "probability": 0.235,
+        "volume": 10175.132569999998
       },
       {
         "name": "Max Verstappen",
         "probability": 0.07,
-        "volume": 9307.116225
+        "volume": 9372.116225
       },
       {
         "name": "George Russell",
         "probability": 0.065,
-        "volume": 5095.224405999999
+        "volume": 5100.5644059999995
       },
       {
         "name": "Lando Norris",
-        "probability": 0.049,
+        "probability": 0.0535,
         "volume": 4396.274192000001
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0205,
+        "probability": 0.02,
         "volume": 2393.964074000001
       },
       {
@@ -244,22 +244,27 @@
     "title": "Hungarian Grand Prix: Driver Fastest Lap",
     "slug": "f1-hungarian-grand-prix-driver-fastest-lap-2026-07-26",
     "endDate": "2026-08-02T13:00:00Z",
-    "totalVolume": 4213.250945000001,
+    "totalVolume": 4272.074473,
     "runners": [
       {
         "name": "Kimi Antonelli",
-        "probability": 0.36,
+        "probability": 0.355,
         "volume": 1378.957132
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.155,
+        "probability": 0.16,
         "volume": 576.693818
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.145,
-        "volume": 1239.750293
+        "probability": 0.155,
+        "volume": 1298.573821
+      },
+      {
+        "name": "George Russell",
+        "probability": 0.12,
+        "volume": 102.37604100000001
       },
       {
         "name": "Max Verstappen",
@@ -267,13 +272,8 @@
         "volume": 98.715638
       },
       {
-        "name": "George Russell",
-        "probability": 0.085,
-        "volume": 102.37604100000001
-      },
-      {
         "name": "Lando Norris",
-        "probability": 0.037,
+        "probability": 0.033,
         "volume": 18.63
       },
       {
@@ -283,7 +283,7 @@
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0285,
+        "probability": 0.029,
         "volume": 73.061223
       },
       {
@@ -293,7 +293,7 @@
       },
       {
         "name": "Liam Lawson",
-        "probability": 0.02,
+        "probability": 0.0195,
         "volume": 23.6868
       },
       {
