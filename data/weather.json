@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T14:38:19.068Z",
+  "updatedAt": "2026-07-25T16:05:22.416Z",
   "available": true,
   "round": 11,
   "race": "Hungarian Grand Prix",
@@ -37,16 +37,16 @@
       "startUTC": "2026-07-25T14:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 27.7,
-      "windKph": 9,
+      "tempC": 26.5,
+      "windKph": 8.6,
       "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-07-26T13:00:00.000Z",
       "precipProbability": 4,
       "precipMm": 0,
-      "tempC": 32.6,
-      "windKph": 16.6,
+      "tempC": 32.7,
+      "windKph": 16.2,
       "weatherCode": 0
     }
   },
