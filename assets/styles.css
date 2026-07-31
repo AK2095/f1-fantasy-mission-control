@@ -741,3 +741,16 @@ input:hover, textarea:hover { border-color: var(--line-2); }
   margin-bottom: var(--s3);
 }
 .prose li::marker { color: var(--ink-muted); }
+
+/* Data that does not exist yet — distinct from data that failed. */
+.empty.is-pending {
+  border-style: solid;
+  border-color: color-mix(in srgb, var(--warning) 32%, transparent);
+  background: color-mix(in srgb, var(--warning) 6%, transparent);
+  color: var(--ink-2);
+}
+.pending-when {
+  margin-top: var(--s2);
+  font-size: .78rem; font-weight: 640;
+  color: var(--warning);
+}

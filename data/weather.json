@@ -1,59 +1,11 @@
 {
-  "updatedAt": "2026-07-26T12:04:45.826Z",
-  "available": true,
-  "round": 11,
-  "race": "Hungarian Grand Prix",
-  "circuit": "Hungaroring",
-  "locality": "Budapest",
-  "country": "Hungary",
-  "lat": 47.5789,
-  "lon": 19.2486,
-  "sessions": {
-    "fp1": {
-      "startUTC": "2026-07-24T11:30:00.000Z",
-      "precipProbability": 2,
-      "precipMm": 0,
-      "tempC": 23.2,
-      "windKph": 11.2,
-      "weatherCode": 1
-    },
-    "fp2": {
-      "startUTC": "2026-07-24T15:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 23.8,
-      "windKph": 16.9,
-      "weatherCode": 1
-    },
-    "fp3": {
-      "startUTC": "2026-07-25T10:30:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 24.4,
-      "windKph": 6.1,
-      "weatherCode": 0
-    },
-    "qualifying": {
-      "startUTC": "2026-07-25T14:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 26.5,
-      "windKph": 8.6,
-      "weatherCode": 3
-    },
-    "race": {
-      "startUTC": "2026-07-26T13:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 31.2,
-      "windKph": 15.8,
-      "weatherCode": 3
-    }
-  },
-  "scenario": {
-    "dryProb": 100,
-    "wetProb": 0,
-    "haltProb": 0
-  },
+  "updatedAt": "2026-07-31T02:38:37.117Z",
+  "available": false,
+  "pending": true,
+  "reason": "Weather forecasts reach 2026-08-15. The Dutch Grand Prix runs 2026-08-23, so its forecast is not published yet.",
+  "availableFrom": "2026-08-15",
+  "round": 12,
+  "race": "Dutch Grand Prix",
+  "circuit": "Circuit Park Zandvoort",
   "provider": "Open-Meteo"
 }

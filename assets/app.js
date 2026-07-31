@@ -55,6 +55,19 @@ const cls = (id) => `c-${(id || 'unknown').replace(/[^a-z0-9_]/gi, '_').toLowerC
 /** el() plus inline styles. Avoids chaining off append(), which returns undefined. */
 const styled = (node, styles) => { Object.assign(node.style, styles); return node; };
 
+/**
+ * Empty state for data that does not exist yet, as opposed to data that
+ * failed. Says why, and when it will appear, so an expected gap never reads
+ * as a broken dashboard.
+ */
+function pendingState(title, reason, availableFrom) {
+  const when = availableFrom
+    ? `<div class="pending-when">Expected from ${esc(new Date(availableFrom + 'T00:00:00Z')
+        .toLocaleDateString(undefined, { month: 'long', day: 'numeric', timeZone: 'UTC' }))}</div>`
+    : '';
+  return el('div', 'empty is-pending', `<strong>${esc(title)}</strong>${esc(reason)}${when}`);
+}
+
 const scrollWrap = (node) => {
   const box = el('div', 'table-scroll');
   box.append(node);
@@ -218,7 +231,9 @@ function stalenessReport() {
     });
   }
   for (const [name, s] of Object.entries(meta?.sources ?? {})) {
-    if (!s.ok) {
+    // A source with nothing to give yet is a normal state, explained in the
+    // panel it belongs to. Only a genuine fault warrants a banner.
+    if (!s.ok && !s.pending) {
       issues.push({
         level: 'warning', title: `Source unavailable: ${name}`,
         text: `${s.error || 'Unknown error.'} Every other section is unaffected — sources are fetched independently.`,
@@ -438,6 +453,10 @@ function renderSessions() {
   host.innerHTML = '';
   if (!race) { host.append(el('div', 'empty', '<strong>No upcoming race</strong>The season is complete.')); return; }
 
+  if (wx?.pending) {
+    host.append(pendingState('Forecast not published yet', wx.reason ?? '', wx.availableFrom));
+  }
+
   const lockKey = race.sessions.sprintQualifying ? 'sprintQualifying' : 'qualifying';
   for (const [key, iso] of Object.entries(race.sessions)) {
     const w = wx?.sessions?.[key];
@@ -455,7 +474,12 @@ function renderScenario() {
   const wx = state.data.weather;
   const host = $('#scenario');
   host.innerHTML = '';
-  if (!wx?.available) { host.append(el('div', 'empty', '<strong>No forecast</strong>Weather source unavailable.')); return; }
+  if (!wx?.available) {
+    host.append(wx?.pending
+      ? pendingState('Forecast not published yet', wx.reason ?? '', wx.availableFrom)
+      : el('div', 'empty', '<strong>No forecast</strong>Weather source unavailable.'));
+    return;
+  }
   const s = wx.scenario;
   for (const r of [
     { label: 'Dry race', value: s.dryProb, fill: 'var(--series-4)' },
@@ -864,7 +888,9 @@ function renderMarkets() {
   host.innerHTML = '';
   if (!m?.available) {
     tabs.innerHTML = '';
-    host.append(el('div', 'empty', '<strong>No market data</strong>No open market matched this round.'));
+    host.append(m?.pending
+      ? pendingState('Markets not open yet', m.reason ?? '', null)
+      : el('div', 'empty', '<strong>No market data</strong>No open market matched this round.'));
     return;
   }
 
@@ -1261,12 +1287,16 @@ function renderProvenance() {
   const tb = el('tbody');
   for (const [what, src, type, s] of rows) {
     const ok = s?.ok !== false;
+    const isPending = Boolean(s?.pending);
+    const status = ok ? '<span class="pill is-good">OK</span>'
+      : isPending ? '<span class="pill is-warning">Not yet available</span>'
+      : '<span class="pill is-critical">Failed</span>';
     const tr = el('tr');
     tr.innerHTML =
       `<td class="strong">${esc(what)}</td><td>${esc(src)}</td>
        <td><span class="prov is-${type}">${type === 'live' ? 'Automated' : 'Manual'}</span></td>
-       <td>${ok ? '<span class="pill is-good">OK</span>' : '<span class="pill is-critical">Failed</span>'}</td>
-       <td>${esc(relativeTime(s?.fetchedAt))}</td>`;
+       <td>${status}${isPending && s.reason ? `<div class="note" style="margin-top:2px">${esc(s.reason)}</div>` : ''}</td>
+       <td>${esc(relativeTime(s?.fetchedAt ?? s?.checkedAt))}</td>`;
     tb.append(tr);
   }
   table.append(tb);

@@ -28,8 +28,21 @@ const SEASON = 2026;
 const JOLPICA = 'https://api.jolpi.ca/ergast/f1';
 
 const now = new Date();
+
+// Two different things that both mean "no data", which the pipeline used to
+// conflate — and conflating them is what took the published site down:
+//   errors  — something is broken and needs a human. Fails the run.
+//   pending — the data does not exist yet and will arrive on its own. Normal.
+// A source being pending must never block publishing the sources that worked.
 const errors = [];
+const pending = [];
 const sources = {};
+
+/** Record a source as legitimately not-yet-available. */
+function markPending(name, reason, availableFrom = null) {
+  sources[name] = { ok: false, pending: true, reason, availableFrom, checkedAt: now.toISOString() };
+  pending.push(`${name}: ${reason}`);
+}
 
 // ── helpers ────────────────────────────────────────────────────────────────
 async function getJSON(url, { tries = 3 } = {}) {
@@ -40,14 +53,29 @@ async function getJSON(url, { tries = 3 } = {}) {
         headers: { 'User-Agent': 'f1-mission-control/2.0' },
         signal: AbortSignal.timeout(25_000),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        const err = new Error(`HTTP ${res.status}`);
+        err.status = res.status;
+        // The body usually explains *why*, which lets callers tell a bad
+        // request apart from an outage. Open-Meteo, for instance, states the
+        // exact date range it will serve.
+        err.body = await res.text().catch(() => '');
+        throw err;
+      }
       return await res.json();
     } catch (err) {
       lastErr = err;
+      // A 4xx is a statement about the request, not a transient fault.
+      // Retrying it just burns time and hides the real reason.
+      if (err.status >= 400 && err.status < 500) break;
       if (i < tries - 1) await new Promise((r) => setTimeout(r, 1500 * (i + 1)));
     }
   }
-  throw new Error(`${url} failed after ${tries} tries: ${lastErr.message}`);
+  const detail = lastErr.body ? ` — ${String(lastErr.body).slice(0, 200)}` : '';
+  const err = new Error(`${url} failed: ${lastErr.message}${detail}`);
+  err.status = lastErr.status;
+  err.body = lastErr.body;
+  throw err;
 }
 
 async function write(name, payload) {
@@ -225,7 +253,35 @@ async function buildWeather(position) {
     `&hourly=precipitation_probability,precipitation,temperature_2m,wind_speed_10m,weather_code` +
     `&start_date=${days[0]}&end_date=${days.at(-1)}&timezone=UTC`;
 
-  const wx = await getJSON(url);
+  let wx;
+  try {
+    wx = await getJSON(url);
+  } catch (err) {
+    // Forecasts only reach ~2 weeks out. During a mid-season break the next
+    // race sits beyond that, which is not a fault — the data simply does not
+    // exist yet. Open-Meteo states its exact window in the error body, so we
+    // read the horizon from the source rather than hardcoding an assumption
+    // that would rot the moment they changed it.
+    const range = /allowed range from \s*([\d-]{10})\s*to\s*([\d-]{10})/i.exec(String(err.body ?? ''));
+    if (err.status === 400 && range) {
+      const availableFrom = range[2];
+      markPending('weather', `Forecast for ${race.shortName} is beyond the ${availableFrom} horizon`, availableFrom);
+      await write('weather.json', {
+        updatedAt: now.toISOString(),
+        available: false,
+        pending: true,
+        reason: `Weather forecasts reach ${availableFrom}. The ${race.name} runs ${race.date}, so its forecast is not published yet.`,
+        availableFrom,
+        round: race.round,
+        race: race.name,
+        circuit: race.circuit,
+        provider: 'Open-Meteo',
+      });
+      return null;
+    }
+    throw err;   // anything else is a genuine fault
+  }
+
   const at = (iso) => {
     const hour = iso.slice(0, 13) + ':00';
     const i = wx.hourly.time.indexOf(hour);
@@ -328,16 +384,20 @@ async function buildMarkets(position) {
   const pole = extract(pickEvent('pole-position'));
   const fastestLap = extract(pickEvent('fastest-lap'));
 
-  sources.markets = {
-    ok: Boolean(winner),
-    fetchedAt: now.toISOString(),
-    ...(winner ? { runners: winner.runners.length } : { error: 'no winner market matched this round' }),
-  };
-  if (!winner) errors.push('markets: no Polymarket winner market matched this round');
+  // Outcome markets open close to a race weekend. Their absence weeks out is
+  // expected, not broken — so it is reported, not treated as a failure.
+  if (winner) {
+    sources.markets = { ok: true, fetchedAt: now.toISOString(), runners: winner.runners.length };
+  } else {
+    markPending('markets', `Betting markets for ${race.shortName} have not opened yet`);
+  }
 
   await write('markets.json', {
     updatedAt: now.toISOString(),
     available: Boolean(winner),
+    pending: !winner,
+    reason: winner ? null
+      : `Outcome markets usually open in the days before a race. The ${race.name} runs ${race.date}.`,
     round: race.round,
     race: race.name,
     provider: 'Polymarket',
@@ -834,6 +894,8 @@ async function main() {
   settled.forEach((s, i) => {
     if (s.status === 'rejected') {
       const name = NAMES[i];
+      // A builder that resolved after recording itself as pending is not an
+      // error; only an actual rejection is.
       sources[name] = { ok: false, fetchedAt: now.toISOString(), error: String(s.reason.message) };
       errors.push(`${name}: ${s.reason.message}`);
     }
@@ -885,18 +947,27 @@ async function main() {
     commit: process.env.GITHUB_SHA?.slice(0, 7) ?? null,
     sources,
     errors,
+    // Sources with nothing to give yet. Reported to the reader, but never
+    // treated as a fault and never allowed to block publishing.
+    pending,
     // The UI uses this to decide whether to shout at you.
     staleAfterHours: 36,
   });
 
+  if (pending.length) {
+    console.log(`\nℹ️  ${pending.length} source(s) not available yet — expected, not a fault:`);
+    pending.forEach((p) => console.log(`   - ${p}`));
+  }
+
   if (errors.length) {
     console.error(`\n⚠️  ${errors.length} source(s) failed:`);
     errors.forEach((e) => console.error(`   - ${e}`));
-    // Partial data is still written and recorded, but the run exits non-zero
-    // so the failure surfaces as a notification rather than passing quietly.
+    // Exit non-zero so a genuine fault raises a notification. The commit step
+    // runs regardless (if: always()), so everything that did succeed still
+    // publishes — a broken source must never take the whole dashboard offline.
     process.exitCode = 1;
   } else {
-    console.log('\n✓ all sources ok');
+    console.log(pending.length ? '\n✓ all available sources ok' : '\n✓ all sources ok');
   }
 }
 

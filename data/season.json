@@ -1,36 +1,36 @@
 {
   "season": 2026,
-  "updatedAt": "2026-07-26T12:04:45.826Z",
-  "lastCompletedRound": 10,
-  "nextRound": 11,
-  "roundsRemaining": 12,
-  "isRaceWeek": true,
+  "updatedAt": "2026-07-31T02:38:37.117Z",
+  "lastCompletedRound": 11,
+  "nextRound": 12,
+  "roundsRemaining": 11,
+  "isRaceWeek": false,
   "nextRace": {
-    "round": 11,
-    "name": "Hungarian Grand Prix",
-    "shortName": "Hungarian GP",
-    "circuitId": "hungaroring",
-    "circuit": "Hungaroring",
-    "locality": "Budapest",
-    "country": "Hungary",
-    "lat": 47.5789,
-    "lon": 19.2486,
-    "date": "2026-07-26",
-    "raceStartUTC": "2026-07-26T13:00:00.000Z",
-    "isSprint": false,
+    "round": 12,
+    "name": "Dutch Grand Prix",
+    "shortName": "Dutch GP",
+    "circuitId": "zandvoort",
+    "circuit": "Circuit Park Zandvoort",
+    "locality": "Zandvoort",
+    "country": "Netherlands",
+    "lat": 52.3888,
+    "lon": 4.54092,
+    "date": "2026-08-23",
+    "raceStartUTC": "2026-08-23T13:00:00.000Z",
+    "isSprint": true,
     "sessions": {
-      "fp1": "2026-07-24T11:30:00.000Z",
-      "fp2": "2026-07-24T15:00:00.000Z",
-      "fp3": "2026-07-25T10:30:00.000Z",
-      "qualifying": "2026-07-25T14:00:00.000Z",
-      "race": "2026-07-26T13:00:00.000Z"
+      "fp1": "2026-08-21T10:30:00.000Z",
+      "sprintQualifying": "2026-08-21T14:30:00.000Z",
+      "sprint": "2026-08-22T10:00:00.000Z",
+      "qualifying": "2026-08-22T14:00:00.000Z",
+      "race": "2026-08-23T13:00:00.000Z"
     },
-    "lockUTC": "2026-07-25T14:00:00.000Z",
-    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix"
+    "lockUTC": "2026-08-21T14:30:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix"
   },
   "lastRace": {
-    "round": 10,
-    "name": "Belgian Grand Prix",
-    "date": "2026-07-19"
+    "round": 11,
+    "name": "Hungarian Grand Prix",
+    "date": "2026-07-26"
   }
 }

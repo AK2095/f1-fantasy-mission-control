@@ -1,55 +1,63 @@
 {
-  "builtAt": "2026-07-26T12:04:45.826Z",
-  "builtBy": "github-actions",
-  "commit": "87ae67b",
+  "builtAt": "2026-07-31T02:38:37.117Z",
+  "builtBy": "local",
+  "commit": null,
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
       "rounds": 22
     },
     "markets": {
-      "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
-      "runners": 22
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
-      "circuit": "Hungaroring"
+      "ok": false,
+      "pending": true,
+      "reason": "Betting markets for Dutch GP have not opened yet",
+      "availableFrom": null,
+      "checkedAt": "2026-07-31T02:38:37.117Z"
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
       "throughRound": 11
+    },
+    "weather": {
+      "ok": false,
+      "pending": true,
+      "reason": "Forecast for Dutch GP is beyond the 2026-08-15 horizon",
+      "availableFrom": "2026-08-15",
+      "checkedAt": "2026-07-31T02:38:37.117Z"
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
       "assets": 33,
-      "rounds": 10
+      "rounds": 11
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
-      "rounds": 10
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
+      "rounds": 11
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
-      "rounds": 10
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
+      "rounds": 11
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
-      "rounds": 7
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
+      "rounds": 8
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-07-26T12:04:45.826Z",
+      "fetchedAt": "2026-07-31T02:38:37.117Z",
       "rounds": 9
     }
   },
   "errors": [],
+  "pending": [
+    "markets: Betting markets for Dutch GP have not opened yet",
+    "weather: Forecast for Dutch GP is beyond the 2026-08-15 horizon"
+  ],
   "staleAfterHours": 36
 }
