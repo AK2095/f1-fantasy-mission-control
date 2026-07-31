@@ -1,23 +1,23 @@
 {
-  "builtAt": "2026-07-31T02:43:32.022Z",
+  "builtAt": "2026-07-31T08:52:19.564Z",
   "builtBy": "github-actions",
-  "commit": "032e4bd",
+  "commit": "00ed135",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
-      "rounds": 22
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
+      "rounds": 23
     },
     "markets": {
       "ok": false,
       "pending": true,
       "reason": "Betting markets for Dutch GP have not opened yet",
       "availableFrom": null,
-      "checkedAt": "2026-07-31T02:43:32.022Z"
+      "checkedAt": "2026-07-31T08:52:19.564Z"
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
       "throughRound": 11
     },
     "weather": {
@@ -25,32 +25,32 @@
       "pending": true,
       "reason": "Forecast for Dutch GP is beyond the 2026-08-15 horizon",
       "availableFrom": "2026-08-15",
-      "checkedAt": "2026-07-31T02:43:32.022Z"
+      "checkedAt": "2026-07-31T08:52:19.564Z"
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
       "assets": 33,
-      "rounds": 11
-    },
-    "results": {
-      "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
       "rounds": 11
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
+      "rounds": 11
+    },
+    "results": {
+      "ok": true,
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
       "rounds": 11
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
       "rounds": 8
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-07-31T02:43:32.022Z",
+      "fetchedAt": "2026-07-31T08:52:19.564Z",
       "rounds": 9
     }
   },
