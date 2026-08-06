@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-05T09:41:14.608Z",
+  "updatedAt": "2026-08-06T08:38:46.045Z",
   "available": false,
   "pending": true,
-  "reason": "Weather forecasts reach 2026-08-20. The Dutch Grand Prix runs 2026-08-23, so its forecast is not published yet.",
-  "availableFrom": "2026-08-20",
+  "reason": "Weather forecasts reach 2026-08-21. The Dutch Grand Prix runs 2026-08-23, so its forecast is not published yet.",
+  "availableFrom": "2026-08-21",
   "round": 12,
   "race": "Dutch Grand Prix",
   "circuit": "Circuit Park Zandvoort",
