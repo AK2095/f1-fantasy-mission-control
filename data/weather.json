@@ -1,11 +1,59 @@
 {
-  "updatedAt": "2026-08-07T22:37:25.759Z",
-  "available": false,
-  "pending": true,
-  "reason": "Weather forecasts reach 2026-08-22. The Dutch Grand Prix runs 2026-08-23, so its forecast is not published yet.",
-  "availableFrom": "2026-08-22",
+  "updatedAt": "2026-08-08T06:56:09.783Z",
+  "available": true,
   "round": 12,
   "race": "Dutch Grand Prix",
   "circuit": "Circuit Park Zandvoort",
+  "locality": "Zandvoort",
+  "country": "Netherlands",
+  "lat": 52.3888,
+  "lon": 4.54092,
+  "sessions": {
+    "fp1": {
+      "startUTC": "2026-08-21T10:30:00.000Z",
+      "precipProbability": 21,
+      "precipMm": 0,
+      "tempC": 19.3,
+      "windKph": 9.8,
+      "weatherCode": 0
+    },
+    "sprintQualifying": {
+      "startUTC": "2026-08-21T14:30:00.000Z",
+      "precipProbability": 22,
+      "precipMm": 0,
+      "tempC": 21.3,
+      "windKph": 9.2,
+      "weatherCode": 0
+    },
+    "sprint": {
+      "startUTC": "2026-08-22T10:00:00.000Z",
+      "precipProbability": 28,
+      "precipMm": 0,
+      "tempC": 19.6,
+      "windKph": 23.8,
+      "weatherCode": 3
+    },
+    "qualifying": {
+      "startUTC": "2026-08-22T14:00:00.000Z",
+      "precipProbability": 29,
+      "precipMm": 0,
+      "tempC": 21.8,
+      "windKph": 20.3,
+      "weatherCode": 2
+    },
+    "race": {
+      "startUTC": "2026-08-23T13:00:00.000Z",
+      "precipProbability": null,
+      "precipMm": null,
+      "tempC": null,
+      "windKph": null,
+      "weatherCode": null
+    }
+  },
+  "scenario": {
+    "dryProb": 100,
+    "wetProb": 0,
+    "haltProb": 0
+  },
   "provider": "Open-Meteo"
 }
