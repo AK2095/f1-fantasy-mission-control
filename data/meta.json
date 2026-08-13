@@ -1,11 +1,11 @@
 {
-  "builtAt": "2026-08-13T19:13:38.055Z",
+  "builtAt": "2026-08-13T20:45:13.429Z",
   "builtBy": "github-actions",
-  "commit": "861f42c",
+  "commit": "444387b",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "rounds": 23
     },
     "markets": {
@@ -13,42 +13,42 @@
       "pending": true,
       "reason": "Betting markets for Dutch GP have not opened yet",
       "availableFrom": null,
-      "checkedAt": "2026-08-13T19:13:38.055Z"
-    },
-    "standings": {
-      "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
-      "throughRound": 11
+      "checkedAt": "2026-08-13T20:45:13.429Z"
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "circuit": "Circuit Park Zandvoort"
+    },
+    "standings": {
+      "ok": true,
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
+      "throughRound": 11
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "assets": 33,
       "rounds": 11
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "rounds": 11
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "rounds": 11
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "rounds": 8
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-08-13T19:13:38.055Z",
+      "fetchedAt": "2026-08-13T20:45:13.429Z",
       "rounds": 9
     }
   },
