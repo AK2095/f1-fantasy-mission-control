@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T08:23:50.057Z",
+  "updatedAt": "2026-08-13T07:36:56.629Z",
   "available": true,
   "round": 12,
   "race": "Dutch Grand Prix",
@@ -11,48 +11,48 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-08-21T10:30:00.000Z",
-      "precipProbability": 62,
-      "precipMm": 0.2,
-      "tempC": 16.5,
-      "windKph": 8.7,
-      "weatherCode": 51
+      "precipProbability": 43,
+      "precipMm": 0,
+      "tempC": 21.2,
+      "windKph": 13,
+      "weatherCode": 3
     },
     "sprintQualifying": {
       "startUTC": "2026-08-21T14:30:00.000Z",
-      "precipProbability": 55,
+      "precipProbability": 38,
       "precipMm": 0,
-      "tempC": 17.6,
-      "windKph": 11.9,
-      "weatherCode": 0
+      "tempC": 23.3,
+      "windKph": 6.9,
+      "weatherCode": 3
     },
     "sprint": {
       "startUTC": "2026-08-22T10:00:00.000Z",
-      "precipProbability": 46,
+      "precipProbability": 45,
       "precipMm": 0,
-      "tempC": 17.3,
-      "windKph": 11.2,
-      "weatherCode": 1
+      "tempC": 18.8,
+      "windKph": 18.2,
+      "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-08-22T14:00:00.000Z",
-      "precipProbability": 40,
+      "precipProbability": 47,
       "precipMm": 0,
-      "tempC": 17.9,
-      "windKph": 16,
-      "weatherCode": 1
+      "tempC": 18.6,
+      "windKph": 15.2,
+      "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-08-23T13:00:00.000Z",
-      "precipProbability": 40,
+      "precipProbability": 33,
       "precipMm": 0,
-      "tempC": 18.2,
-      "windKph": 17.9,
-      "weatherCode": 0
+      "tempC": 18.5,
+      "windKph": 18.4,
+      "weatherCode": 3
     }
   },
   "scenario": {
-    "dryProb": 60,
-    "wetProb": 40,
+    "dryProb": 67,
+    "wetProb": 33,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
