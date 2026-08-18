@@ -1,12 +1,246 @@
 {
-  "updatedAt": "2026-08-17T07:55:57.237Z",
-  "available": false,
-  "pending": true,
-  "reason": "Outcome markets usually open in the days before a race. The Dutch Grand Prix runs 2026-08-23.",
+  "updatedAt": "2026-08-18T07:44:33.854Z",
+  "available": true,
+  "pending": false,
+  "reason": null,
   "round": 12,
   "race": "Dutch Grand Prix",
   "provider": "Polymarket",
-  "winner": null,
+  "winner": {
+    "title": "Dutch Grand Prix: Driver Winner",
+    "slug": "f1-dutch-grand-prix-winner-2026-08-23",
+    "endDate": "2026-08-30T13:00:00Z",
+    "totalVolume": 0,
+    "runners": [
+      {
+        "name": "Isack Hadjar",
+        "probability": 0.5,
+        "volume": 0
+      },
+      {
+        "name": "Pierre Gasly",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Fernando Alonso",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Alexander Albon",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Charles Leclerc",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Esteban Ocon",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Lando Norris",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Kimi Antonelli",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Max Verstappen",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Franco Colapinto",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Valtteri Bottas",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Oliver Bearman",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Oscar Piastri",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "George Russell",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Arvid Lindblad",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Liam Lawson",
+        "probability": 0.495,
+        "volume": 0
+      },
+      {
+        "name": "Lance Stroll",
+        "probability": 0.495,
+        "volume": 0
+      }
+    ]
+  },
   "pole": null,
-  "fastestLap": null
+  "fastestLap": {
+    "title": "Dutch Grand Prix: Practice 1 Fastest Lap",
+    "slug": "f1-dutch-grand-prix-practice-1-fastest-lap-2026-08-21",
+    "endDate": "2026-08-28T10:30:00Z",
+    "totalVolume": 0,
+    "runners": [
+      {
+        "name": "Pierre Gasly",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Fernando Alonso",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Alexander Albon",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Charles Leclerc",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Esteban Ocon",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Lando Norris",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Kimi Antonelli",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Max Verstappen",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Franco Colapinto",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Valtteri Bottas",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Oliver Bearman",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Oscar Piastri",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "George Russell",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Arvid Lindblad",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Isack Hadjar",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Liam Lawson",
+        "probability": 0.49,
+        "volume": 0
+      },
+      {
+        "name": "Lance Stroll",
+        "probability": 0.49,
+        "volume": 0
+      }
+    ]
+  }
 }
