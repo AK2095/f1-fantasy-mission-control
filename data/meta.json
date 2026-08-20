@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-08-20T14:37:55.513Z",
+  "builtAt": "2026-08-20T15:34:51.052Z",
   "builtBy": "github-actions",
-  "commit": "61f232f",
+  "commit": "17e08f0",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "rounds": 23
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "runners": 22
-    },
-    "standings": {
-      "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
-      "throughRound": 11
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "circuit": "Circuit Park Zandvoort"
+    },
+    "standings": {
+      "ok": true,
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
+      "throughRound": 11
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "assets": 33,
       "rounds": 11
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "rounds": 11
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "rounds": 11
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "rounds": 8
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-08-20T14:37:55.513Z",
+      "fetchedAt": "2026-08-20T15:34:51.052Z",
       "rounds": 9
     }
   },
