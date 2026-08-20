@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T07:44:43.289Z",
+  "updatedAt": "2026-08-20T06:48:58.878Z",
   "provider": "f1fantasytools.com",
   "note": "Official fantasy prices and per-round scoring. Derived metrics (avgPoints, stdev, sharpe, pointsPerMillion, momentum) are computed here, not published by the source.",
   "rounds": 11,
@@ -455,8 +455,8 @@
       "momentum": -10.3
     },
     {
-      "code": "HAD",
-      "id": "RED_HAD",
+      "code": "LAW",
+      "id": "RED_LAW",
       "type": "driver",
       "color": "#0600ef",
       "price": 14.5,
@@ -481,12 +481,12 @@
       "worstRound": -26,
       "bestRound": 51,
       "negativeRounds": 2,
-      "last2Avg": 26.5,
-      "momentum": 12.4
+      "last2Avg": null,
+      "momentum": null
     },
     {
-      "code": "LAW",
-      "id": "VRB_LAW",
+      "code": "TSU",
+      "id": "VRB_TSU",
       "type": "driver",
       "color": "#6692ff",
       "price": 10.3,
@@ -511,8 +511,8 @@
       "worstRound": -12,
       "bestRound": 35,
       "negativeRounds": 1,
-      "last2Avg": 8,
-      "momentum": -5.2
+      "last2Avg": null,
+      "momentum": null
     },
     {
       "code": "OCO",
