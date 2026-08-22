@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:24:17.862Z",
+  "updatedAt": "2026-08-22T21:23:05.662Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,47 +10,47 @@
     "title": "Dutch Grand Prix: Driver Winner",
     "slug": "f1-dutch-grand-prix-winner-2026-08-23",
     "endDate": "2026-08-30T13:00:00Z",
-    "totalVolume": 175482.851848,
+    "totalVolume": 177999.92989000003,
     "runners": [
       {
         "name": "Lando Norris",
         "probability": 0.365,
-        "volume": 16984.279896
+        "volume": 17178.925637999997
       },
       {
         "name": "George Russell",
-        "probability": 0.255,
-        "volume": 6488.341499
+        "probability": 0.25,
+        "volume": 6560.403799000001
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.24,
-        "volume": 17876.848680999996
+        "probability": 0.245,
+        "volume": 19076.658680999997
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.045,
-        "volume": 3208.7488389999994
+        "probability": 0.0425,
+        "volume": 3224.7488390000003
       },
       {
         "name": "Charles Leclerc",
         "probability": 0.0365,
-        "volume": 8404.380872999998
+        "volume": 8858.380873
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0355,
+        "probability": 0.0345,
         "volume": 9643.037869
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.024,
+        "probability": 0.0275,
         "volume": 7714.9931910000005
       },
       {
         "name": "Pierre Gasly",
         "probability": 0.0015,
-        "volume": 7572.972
+        "volume": 7572.972000000001
       },
       {
         "name": "Arvid Lindblad",
@@ -60,32 +60,27 @@
       {
         "name": "Liam Lawson",
         "probability": 0.0015,
-        "volume": 175.112
+        "volume": 175.11199999999997
       },
       {
         "name": "Fernando Alonso",
         "probability": 0.001,
-        "volume": 614.909
+        "volume": 614.9089999999999
       },
       {
         "name": "Alexander Albon",
         "probability": 0.001,
-        "volume": 13237.572
+        "volume": 13537.572
       },
       {
         "name": "Gabriel Bortoleto",
         "probability": 0.001,
-        "volume": 8256.37
+        "volume": 8536.93
       },
       {
         "name": "Sergio Perez",
         "probability": 0.001,
         "volume": 8258.182
-      },
-      {
-        "name": "Franco Colapinto",
-        "probability": 0.001,
-        "volume": 8458.182
       },
       {
         "name": "Carlos Sainz Jr.",
@@ -105,7 +100,7 @@
       {
         "name": "Oliver Bearman",
         "probability": 0.001,
-        "volume": 9615.282
+        "volume": 9615.282000000001
       },
       {
         "name": "Lance Stroll",
@@ -118,6 +113,11 @@
         "volume": 7688.992
       },
       {
+        "name": "Franco Colapinto",
+        "probability": 0.0005,
+        "volume": 8458.182
+      },
+      {
         "name": "Isack Hadjar",
         "probability": 0.0005,
         "volume": 265.996
@@ -128,16 +128,16 @@
     "title": "Dutch Grand Prix: Driver Pole Position",
     "slug": "f1-dutch-grand-prix-driver-pole-position-2026-08-22",
     "endDate": "2026-08-29T14:00:00Z",
-    "totalVolume": 43339.118379,
+    "totalVolume": 43497.87837899999,
     "runners": [
       {
         "name": "Lando Norris",
         "probability": 0.995,
-        "volume": 11147.521976999997
+        "volume": 11151.091976999995
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.4955,
+        "probability": 0.4935,
         "volume": 3896.3883690000007
       },
       {
@@ -147,7 +147,7 @@
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.003,
+        "probability": 0.0035,
         "volume": 5333.6445570000005
       },
       {
@@ -203,7 +203,7 @@
       {
         "name": "George Russell",
         "probability": 0.001,
-        "volume": 7563.285080999999
+        "volume": 7718.475080999997
       },
       {
         "name": "Isack Hadjar",
@@ -223,22 +223,22 @@
       {
         "name": "Charles Leclerc",
         "probability": 0.0005,
-        "volume": 5678.285284
+        "volume": 5678.2852840000005
       },
       {
         "name": "Oscar Piastri",
         "probability": 0.0005,
-        "volume": 2345.6141140000004
+        "volume": 2345.614114
       },
       {
         "name": "Arvid Lindblad",
         "probability": 0.0005,
-        "volume": 132.24099999999999
+        "volume": 132.241
       },
       {
         "name": "Liam Lawson",
         "probability": 0.0005,
-        "volume": 132.24099999999999
+        "volume": 132.241
       }
     ]
   },
@@ -246,42 +246,42 @@
     "title": "Dutch Grand Prix: Driver Fastest Lap",
     "slug": "f1-dutch-grand-prix-driver-fastest-lap-2026-08-23",
     "endDate": "2026-08-30T13:00:00Z",
-    "totalVolume": 2482.7352679999995,
+    "totalVolume": 3367.771115,
     "runners": [
       {
         "name": "Kimi Antonelli",
         "probability": 0.29,
-        "volume": 391.28
+        "volume": 391.28000000000003
       },
       {
         "name": "Lando Norris",
-        "probability": 0.145,
-        "volume": 19.463155999999998
-      },
-      {
-        "name": "Charles Leclerc",
-        "probability": 0.125,
-        "volume": 422.868446
+        "probability": 0.135,
+        "volume": 29.463155999999998
       },
       {
         "name": "George Russell",
-        "probability": 0.12,
+        "probability": 0.125,
         "volume": 44.166665
+      },
+      {
+        "name": "Charles Leclerc",
+        "probability": 0.115,
+        "volume": 574.571517
       },
       {
         "name": "Lewis Hamilton",
         "probability": 0.105,
-        "volume": 306.41889999999995
+        "volume": 306.4189
+      },
+      {
+        "name": "Oscar Piastri",
+        "probability": 0.045,
+        "volume": 0
       },
       {
         "name": "Max Verstappen",
         "probability": 0.044,
-        "volume": 1073.5381009999999
-      },
-      {
-        "name": "Oscar Piastri",
-        "probability": 0.041,
-        "volume": 0
+        "volume": 1796.8708769999998
       },
       {
         "name": "Liam Lawson",
