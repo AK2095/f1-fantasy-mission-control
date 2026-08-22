@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T18:32:48.563Z",
+  "updatedAt": "2026-08-22T19:23:13.992Z",
   "available": true,
   "round": 12,
   "race": "Dutch Grand Prix",
@@ -45,8 +45,8 @@
       "startUTC": "2026-08-23T13:00:00.000Z",
       "precipProbability": 17,
       "precipMm": 0,
-      "tempC": 17,
-      "windKph": 9.7,
+      "tempC": 18,
+      "windKph": 14.4,
       "weatherCode": 3
     }
   },
