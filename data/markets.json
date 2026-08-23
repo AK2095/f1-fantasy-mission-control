@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T08:32:04.959Z",
+  "updatedAt": "2026-08-23T09:29:04.107Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,62 +10,52 @@
     "title": "Dutch Grand Prix: Driver Winner",
     "slug": "f1-dutch-grand-prix-winner-2026-08-23",
     "endDate": "2026-08-30T13:00:00Z",
-    "totalVolume": 201442.30166300002,
+    "totalVolume": 205601.17402800004,
     "runners": [
       {
         "name": "Lando Norris",
-        "probability": 0.375,
-        "volume": 24490.398559000005
+        "probability": 0.365,
+        "volume": 26931.386452000006
       },
       {
         "name": "George Russell",
-        "probability": 0.28,
-        "volume": 6933.545351
+        "probability": 0.285,
+        "volume": 7022.585351000001
       },
       {
         "name": "Kimi Antonelli",
         "probability": 0.245,
-        "volume": 20146.912358999998
+        "volume": 20166.912359
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.046,
-        "volume": 3506.015781
+        "probability": 0.0485,
+        "volume": 3556.015781
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.0385,
-        "volume": 9033.479696999999
+        "probability": 0.0395,
+        "volume": 9441.311478
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0355,
-        "volume": 11333.322869
+        "probability": 0.034,
+        "volume": 11383.322869000001
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.02,
-        "volume": 12924.586046999999
-      },
-      {
-        "name": "Fernando Alonso",
-        "probability": 0.0065,
-        "volume": 614.909
+        "probability": 0.0225,
+        "volume": 13746.598737999999
       },
       {
         "name": "Liam Lawson",
         "probability": 0.0065,
-        "volume": 754.872
+        "volume": 754.8720000000001
       },
       {
-        "name": "Sergio Perez",
-        "probability": 0.0045,
-        "volume": 10758.782
-      },
-      {
-        "name": "Franco Colapinto",
-        "probability": 0.0025,
-        "volume": 12309.082
+        "name": "Fernando Alonso",
+        "probability": 0.006,
+        "volume": 614.909
       },
       {
         "name": "Lance Stroll",
@@ -73,9 +63,19 @@
         "volume": 8870.37
       },
       {
+        "name": "Franco Colapinto",
+        "probability": 0.002,
+        "volume": 12309.082
+      },
+      {
         "name": "Pierre Gasly",
         "probability": 0.0015,
         "volume": 7572.972
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.0015,
+        "volume": 7687.172
       },
       {
         "name": "Arvid Lindblad",
@@ -86,11 +86,6 @@
         "name": "Gabriel Bortoleto",
         "probability": 0.001,
         "volume": 8536.93
-      },
-      {
-        "name": "Carlos Sainz Jr.",
-        "probability": 0.001,
-        "volume": 7687.172
       },
       {
         "name": "Nico Hulkenberg",
@@ -106,6 +101,11 @@
         "name": "Alexander Albon",
         "probability": 0.0005,
         "volume": 13537.572
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.0005,
+        "volume": 11037.782000000001
       },
       {
         "name": "Esteban Ocon",
@@ -133,8 +133,8 @@
     "runners": [
       {
         "name": "Kimi Antonelli",
-        "probability": 0.24,
-        "volume": 539.9674180000001
+        "probability": 0.25,
+        "volume": 539.967418
       },
       {
         "name": "Lando Norris",
@@ -148,17 +148,17 @@
       },
       {
         "name": "George Russell",
-        "probability": 0.12,
+        "probability": 0.125,
         "volume": 51.309521000000004
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.105,
+        "probability": 0.115,
         "volume": 306.4189
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.0555,
+        "probability": 0.0565,
         "volume": 2096.160877
       },
       {
