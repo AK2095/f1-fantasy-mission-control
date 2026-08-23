@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T10:25:42.708Z",
+  "updatedAt": "2026-08-23T11:21:42.179Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,42 +10,42 @@
     "title": "Dutch Grand Prix: Driver Winner",
     "slug": "f1-dutch-grand-prix-winner-2026-08-23",
     "endDate": "2026-08-30T13:00:00Z",
-    "totalVolume": 211642.591991,
+    "totalVolume": 218537.529592,
     "runners": [
       {
         "name": "Lando Norris",
-        "probability": 0.365,
-        "volume": 30315.278336999996
+        "probability": 0.355,
+        "volume": 31882.776592000006
       },
       {
         "name": "George Russell",
         "probability": 0.285,
-        "volume": 7589.861202999998
+        "volume": 8413.99913
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.255,
-        "volume": 20605.121303999997
+        "probability": 0.26,
+        "volume": 21011.813608
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.0475,
-        "volume": 4582.015781
+        "probability": 0.051,
+        "volume": 6654.95025
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.0395,
-        "volume": 9441.311478000001
+        "probability": 0.039,
+        "volume": 9525.740873000002
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0365,
-        "volume": 11509.36415
+        "probability": 0.035,
+        "volume": 11583.179938000001
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.0225,
-        "volume": 13746.598738000002
+        "probability": 0.023,
+        "volume": 14911.628201
       },
       {
         "name": "Liam Lawson",
@@ -58,29 +58,14 @@
         "volume": 1114.909
       },
       {
-        "name": "Sergio Perez",
-        "probability": 0.0035,
-        "volume": 11037.782000000001
-      },
-      {
         "name": "Lance Stroll",
         "probability": 0.0025,
         "volume": 8870.369999999999
       },
       {
-        "name": "Franco Colapinto",
-        "probability": 0.002,
-        "volume": 12309.082
-      },
-      {
         "name": "Pierre Gasly",
         "probability": 0.0015,
         "volume": 7572.972
-      },
-      {
-        "name": "Carlos Sainz Jr.",
-        "probability": 0.0015,
-        "volume": 7687.172
       },
       {
         "name": "Arvid Lindblad",
@@ -91,6 +76,21 @@
         "name": "Gabriel Bortoleto",
         "probability": 0.001,
         "volume": 8536.93
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.001,
+        "volume": 11738.182
+      },
+      {
+        "name": "Franco Colapinto",
+        "probability": 0.001,
+        "volume": 12309.082
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.001,
+        "volume": 7687.172
       },
       {
         "name": "Nico Hulkenberg",
@@ -129,22 +129,22 @@
     "title": "Dutch Grand Prix: Driver Fastest Lap",
     "slug": "f1-dutch-grand-prix-driver-fastest-lap-2026-08-23",
     "endDate": "2026-08-30T13:00:00Z",
-    "totalVolume": 4169.111389,
+    "totalVolume": 4198.868465,
     "runners": [
       {
         "name": "Kimi Antonelli",
         "probability": 0.245,
-        "volume": 539.967418
+        "volume": 543.8135699999999
       },
       {
         "name": "Lando Norris",
-        "probability": 0.17,
-        "volume": 308.463156
+        "probability": 0.175,
+        "volume": 318.989468
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.125,
-        "volume": 599.061517
+        "probability": 0.14,
+        "volume": 606.753823
       },
       {
         "name": "George Russell",
@@ -153,12 +153,12 @@
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.11,
-        "volume": 306.41889999999995
+        "probability": 0.12,
+        "volume": 314.1112059999999
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.0565,
+        "probability": 0.0555,
         "volume": 2096.160877
       },
       {
