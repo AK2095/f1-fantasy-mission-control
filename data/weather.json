@@ -1,58 +1,58 @@
 {
-  "updatedAt": "2026-08-23T12:42:31.383Z",
+  "updatedAt": "2026-08-23T13:33:01.508Z",
   "available": true,
-  "round": 12,
-  "race": "Dutch Grand Prix",
-  "circuit": "Circuit Park Zandvoort",
-  "locality": "Zandvoort",
-  "country": "Netherlands",
-  "lat": 52.3888,
-  "lon": 4.54092,
+  "round": 13,
+  "race": "Italian Grand Prix",
+  "circuit": "Autodromo Nazionale di Monza",
+  "locality": "Monza",
+  "country": "Italy",
+  "lat": 45.6156,
+  "lon": 9.28111,
   "sessions": {
     "fp1": {
-      "startUTC": "2026-08-21T10:30:00.000Z",
-      "precipProbability": 97,
+      "startUTC": "2026-09-04T10:30:00.000Z",
+      "precipProbability": 17,
       "precipMm": 0,
-      "tempC": 19.2,
-      "windKph": 11.9,
+      "tempC": 22.9,
+      "windKph": 2.8,
+      "weatherCode": 2
+    },
+    "fp2": {
+      "startUTC": "2026-09-04T14:00:00.000Z",
+      "precipProbability": 15,
+      "precipMm": 0,
+      "tempC": 24.4,
+      "windKph": 2,
+      "weatherCode": 2
+    },
+    "fp3": {
+      "startUTC": "2026-09-05T10:30:00.000Z",
+      "precipProbability": 20,
+      "precipMm": 0,
+      "tempC": 23.4,
+      "windKph": 5.4,
       "weatherCode": 3
     },
-    "sprintQualifying": {
-      "startUTC": "2026-08-21T14:30:00.000Z",
-      "precipProbability": 37,
-      "precipMm": 0,
-      "tempC": 19.5,
-      "windKph": 14.8,
-      "weatherCode": 2
-    },
-    "sprint": {
-      "startUTC": "2026-08-22T10:00:00.000Z",
-      "precipProbability": 96,
-      "precipMm": 0,
-      "tempC": 17.3,
-      "windKph": 19.4,
-      "weatherCode": 0
-    },
     "qualifying": {
-      "startUTC": "2026-08-22T14:00:00.000Z",
-      "precipProbability": 24,
+      "startUTC": "2026-09-05T14:00:00.000Z",
+      "precipProbability": 21,
       "precipMm": 0,
-      "tempC": 18.2,
-      "windKph": 14,
-      "weatherCode": 0
+      "tempC": 25.1,
+      "windKph": 4.5,
+      "weatherCode": 3
     },
     "race": {
-      "startUTC": "2026-08-23T13:00:00.000Z",
-      "precipProbability": 32,
-      "precipMm": 0,
-      "tempC": 18.4,
-      "windKph": 11.5,
-      "weatherCode": 2
+      "startUTC": "2026-09-06T13:00:00.000Z",
+      "precipProbability": 21,
+      "precipMm": 0.8,
+      "tempC": 20,
+      "windKph": 8,
+      "weatherCode": 95
     }
   },
   "scenario": {
-    "dryProb": 68,
-    "wetProb": 32,
+    "dryProb": 79,
+    "wetProb": 21,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
