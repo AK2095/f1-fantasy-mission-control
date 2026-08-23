@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T13:33:01.508Z",
+  "updatedAt": "2026-08-23T14:24:39.737Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -25,11 +25,11 @@
       {
         "name": "Lando Norris",
         "probability": 0.175,
-        "volume": 816.5501039999999
+        "volume": 816.550104
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.155,
+        "probability": 0.175,
         "volume": 5363.829742
       },
       {
@@ -45,22 +45,17 @@
       {
         "name": "Oscar Piastri",
         "probability": 0.095,
-        "volume": 2335.326358
+        "volume": 2335.3263580000003
       },
       {
         "name": "Alexander Albon",
-        "probability": 0.003,
+        "probability": 0.0055,
         "volume": 333.15
       },
       {
         "name": "Isack Hadjar",
         "probability": 0.0025,
         "volume": 287.03
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.002,
-        "volume": 309.48
       },
       {
         "name": "Pierre Gasly",
@@ -80,12 +75,12 @@
       {
         "name": "Sergio Perez",
         "probability": 0.0015,
-        "volume": 322.67
+        "volume": 322.66999999999996
       },
       {
         "name": "Franco Colapinto",
         "probability": 0.0015,
-        "volume": 322.70000000000005
+        "volume": 322.7
       },
       {
         "name": "Nico Hulkenberg",
@@ -95,12 +90,17 @@
       {
         "name": "Valtteri Bottas",
         "probability": 0.0015,
-        "volume": 247.51000000000002
+        "volume": 247.51
       },
       {
         "name": "Liam Lawson",
         "probability": 0.0015,
         "volume": 313.46000000000004
+      },
+      {
+        "name": "Oliver Bearman",
+        "probability": 0.001,
+        "volume": 309.48
       },
       {
         "name": "Esteban Ocon",
@@ -250,7 +250,7 @@
     "runners": [
       {
         "name": "Kimi Antonelli",
-        "probability": 0.5,
+        "probability": 0.495,
         "volume": 13.157891
       },
       {
@@ -335,7 +335,7 @@
       },
       {
         "name": "Lance Stroll",
-        "probability": 0.475,
+        "probability": 0.465,
         "volume": 0
       },
       {
