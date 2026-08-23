@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T14:24:39.737Z",
+  "updatedAt": "2026-08-23T15:23:51.194Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,8 +10,13 @@
     "title": "Italian Grand Prix: Driver Winner",
     "slug": "f1-italian-grand-prix-winner-2026-09-06",
     "endDate": "2026-09-13T13:00:00Z",
-    "totalVolume": 16600.009839,
+    "totalVolume": 16764.253560999998,
     "runners": [
+      {
+        "name": "Lando Norris",
+        "probability": 0.24,
+        "volume": 880.6885639999999
+      },
       {
         "name": "Charles Leclerc",
         "probability": 0.19,
@@ -23,14 +28,9 @@
         "volume": 1250.1147879999999
       },
       {
-        "name": "Lando Norris",
-        "probability": 0.175,
-        "volume": 816.550104
-      },
-      {
         "name": "Kimi Antonelli",
         "probability": 0.175,
-        "volume": 5363.829742
+        "volume": 5463.935004
       },
       {
         "name": "George Russell",
@@ -45,16 +45,21 @@
       {
         "name": "Oscar Piastri",
         "probability": 0.095,
-        "volume": 2335.3263580000003
+        "volume": 2335.326358
       },
       {
         "name": "Alexander Albon",
-        "probability": 0.0055,
+        "probability": 0.0045,
         "volume": 333.15
       },
       {
+        "name": "Oliver Bearman",
+        "probability": 0.0035,
+        "volume": 309.48
+      },
+      {
         "name": "Isack Hadjar",
-        "probability": 0.0025,
+        "probability": 0.002,
         "volume": 287.03
       },
       {
@@ -75,12 +80,12 @@
       {
         "name": "Sergio Perez",
         "probability": 0.0015,
-        "volume": 322.66999999999996
+        "volume": 322.67
       },
       {
         "name": "Franco Colapinto",
         "probability": 0.0015,
-        "volume": 322.7
+        "volume": 322.70000000000005
       },
       {
         "name": "Nico Hulkenberg",
@@ -90,17 +95,12 @@
       {
         "name": "Valtteri Bottas",
         "probability": 0.0015,
-        "volume": 247.51
+        "volume": 247.51000000000002
       },
       {
         "name": "Liam Lawson",
         "probability": 0.0015,
         "volume": 313.46000000000004
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.001,
-        "volume": 309.48
       },
       {
         "name": "Esteban Ocon",
@@ -274,17 +274,7 @@
         "volume": 0
       },
       {
-        "name": "Sergio Perez",
-        "probability": 0.475,
-        "volume": 0
-      },
-      {
         "name": "Esteban Ocon",
-        "probability": 0.475,
-        "volume": 0
-      },
-      {
-        "name": "Lando Norris",
         "probability": 0.475,
         "volume": 0
       },
@@ -334,8 +324,18 @@
         "volume": 0
       },
       {
+        "name": "Sergio Perez",
+        "probability": 0.47,
+        "volume": 0
+      },
+      {
+        "name": "Lando Norris",
+        "probability": 0.47,
+        "volume": 0
+      },
+      {
         "name": "Lance Stroll",
-        "probability": 0.465,
+        "probability": 0.47,
         "volume": 0
       },
       {
