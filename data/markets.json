@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T20:34:58.821Z",
+  "updatedAt": "2026-08-29T23:02:43.546Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,17 +10,17 @@
     "title": "Italian Grand Prix: Driver Winner",
     "slug": "f1-italian-grand-prix-winner-2026-09-06",
     "endDate": "2026-09-13T13:00:00Z",
-    "totalVolume": 69953.760495,
+    "totalVolume": 72487.60049499999,
     "runners": [
       {
         "name": "Lando Norris",
-        "probability": 0.325,
-        "volume": 4229.212361999999
+        "probability": 0.32,
+        "volume": 4229.212362
       },
       {
         "name": "George Russell",
         "probability": 0.28,
-        "volume": 2982.6958369999998
+        "volume": 2982.695837
       },
       {
         "name": "Lewis Hamilton",
@@ -29,23 +29,23 @@
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.11,
-        "volume": 7602.557805
+        "probability": 0.105,
+        "volume": 7602.5578049999995
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.08,
-        "volume": 28136.594431999998
+        "probability": 0.075,
+        "volume": 30670.434432
       },
       {
         "name": "Max Verstappen",
         "probability": 0.06,
-        "volume": 4034.754952000001
+        "volume": 4034.7549520000007
       },
       {
         "name": "Oscar Piastri",
         "probability": 0.055,
-        "volume": 2900.5563580000007
+        "volume": 2900.556358
       },
       {
         "name": "Isack Hadjar",
@@ -75,12 +75,12 @@
       {
         "name": "Franco Colapinto",
         "probability": 0.0015,
-        "volume": 349.55
+        "volume": 349.55000000000007
       },
       {
         "name": "Carlos Sainz Jr.",
         "probability": 0.0015,
-        "volume": 6707.46
+        "volume": 6707.459999999999
       },
       {
         "name": "Nico Hulkenberg",
@@ -167,7 +167,7 @@
       },
       {
         "name": "Valtteri Bottas",
-        "probability": 0.049,
+        "probability": 0.046,
         "volume": 41.96
       },
       {
@@ -249,6 +249,11 @@
     "totalVolume": 233.890713,
     "runners": [
       {
+        "name": "George Russell",
+        "probability": 0.245,
+        "volume": 0
+      },
+      {
         "name": "Lando Norris",
         "probability": 0.24,
         "volume": 0
@@ -257,11 +262,6 @@
         "name": "Kimi Antonelli",
         "probability": 0.215,
         "volume": 175.97607100000002
-      },
-      {
-        "name": "George Russell",
-        "probability": 0.215,
-        "volume": 0
       },
       {
         "name": "Charles Leclerc",
