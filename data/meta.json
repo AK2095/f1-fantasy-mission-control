@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-09-03T21:35:21.066Z",
+  "builtAt": "2026-09-03T23:49:58.495Z",
   "builtBy": "github-actions",
-  "commit": "499753e",
+  "commit": "31c7916",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "rounds": 23
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
-      "circuit": "Autodromo Nazionale di Monza"
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "runners": 22
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "throughRound": 12
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "assets": 33,
       "rounds": 12
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "rounds": 12
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "rounds": 12
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
+      "circuit": "Autodromo Nazionale di Monza"
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "rounds": 9
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-09-03T21:35:21.066Z",
+      "fetchedAt": "2026-09-03T23:49:58.495Z",
       "rounds": 9
     }
   },
