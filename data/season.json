@@ -1,10 +1,10 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-03T10:50:43.131Z",
+  "updatedAt": "2026-09-03T14:54:19.184Z",
   "lastCompletedRound": 12,
   "nextRound": 13,
   "roundsRemaining": 11,
-  "isRaceWeek": false,
+  "isRaceWeek": true,
   "nextRace": {
     "round": 13,
     "name": "Italian Grand Prix",
