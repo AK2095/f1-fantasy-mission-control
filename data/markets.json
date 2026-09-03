@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T14:54:19.184Z",
+  "updatedAt": "2026-09-03T18:23:36.578Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,37 +10,37 @@
     "title": "Italian Grand Prix: Driver Winner",
     "slug": "f1-italian-grand-prix-winner-2026-09-06",
     "endDate": "2026-09-13T13:00:00Z",
-    "totalVolume": 113956.175872,
+    "totalVolume": 114389.77612799998,
     "runners": [
       {
         "name": "Lando Norris",
-        "probability": 0.315,
-        "volume": 10894.359316999999
+        "probability": 0.325,
+        "volume": 11005.340528
       },
       {
         "name": "George Russell",
         "probability": 0.285,
-        "volume": 7475.862646
+        "volume": 7475.8626460000005
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.115,
-        "volume": 9943.565143
+        "probability": 0.12,
+        "volume": 9943.565143000002
       },
       {
         "name": "Charles Leclerc",
         "probability": 0.11,
-        "volume": 10146.572038999999
+        "volume": 10154.905371
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.065,
-        "volume": 46253.71736
+        "probability": 0.06,
+        "volume": 46568.003073
       },
       {
         "name": "Max Verstappen",
         "probability": 0.0585,
-        "volume": 8594.005868000002
+        "volume": 8594.005867999998
       },
       {
         "name": "Oscar Piastri",
@@ -50,7 +50,7 @@
       {
         "name": "Liam Lawson",
         "probability": 0.0025,
-        "volume": 3479.01
+        "volume": 3479.0100000000007
       },
       {
         "name": "Pierre Gasly",
@@ -120,7 +120,7 @@
       {
         "name": "Isack Hadjar",
         "probability": 0.0005,
-        "volume": 1478.43
+        "volume": 1478.4299999999998
       }
     ]
   },
@@ -128,7 +128,7 @@
     "title": "Italian Grand Prix: Driver Pole Position",
     "slug": "f1-italian-grand-prix-driver-pole-position-2026-09-05",
     "endDate": "2026-09-12T14:00:00Z",
-    "totalVolume": 2881.70327,
+    "totalVolume": 2881.7032700000004,
     "runners": [
       {
         "name": "George Russell",
@@ -138,7 +138,7 @@
       {
         "name": "Kimi Antonelli",
         "probability": 0.23,
-        "volume": 689.3410149999999
+        "volume": 689.341015
       },
       {
         "name": "Lando Norris",
@@ -147,8 +147,13 @@
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.16,
+        "probability": 0.165,
         "volume": 258.391129
+      },
+      {
+        "name": "Max Verstappen",
+        "probability": 0.1,
+        "volume": 378.5302460000001
       },
       {
         "name": "Lewis Hamilton",
@@ -157,22 +162,17 @@
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.085,
+        "probability": 0.07,
         "volume": 72.56714099999999
       },
       {
-        "name": "Max Verstappen",
-        "probability": 0.0485,
-        "volume": 378.53024600000003
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.0455,
+        "name": "Valtteri Bottas",
+        "probability": 0.0395,
         "volume": 41.96
       },
       {
-        "name": "Valtteri Bottas",
-        "probability": 0.042,
+        "name": "Oliver Bearman",
+        "probability": 0.0375,
         "volume": 41.96
       },
       {
@@ -246,21 +246,21 @@
     "title": "Italian Grand Prix: Driver Fastest Lap",
     "slug": "f1-italian-grand-prix-driver-fastest-lap-2026-09-06",
     "endDate": "2026-09-13T13:00:00Z",
-    "totalVolume": 2498.600488,
+    "totalVolume": 2508.600488,
     "runners": [
       {
         "name": "Kimi Antonelli",
-        "probability": 0.3,
-        "volume": 1902.560483
+        "probability": 0.295,
+        "volume": 1912.560483
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.245,
+        "probability": 0.24,
         "volume": 36.588288999999996
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.215,
+        "probability": 0.235,
         "volume": 21.349856000000003
       },
       {
@@ -270,17 +270,17 @@
       },
       {
         "name": "Lando Norris",
-        "probability": 0.145,
+        "probability": 0.14,
         "volume": 0
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.07,
+        "probability": 0.06,
         "volume": 0
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.0505,
+        "probability": 0.047,
         "volume": 490.530433
       },
       {
