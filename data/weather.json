@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T10:08:23.404Z",
+  "updatedAt": "2026-09-05T13:43:16.945Z",
   "available": true,
   "round": 13,
   "race": "Italian Grand Prix",
@@ -29,24 +29,24 @@
       "startUTC": "2026-09-05T10:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 29,
-      "windKph": 7,
-      "weatherCode": 2
+      "tempC": 29.2,
+      "windKph": 5.8,
+      "weatherCode": 1
     },
     "qualifying": {
       "startUTC": "2026-09-05T14:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 34.3,
-      "windKph": 10.9,
+      "tempC": 33.7,
+      "windKph": 10,
       "weatherCode": 0
     },
     "race": {
       "startUTC": "2026-09-06T13:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 31.4,
-      "windKph": 7.9,
+      "tempC": 31.1,
+      "windKph": 7,
       "weatherCode": 0
     }
   },
