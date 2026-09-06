@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:47:41.979Z",
+  "updatedAt": "2026-09-06T10:29:17.983Z",
   "available": true,
   "round": 13,
   "race": "Italian Grand Prix",
@@ -45,8 +45,8 @@
       "startUTC": "2026-09-06T13:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 31.2,
-      "windKph": 7.4,
+      "tempC": 31.1,
+      "windKph": 4.2,
       "weatherCode": 1
     }
   },
