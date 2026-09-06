@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-09-06T10:29:17.983Z",
+  "builtAt": "2026-09-06T13:59:44.146Z",
   "builtBy": "github-actions",
-  "commit": "fc186bb",
+  "commit": "71abf9f",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "rounds": 23
-    },
-    "markets": {
-      "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
-      "runners": 22
-    },
-    "standings": {
-      "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
-      "throughRound": 13
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
-      "circuit": "Autodromo Nazionale di Monza"
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
+      "circuit": "Madring"
+    },
+    "standings": {
+      "ok": true,
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
+      "throughRound": 13
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "assets": 33,
       "rounds": 12
     },
+    "markets": {
+      "ok": true,
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
+      "runners": 22
+    },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "rounds": 12
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "rounds": 12
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "rounds": 9
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-09-06T10:29:17.983Z",
+      "fetchedAt": "2026-09-06T13:59:44.146Z",
       "rounds": 9
     }
   },
