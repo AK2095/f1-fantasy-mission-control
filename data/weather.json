@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T13:26:20.276Z",
+  "updatedAt": "2026-09-08T12:04:42.558Z",
   "available": true,
   "round": 14,
   "race": "Spanish Grand Prix",
@@ -13,41 +13,41 @@
       "startUTC": "2026-09-11T11:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 24.5,
-      "windKph": 1.8,
-      "weatherCode": 2
+      "tempC": 25,
+      "windKph": 4,
+      "weatherCode": 0
     },
     "fp2": {
       "startUTC": "2026-09-11T15:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 28.6,
-      "windKph": 5.5,
-      "weatherCode": 2
+      "tempC": 29.1,
+      "windKph": 3.7,
+      "weatherCode": 1
     },
     "fp3": {
       "startUTC": "2026-09-12T10:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 22.6,
-      "windKph": 13.7,
+      "tempC": 22.4,
+      "windKph": 11.7,
       "weatherCode": 0
     },
     "qualifying": {
       "startUTC": "2026-09-12T14:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 28.6,
-      "windKph": 10.3,
+      "tempC": 28.5,
+      "windKph": 6.6,
       "weatherCode": 0
     },
     "race": {
       "startUTC": "2026-09-13T13:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 29,
-      "windKph": 5.5,
-      "weatherCode": 2
+      "tempC": 29.1,
+      "windKph": 5.4,
+      "weatherCode": 0
     }
   },
   "scenario": {
