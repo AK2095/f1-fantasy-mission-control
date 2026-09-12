@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T21:23:35.511Z",
+  "updatedAt": "2026-09-12T23:50:10.220Z",
   "available": true,
   "round": 14,
   "race": "Spanish Grand Prix",
@@ -45,8 +45,8 @@
       "startUTC": "2026-09-13T13:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 30.7,
-      "windKph": 8.3,
+      "tempC": 30.8,
+      "windKph": 7.4,
       "weatherCode": 0
     }
   },

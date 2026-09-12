@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T21:23:35.511Z",
+  "updatedAt": "2026-09-12T23:50:10.220Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,42 +10,42 @@
     "title": "Spanish Grand Prix: Driver Winner",
     "slug": "f1-spanish-grand-prix-winner-2026-09-13",
     "endDate": "2026-09-20T13:00:00Z",
-    "totalVolume": 155756.60740600002,
+    "totalVolume": 175903.75560200005,
     "runners": [
       {
         "name": "Kimi Antonelli",
         "probability": 0.395,
-        "volume": 38570.78642199998
+        "volume": 53475.246422000004
       },
       {
         "name": "Lando Norris",
-        "probability": 0.355,
-        "volume": 21323.353873
+        "probability": 0.365,
+        "volume": 22656.316200999998
       },
       {
         "name": "Max Verstappen",
         "probability": 0.115,
-        "volume": 21312.268686000007
+        "volume": 21328.60202000001
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.075,
-        "volume": 16346.994156999997
-      },
-      {
-        "name": "Charles Leclerc",
-        "probability": 0.0425,
-        "volume": 13022.620111
+        "probability": 0.06,
+        "volume": 18448.645757
       },
       {
         "name": "George Russell",
-        "probability": 0.0415,
-        "volume": 19464.48246
+        "probability": 0.0435,
+        "volume": 19496.175794000002
+      },
+      {
+        "name": "Charles Leclerc",
+        "probability": 0.0315,
+        "volume": 14782.667711000002
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.0165,
-        "volume": 7511.917716000002
+        "probability": 0.016,
+        "volume": 7511.917716
       },
       {
         "name": "Liam Lawson",
@@ -55,7 +55,7 @@
       {
         "name": "Arvid Lindblad",
         "probability": 0.0045,
-        "volume": 3308.2761119999996
+        "volume": 3308.276112
       },
       {
         "name": "Pierre Gasly",
@@ -90,7 +90,7 @@
       {
         "name": "Franco Colapinto",
         "probability": 0.0005,
-        "volume": 2433.587519
+        "volume": 2433.5875189999997
       },
       {
         "name": "Carlos Sainz Jr.",
@@ -136,14 +136,14 @@
         "volume": 695.5071770000001
       },
       {
+        "name": "Alpine",
+        "probability": 0.245,
+        "volume": 19.1919
+      },
+      {
         "name": "Racing Bulls",
         "probability": 0.245,
         "volume": 15.1515
-      },
-      {
-        "name": "Alpine",
-        "probability": 0.14,
-        "volume": 19.1919
       },
       {
         "name": "Mercedes",
@@ -191,12 +191,12 @@
     "title": "Spanish Grand Prix: Driver Fastest Lap",
     "slug": "f1-spanish-grand-prix-driver-fastest-lap-2026-09-13",
     "endDate": "2026-09-20T13:00:00Z",
-    "totalVolume": 660.171169,
+    "totalVolume": 677.8634770000001,
     "runners": [
       {
         "name": "Kimi Antonelli",
         "probability": 0.33,
-        "volume": 361.593896
+        "volume": 361.59389600000003
       },
       {
         "name": "Lando Norris",
@@ -204,19 +204,14 @@
         "volume": 6
       },
       {
-        "name": "Max Verstappen",
-        "probability": 0.13,
-        "volume": 181.42
-      },
-      {
         "name": "Charles Leclerc",
-        "probability": 0.09,
+        "probability": 0.11,
         "volume": 40.207273
       },
       {
-        "name": "Oscar Piastri",
+        "name": "Max Verstappen",
         "probability": 0.085,
-        "volume": 0
+        "volume": 191.42
       },
       {
         "name": "George Russell",
@@ -224,13 +219,18 @@
         "volume": 25
       },
       {
-        "name": "Lewis Hamilton",
-        "probability": 0.075,
+        "name": "Oscar Piastri",
+        "probability": 0.08,
         "volume": 0
       },
       {
+        "name": "Lewis Hamilton",
+        "probability": 0.07,
+        "volume": 7.692308
+      },
+      {
         "name": "Pierre Gasly",
-        "probability": 0.0505,
+        "probability": 0.05,
         "volume": 45.95
       },
       {
