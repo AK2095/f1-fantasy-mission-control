@@ -1,36 +1,36 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-13T11:17:03.875Z",
-  "lastCompletedRound": 13,
-  "nextRound": 14,
-  "roundsRemaining": 10,
-  "isRaceWeek": true,
+  "updatedAt": "2026-09-13T15:47:10.456Z",
+  "lastCompletedRound": 14,
+  "nextRound": 15,
+  "roundsRemaining": 9,
+  "isRaceWeek": false,
   "nextRace": {
-    "round": 14,
-    "name": "Spanish Grand Prix",
-    "shortName": "Spanish GP",
-    "circuitId": "madring",
-    "circuit": "Madring",
-    "locality": "Madrid",
-    "country": "Spain",
-    "lat": 40.46528,
-    "lon": -3.61528,
-    "date": "2026-09-13",
-    "raceStartUTC": "2026-09-13T13:00:00.000Z",
+    "round": 15,
+    "name": "Azerbaijan Grand Prix",
+    "shortName": "Azerbaijan GP",
+    "circuitId": "baku",
+    "circuit": "Baku City Circuit",
+    "locality": "Baku",
+    "country": "Azerbaijan",
+    "lat": 40.3725,
+    "lon": 49.8533,
+    "date": "2026-09-26",
+    "raceStartUTC": "2026-09-26T11:00:00.000Z",
     "isSprint": false,
     "sessions": {
-      "fp1": "2026-09-11T11:30:00.000Z",
-      "fp2": "2026-09-11T15:00:00.000Z",
-      "fp3": "2026-09-12T10:30:00.000Z",
-      "qualifying": "2026-09-12T14:00:00.000Z",
-      "race": "2026-09-13T13:00:00.000Z"
+      "fp1": "2026-09-24T08:30:00.000Z",
+      "fp2": "2026-09-24T12:00:00.000Z",
+      "fp3": "2026-09-25T08:30:00.000Z",
+      "qualifying": "2026-09-25T12:00:00.000Z",
+      "race": "2026-09-26T11:00:00.000Z"
     },
-    "lockUTC": "2026-09-12T14:00:00.000Z",
-    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+    "lockUTC": "2026-09-25T12:00:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix"
   },
   "lastRace": {
-    "round": 13,
-    "name": "Italian Grand Prix",
-    "date": "2026-09-06"
+    "round": 14,
+    "name": "Spanish Grand Prix",
+    "date": "2026-09-13"
   }
 }
