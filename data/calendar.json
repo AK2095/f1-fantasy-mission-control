@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-14T13:49:48.970Z",
+  "updatedAt": "2026-09-15T12:35:29.802Z",
   "races": [
     {
       "round": 1,
@@ -490,7 +490,7 @@
       "name": "Qatar Grand Prix",
       "shortName": "Qatar GP",
       "circuitId": "losail",
-      "circuit": "Losail International Circuit",
+      "circuit": "Lusail International Circuit",
       "locality": "Lusail",
       "country": "Qatar",
       "lat": 25.49,
