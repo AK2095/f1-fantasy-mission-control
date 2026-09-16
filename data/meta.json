@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-09-15T12:35:29.802Z",
+  "builtAt": "2026-09-16T12:31:57.197Z",
   "builtBy": "github-actions",
-  "commit": "f5e3377",
+  "commit": "f3a8dfd",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "rounds": 23
+    },
+    "markets": {
+      "ok": true,
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
+      "runners": 23
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "throughRound": 14
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "circuit": "Baku City Circuit"
-    },
-    "markets": {
-      "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
-      "runners": 23
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "assets": 33,
       "rounds": 14
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "rounds": 14
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "rounds": 14
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "rounds": 11
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-09-15T12:35:29.802Z",
+      "fetchedAt": "2026-09-16T12:31:57.197Z",
       "rounds": 9
     }
   },
