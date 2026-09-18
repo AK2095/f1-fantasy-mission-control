@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T10:45:15.398Z",
+  "updatedAt": "2026-09-18T14:48:42.448Z",
   "available": true,
   "round": 15,
   "race": "Azerbaijan Grand Prix",
@@ -43,7 +43,7 @@
     },
     "race": {
       "startUTC": "2026-09-26T11:00:00.000Z",
-      "precipProbability": 2,
+      "precipProbability": 0,
       "precipMm": 0,
       "tempC": 23.9,
       "windKph": 14,
@@ -51,8 +51,8 @@
     }
   },
   "scenario": {
-    "dryProb": 98,
-    "wetProb": 2,
+    "dryProb": 100,
+    "wetProb": 0,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
