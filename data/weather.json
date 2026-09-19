@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T14:12:21.480Z",
+  "updatedAt": "2026-09-19T17:49:30.704Z",
   "available": true,
   "round": 15,
   "race": "Azerbaijan Grand Prix",
@@ -13,40 +13,40 @@
       "startUTC": "2026-09-24T08:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 32.7,
-      "windKph": 5.1,
+      "tempC": 26.9,
+      "windKph": 19.1,
       "weatherCode": 1
     },
     "fp2": {
       "startUTC": "2026-09-24T12:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 27.1,
-      "windKph": 27.7,
+      "tempC": 26.3,
+      "windKph": 35.8,
       "weatherCode": 1
     },
     "fp3": {
       "startUTC": "2026-09-25T08:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 23.3,
+      "tempC": 21.8,
       "windKph": 44.7,
-      "weatherCode": 2
+      "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-09-25T12:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 23.6,
-      "windKph": 39.5,
+      "tempC": 21.9,
+      "windKph": 40.1,
       "weatherCode": 2
     },
     "race": {
       "startUTC": "2026-09-26T11:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 24.6,
-      "windKph": 21.4,
+      "tempC": 25.6,
+      "windKph": 23.1,
       "weatherCode": 1
     }
   },
