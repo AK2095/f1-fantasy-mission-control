@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T12:30:46.852Z",
+  "updatedAt": "2026-09-23T12:41:23.012Z",
   "provider": "f1fantasytools.com",
   "note": "Official fantasy prices and per-round scoring. Derived metrics (avgPoints, stdev, sharpe, pointsPerMillion, momentum) are computed here, not published by the source.",
   "rounds": 14,
@@ -793,8 +793,8 @@
       "worstRound": -45,
       "bestRound": 51,
       "negativeRounds": 5,
-      "last2Avg": -25,
-      "momentum": -27.5
+      "last2Avg": 0,
+      "momentum": -2.5
     },
     {
       "code": "ALB",
@@ -834,7 +834,7 @@
       "id": "VRB_LAW",
       "type": "driver",
       "color": "#6692ff",
-      "price": 10.3,
+      "price": 9.7,
       "perRound": [
         6,
         35,
@@ -855,12 +855,12 @@
       "avgPoints": 1.71,
       "stdev": 25.06,
       "sharpe": 0.07,
-      "pointsPerMillion": 0.17,
+      "pointsPerMillion": 0.18,
       "worstRound": -45,
       "bestRound": 35,
       "negativeRounds": 4,
-      "last2Avg": -25,
-      "momentum": -26.7
+      "last2Avg": 0,
+      "momentum": -1.7
     },
     {
       "code": "ALO",
