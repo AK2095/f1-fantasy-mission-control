@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T16:42:06.858Z",
+  "updatedAt": "2026-09-24T20:17:10.450Z",
   "available": true,
   "round": 15,
   "race": "Azerbaijan Grand Prix",
@@ -29,8 +29,8 @@
       "startUTC": "2026-09-25T08:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 23.8,
-      "windKph": 46.3,
+      "tempC": 24,
+      "windKph": 44.8,
       "weatherCode": 2
     },
     "qualifying": {
@@ -38,7 +38,7 @@
       "precipProbability": 0,
       "precipMm": 0,
       "tempC": 23.4,
-      "windKph": 41.9,
+      "windKph": 42.3,
       "weatherCode": 2
     },
     "race": {
