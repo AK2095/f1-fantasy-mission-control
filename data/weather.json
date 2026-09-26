@@ -1,58 +1,58 @@
 {
-  "updatedAt": "2026-09-26T10:59:26.641Z",
+  "updatedAt": "2026-09-26T14:56:53.254Z",
   "available": true,
-  "round": 15,
-  "race": "Azerbaijan Grand Prix",
-  "circuit": "Baku City Circuit",
-  "locality": "Baku",
-  "country": "Azerbaijan",
-  "lat": 40.3725,
-  "lon": 49.8533,
+  "round": 16,
+  "race": "Bahrain Grand Prix in Malaysia",
+  "circuit": "Sepang International Circuit",
+  "locality": "Kuala Lumpur",
+  "country": "Malaysia",
+  "lat": 2.76083,
+  "lon": 101.738,
   "sessions": {
     "fp1": {
-      "startUTC": "2026-09-24T08:30:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 27,
-      "windKph": 10.3,
-      "weatherCode": 2
+      "startUTC": "2026-10-02T04:30:00.000Z",
+      "precipProbability": 43,
+      "precipMm": 1.3,
+      "tempC": 29.3,
+      "windKph": 4.9,
+      "weatherCode": 80
     },
     "fp2": {
-      "startUTC": "2026-09-24T12:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 29.1,
-      "windKph": 15.4,
-      "weatherCode": 1
+      "startUTC": "2026-10-02T08:00:00.000Z",
+      "precipProbability": 71,
+      "precipMm": 0.4,
+      "tempC": 26.8,
+      "windKph": 8.8,
+      "weatherCode": 51
     },
     "fp3": {
-      "startUTC": "2026-09-25T08:30:00.000Z",
-      "precipProbability": 0,
+      "startUTC": "2026-10-03T04:30:00.000Z",
+      "precipProbability": 55,
       "precipMm": 0,
-      "tempC": 24.6,
-      "windKph": 41.4,
-      "weatherCode": 2
+      "tempC": 29.7,
+      "windKph": 1.1,
+      "weatherCode": 3
     },
     "qualifying": {
-      "startUTC": "2026-09-25T12:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 24.1,
-      "windKph": 38.9,
-      "weatherCode": 2
+      "startUTC": "2026-10-03T08:00:00.000Z",
+      "precipProbability": 70,
+      "precipMm": 1,
+      "tempC": 30.1,
+      "windKph": 0.3,
+      "weatherCode": 55
     },
     "race": {
-      "startUTC": "2026-09-26T11:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 26.7,
-      "windKph": 17.8,
-      "weatherCode": 1
+      "startUTC": "2026-10-04T07:00:00.000Z",
+      "precipProbability": 60,
+      "precipMm": 0.3,
+      "tempC": 31.5,
+      "windKph": 6.3,
+      "weatherCode": 51
     }
   },
   "scenario": {
-    "dryProb": 100,
-    "wetProb": 0,
+    "dryProb": 40,
+    "wetProb": 60,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
