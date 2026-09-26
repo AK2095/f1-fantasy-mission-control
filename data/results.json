@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-26T14:56:53.254Z",
+  "updatedAt": "2026-09-26T18:28:20.191Z",
   "rounds": [
     {
       "round": 1,
@@ -4115,11 +4115,11 @@
           "name": "George Russell",
           "constructor": "Mercedes",
           "constructorId": "mercedes",
-          "grid": 0,
+          "grid": 1,
           "laps": 51,
           "status": "Finished",
           "points": 25,
-          "fastestLapRank": null,
+          "fastestLapRank": 1,
           "positionsGained": 0
         },
         {
@@ -4128,12 +4128,12 @@
           "name": "Max Verstappen",
           "constructor": "Red Bull",
           "constructorId": "red_bull",
-          "grid": 0,
+          "grid": 8,
           "laps": 51,
           "status": "Finished",
           "points": 18,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 2,
+          "positionsGained": 6
         },
         {
           "position": 3,
@@ -4141,12 +4141,12 @@
           "name": "Isack Hadjar",
           "constructor": "Red Bull",
           "constructorId": "red_bull",
-          "grid": 0,
+          "grid": 4,
           "laps": 51,
           "status": "Finished",
           "points": 15,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 4,
+          "positionsGained": 1
         },
         {
           "position": 4,
@@ -4154,12 +4154,12 @@
           "name": "Charles Leclerc",
           "constructor": "Ferrari",
           "constructorId": "ferrari",
-          "grid": 0,
+          "grid": 2,
           "laps": 51,
           "status": "Finished",
           "points": 12,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 5,
+          "positionsGained": -2
         },
         {
           "position": 5,
@@ -4167,12 +4167,12 @@
           "name": "Andrea Kimi Antonelli",
           "constructor": "Mercedes",
           "constructorId": "mercedes",
-          "grid": 0,
+          "grid": 16,
           "laps": 51,
           "status": "Finished",
           "points": 10,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 3,
+          "positionsGained": 11
         },
         {
           "position": 6,
@@ -4180,11 +4180,11 @@
           "name": "Lewis Hamilton",
           "constructor": "Ferrari",
           "constructorId": "ferrari",
-          "grid": 0,
+          "grid": 6,
           "laps": 51,
           "status": "Finished",
           "points": 8,
-          "fastestLapRank": null,
+          "fastestLapRank": 6,
           "positionsGained": 0
         },
         {
@@ -4193,12 +4193,12 @@
           "name": "Arvid Lindblad",
           "constructor": "RB F1 Team",
           "constructorId": "rb",
-          "grid": 0,
+          "grid": 15,
           "laps": 51,
           "status": "Finished",
           "points": 6,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 10,
+          "positionsGained": 8
         },
         {
           "position": 8,
@@ -4206,12 +4206,12 @@
           "name": "Esteban Ocon",
           "constructor": "Haas F1 Team",
           "constructorId": "haas",
-          "grid": 0,
+          "grid": 13,
           "laps": 51,
           "status": "Finished",
           "points": 4,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 14,
+          "positionsGained": 5
         },
         {
           "position": 9,
@@ -4219,12 +4219,12 @@
           "name": "Oliver Bearman",
           "constructor": "Haas F1 Team",
           "constructorId": "haas",
-          "grid": 0,
+          "grid": 10,
           "laps": 51,
           "status": "Finished",
           "points": 2,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 13,
+          "positionsGained": 1
         },
         {
           "position": 10,
@@ -4232,12 +4232,12 @@
           "name": "Carlos Sainz",
           "constructor": "Williams",
           "constructorId": "williams",
-          "grid": 0,
+          "grid": 14,
           "laps": 51,
           "status": "Finished",
           "points": 1,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 9,
+          "positionsGained": 4
         },
         {
           "position": 11,
@@ -4245,12 +4245,12 @@
           "name": "Nico Hülkenberg",
           "constructor": "Audi",
           "constructorId": "audi",
-          "grid": 0,
+          "grid": 18,
           "laps": 51,
           "status": "Finished",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 11,
+          "positionsGained": 7
         },
         {
           "position": 12,
@@ -4258,51 +4258,51 @@
           "name": "Liam Lawson",
           "constructor": "RB F1 Team",
           "constructorId": "rb",
-          "grid": 0,
+          "grid": 11,
           "laps": 51,
           "status": "Finished",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 12,
+          "positionsGained": -1
         },
         {
           "position": 13,
-          "code": "BOR",
-          "name": "Gabriel Bortoleto",
-          "constructor": "Audi",
-          "constructorId": "audi",
-          "grid": 0,
-          "laps": 51,
-          "status": "Finished",
-          "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
-        },
-        {
-          "position": 14,
           "code": "PIA",
           "name": "Oscar Piastri",
           "constructor": "McLaren",
           "constructorId": "mclaren",
-          "grid": 0,
+          "grid": 3,
           "laps": 51,
           "status": "Finished",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 8,
+          "positionsGained": -10
         },
         {
-          "position": 15,
+          "position": 14,
           "code": "PER",
           "name": "Sergio Pérez",
           "constructor": "Cadillac F1 Team",
           "constructorId": "cadillac",
-          "grid": 0,
+          "grid": 20,
           "laps": 51,
           "status": "Finished",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 15,
+          "positionsGained": 6
+        },
+        {
+          "position": 15,
+          "code": "BOR",
+          "name": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "constructorId": "audi",
+          "grid": 17,
+          "laps": 51,
+          "status": "Finished",
+          "points": 0,
+          "fastestLapRank": 7,
+          "positionsGained": 2
         },
         {
           "position": 16,
@@ -4310,12 +4310,12 @@
           "name": "Valtteri Bottas",
           "constructor": "Cadillac F1 Team",
           "constructorId": "cadillac",
-          "grid": 0,
+          "grid": 19,
           "laps": 49,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 20,
+          "positionsGained": 3
         },
         {
           "position": 17,
@@ -4323,12 +4323,12 @@
           "name": "Franco Colapinto",
           "constructor": "Alpine F1 Team",
           "constructorId": "alpine",
-          "grid": 0,
+          "grid": 9,
           "laps": 36,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 19,
+          "positionsGained": -8
         },
         {
           "position": 18,
@@ -4336,12 +4336,12 @@
           "name": "Pierre Gasly",
           "constructor": "Alpine F1 Team",
           "constructorId": "alpine",
-          "grid": 0,
+          "grid": 7,
           "laps": 35,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 17,
+          "positionsGained": -11
         },
         {
           "position": 19,
@@ -4349,12 +4349,12 @@
           "name": "Lando Norris",
           "constructor": "McLaren",
           "constructorId": "mclaren",
-          "grid": 0,
+          "grid": 5,
           "laps": 35,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 16,
+          "positionsGained": -14
         },
         {
           "position": 20,
@@ -4362,12 +4362,12 @@
           "name": "Alexander Albon",
           "constructor": "Williams",
           "constructorId": "williams",
-          "grid": 0,
+          "grid": 12,
           "laps": 29,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
-          "positionsGained": 0
+          "fastestLapRank": 18,
+          "positionsGained": -8
         },
         {
           "position": 21,
@@ -4375,11 +4375,11 @@
           "name": "Fernando Alonso",
           "constructor": "Aston Martin",
           "constructorId": "aston_martin",
-          "grid": 0,
+          "grid": 21,
           "laps": 20,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
+          "fastestLapRank": 21,
           "positionsGained": 0
         },
         {
@@ -4388,11 +4388,11 @@
           "name": "Lance Stroll",
           "constructor": "Aston Martin",
           "constructorId": "aston_martin",
-          "grid": 0,
+          "grid": 22,
           "laps": 7,
           "status": "Retired",
           "points": 0,
-          "fastestLapRank": null,
+          "fastestLapRank": 22,
           "positionsGained": 0
         }
       ]

@@ -2351,5 +2351,177 @@
       "priceChange": 0.2,
       "type": "constructor"
     }
+  },
+  "15": {
+    "COL": {
+      "price": 10.6,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "GAS": {
+      "price": 12,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "ALO": {
+      "price": 6.8,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "STR": {
+      "price": 3,
+      "priceChange": 0,
+      "type": "driver"
+    },
+    "BOR": {
+      "price": 8.4,
+      "priceChange": -0.2,
+      "type": "driver"
+    },
+    "HUL": {
+      "price": 4.8,
+      "priceChange": 0.6,
+      "type": "driver"
+    },
+    "BOT": {
+      "price": 3,
+      "priceChange": 0.6,
+      "type": "driver"
+    },
+    "PER": {
+      "price": 3,
+      "priceChange": 0,
+      "type": "driver"
+    },
+    "HAM": {
+      "price": 24.9,
+      "priceChange": -0.3,
+      "type": "driver"
+    },
+    "LEC": {
+      "price": 24,
+      "priceChange": -0.3,
+      "type": "driver"
+    },
+    "BEA": {
+      "price": 5.8,
+      "priceChange": -0.2,
+      "type": "driver"
+    },
+    "OCO": {
+      "price": 8.9,
+      "priceChange": 0.2,
+      "type": "driver"
+    },
+    "NOR": {
+      "price": 27,
+      "priceChange": -0.3,
+      "type": "driver"
+    },
+    "PIA": {
+      "price": 24.1,
+      "priceChange": -0.1,
+      "type": "driver"
+    },
+    "ANT": {
+      "price": 26.6,
+      "priceChange": 0.3,
+      "type": "driver"
+    },
+    "RUS": {
+      "price": 27.8,
+      "priceChange": 0.3,
+      "type": "driver"
+    },
+    "HAD": {
+      "price": 14.5,
+      "priceChange": 0.6,
+      "type": "driver"
+    },
+    "LAW": {
+      "price": 9.7,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "VER": {
+      "price": 27.3,
+      "priceChange": 0.3,
+      "type": "driver"
+    },
+    "LIN": {
+      "price": 8.2,
+      "priceChange": 0.6,
+      "type": "driver"
+    },
+    "TSU": {
+      "price": 9.7,
+      "priceChange": 0,
+      "type": "driver"
+    },
+    "ALB": {
+      "price": 6.4,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "SAI": {
+      "price": 9,
+      "priceChange": -0.6,
+      "type": "driver"
+    },
+    "ALP": {
+      "price": 19.5,
+      "priceChange": -0.1,
+      "type": "constructor"
+    },
+    "AST": {
+      "price": 6.3,
+      "priceChange": -0.6,
+      "type": "constructor"
+    },
+    "AUD": {
+      "price": 8.6,
+      "priceChange": 0.6,
+      "type": "constructor"
+    },
+    "CAD": {
+      "price": 3,
+      "priceChange": 0.6,
+      "type": "constructor"
+    },
+    "FER": {
+      "price": 27.5,
+      "priceChange": 0.1,
+      "type": "constructor"
+    },
+    "HAA": {
+      "price": 10.2,
+      "priceChange": 0.6,
+      "type": "constructor"
+    },
+    "MCL": {
+      "price": 31.9,
+      "priceChange": 0.3,
+      "type": "constructor"
+    },
+    "MER": {
+      "price": 33.5,
+      "priceChange": 0.3,
+      "type": "constructor"
+    },
+    "RED": {
+      "price": 31.8,
+      "priceChange": 0.3,
+      "type": "constructor"
+    },
+    "VRB": {
+      "price": 14.7,
+      "priceChange": 0.6,
+      "type": "constructor"
+    },
+    "WIL": {
+      "price": 14,
+      "priceChange": -0.2,
+      "type": "constructor"
+    }
   }
 }
