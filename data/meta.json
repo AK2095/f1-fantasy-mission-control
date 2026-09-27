@@ -1,11 +1,11 @@
 {
-  "builtAt": "2026-09-26T21:53:28.359Z",
+  "builtAt": "2026-09-27T00:19:34.832Z",
   "builtBy": "github-actions",
-  "commit": "e139ae9",
+  "commit": "cf881bd",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
       "rounds": 23
     },
     "markets": {
@@ -13,42 +13,42 @@
       "pending": true,
       "reason": "Betting markets for Bahrain Grand Prix in Malaysia have not opened yet",
       "availableFrom": null,
-      "checkedAt": "2026-09-26T21:53:28.359Z"
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
-      "circuit": "Sepang International Circuit"
+      "checkedAt": "2026-09-27T00:19:34.832Z"
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
       "throughRound": 15
     },
-    "assets": {
+    "weather": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
-      "assets": 33,
-      "rounds": 15
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
+      "circuit": "Sepang International Circuit"
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
+      "rounds": 15
+    },
+    "assets": {
+      "ok": true,
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
+      "assets": 33,
       "rounds": 15
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
       "rounds": 15
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
       "rounds": 12
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-09-26T21:53:28.359Z",
+      "fetchedAt": "2026-09-27T00:19:34.832Z",
       "rounds": 9
     }
   },
