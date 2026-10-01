@@ -1,10 +1,10 @@
 {
   "season": 2026,
-  "updatedAt": "2026-09-30T13:32:31.991Z",
+  "updatedAt": "2026-10-01T12:39:24.149Z",
   "lastCompletedRound": 15,
   "nextRound": 16,
   "roundsRemaining": 8,
-  "isRaceWeek": false,
+  "isRaceWeek": true,
   "nextRace": {
     "round": 16,
     "name": "Bahrain Grand Prix in Malaysia",
