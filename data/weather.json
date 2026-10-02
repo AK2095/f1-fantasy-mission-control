@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T18:14:52.242Z",
+  "updatedAt": "2026-10-02T22:50:09.253Z",
   "available": true,
   "round": 16,
   "race": "Bahrain Grand Prix in Malaysia",
@@ -29,25 +29,25 @@
       "startUTC": "2026-10-03T04:30:00.000Z",
       "precipProbability": 22,
       "precipMm": 0.1,
-      "tempC": 31.3,
-      "windKph": 4,
+      "tempC": 30.6,
+      "windKph": 2.8,
       "weatherCode": 51
     },
     "qualifying": {
       "startUTC": "2026-10-03T08:00:00.000Z",
       "precipProbability": 78,
       "precipMm": 0.2,
-      "tempC": 30.6,
-      "windKph": 8.1,
+      "tempC": 29.7,
+      "windKph": 5.6,
       "weatherCode": 51
     },
     "race": {
       "startUTC": "2026-10-04T07:00:00.000Z",
       "precipProbability": 94,
-      "precipMm": 3.8,
-      "tempC": 26.5,
-      "windKph": 0.4,
-      "weatherCode": 81
+      "precipMm": 4.3,
+      "tempC": 26.7,
+      "windKph": 3.4,
+      "weatherCode": 95
     }
   },
   "scenario": {
