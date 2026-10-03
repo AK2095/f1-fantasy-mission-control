@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-10-03T19:04:17.200Z",
+  "builtAt": "2026-10-03T22:43:49.315Z",
   "builtBy": "github-actions",
-  "commit": "df894a5",
+  "commit": "5b49eb2",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "rounds": 23
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "runners": 23
-    },
-    "standings": {
-      "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
-      "throughRound": 16
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "circuit": "Sepang International Circuit"
+    },
+    "standings": {
+      "ok": true,
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
+      "throughRound": 16
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "assets": 33,
       "rounds": 15
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "rounds": 15
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "rounds": 15
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "rounds": 12
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-10-03T19:04:17.200Z",
+      "fetchedAt": "2026-10-03T22:43:49.315Z",
       "rounds": 9
     }
   },
