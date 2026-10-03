@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T11:16:06.163Z",
+  "updatedAt": "2026-10-03T15:53:27.682Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,92 +10,87 @@
     "title": "Bahrain Grand Prix: Driver Winner",
     "slug": "f1-bahrain-grand-prix-winner-2026-10-04",
     "endDate": "2026-10-11T07:00:00Z",
-    "totalVolume": 68359.55366499998,
+    "totalVolume": 119993.32474600001,
     "runners": [
       {
         "name": "Max Verstappen",
-        "probability": 0.58,
-        "volume": 21078.738639999996
+        "probability": 0.605,
+        "volume": 23029.659999000003
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.225,
-        "volume": 12351.393146999999
+        "probability": 0.205,
+        "volume": 15470.371167
       },
       {
         "name": "Lewis Hamilton",
-        "probability": 0.1105,
-        "volume": 7466.055686
+        "probability": 0.119,
+        "volume": 9882.340381000002
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.055,
-        "volume": 5841.361161000001
-      },
-      {
-        "name": "Isack Hadjar",
-        "probability": 0.033,
-        "volume": 8303.763031
-      },
-      {
-        "name": "Lando Norris",
-        "probability": 0.0285,
-        "volume": 4096.567122
+        "probability": 0.032,
+        "volume": 19170.449129
       },
       {
         "name": "George Russell",
-        "probability": 0.017,
-        "volume": 5526.208012
+        "probability": 0.026,
+        "volume": 7112.811266000001
       },
       {
-        "name": "Yuki Tsunoda",
-        "probability": 0.015,
-        "volume": 9.9905
+        "name": "Lando Norris",
+        "probability": 0.024,
+        "volume": 4483.774644
+      },
+      {
+        "name": "Isack Hadjar",
+        "probability": 0.0145,
+        "volume": 36799.366627999996
       },
       {
         "name": "Oscar Piastri",
         "probability": 0.014,
-        "volume": 2342.554366
+        "volume": 2535.6390319999996
+      },
+      {
+        "name": "Yuki Tsunoda",
+        "probability": 0.011,
+        "volume": 9.9905
+      },
+      {
+        "name": "Fernando Alonso",
+        "probability": 0.0075,
+        "volume": 9.9905
       },
       {
         "name": "Gabriel Bortoleto",
-        "probability": 0.0085,
+        "probability": 0.0075,
         "volume": 57.5
       },
       {
         "name": "Franco Colapinto",
-        "probability": 0.0085,
+        "probability": 0.0075,
         "volume": 52
       },
       {
         "name": "Nico Hulkenberg",
-        "probability": 0.0085,
+        "probability": 0.0075,
         "volume": 73.03999999999999
       },
       {
         "name": "Arvid Lindblad",
-        "probability": 0.0085,
+        "probability": 0.0075,
         "volume": 10
       },
       {
         "name": "Liam Lawson",
-        "probability": 0.0085,
+        "probability": 0.0075,
         "volume": 57.44
       },
       {
         "name": "Pierre Gasly",
-        "probability": 0.008,
+        "probability": 0.0065,
         "volume": 15
-      },
-      {
-        "name": "Fernando Alonso",
-        "probability": 0.008,
-        "volume": 9.9905
-      },
-      {
-        "name": "Esteban Ocon",
-        "probability": 0.008,
-        "volume": 61.970499999999994
       },
       {
         "name": "Alexander Albon",
@@ -126,6 +121,11 @@
         "name": "Lance Stroll",
         "probability": 0.006,
         "volume": 165.9905
+      },
+      {
+        "name": "Esteban Ocon",
+        "probability": 0.0005,
+        "volume": 217.9705
       }
     ]
   },
@@ -134,22 +134,22 @@
     "title": "Bahrain Grand Prix: Driver Fastest Lap",
     "slug": "f1-bahrain-grand-prix-driver-fastest-lap-2026-10-04",
     "endDate": "2026-10-11T07:00:00Z",
-    "totalVolume": 250.995,
+    "totalVolume": 414.327561,
     "runners": [
       {
         "name": "Yuki Tsunoda",
-        "probability": 0.4,
+        "probability": 0.36,
         "volume": 10
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.255,
-        "volume": 19.37
+        "probability": 0.335,
+        "volume": 170.152703
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.21,
-        "volume": 15.625
+        "probability": 0.2,
+        "volume": 28.174858
       },
       {
         "name": "Arvid Lindblad",
@@ -163,27 +163,27 @@
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.075,
-        "volume": 0
-      },
-      {
-        "name": "Lewis Hamilton",
-        "probability": 0.06,
+        "probability": 0.0745,
         "volume": 0
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.055,
+        "probability": 0.05,
+        "volume": 0
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.05,
         "volume": 0
       },
       {
         "name": "Lando Norris",
-        "probability": 0.045,
+        "probability": 0.04,
         "volume": 76
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.04,
+        "probability": 0.036,
         "volume": 0
       },
       {
