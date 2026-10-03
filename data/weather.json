@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T15:53:27.682Z",
+  "updatedAt": "2026-10-03T19:04:17.200Z",
   "available": true,
   "round": 16,
   "race": "Bahrain Grand Prix in Malaysia",
@@ -27,7 +27,7 @@
     },
     "fp3": {
       "startUTC": "2026-10-03T04:30:00.000Z",
-      "precipProbability": 47,
+      "precipProbability": 48,
       "precipMm": 0,
       "tempC": 31.3,
       "windKph": 4.8,
@@ -35,7 +35,7 @@
     },
     "qualifying": {
       "startUTC": "2026-10-03T08:00:00.000Z",
-      "precipProbability": 69,
+      "precipProbability": 58,
       "precipMm": 0,
       "tempC": 31.6,
       "windKph": 9,
@@ -43,17 +43,17 @@
     },
     "race": {
       "startUTC": "2026-10-04T07:00:00.000Z",
-      "precipProbability": 83,
-      "precipMm": 2.4,
-      "tempC": 28,
-      "windKph": 4.3,
-      "weatherCode": 80
+      "precipProbability": 59,
+      "precipMm": 4.2,
+      "tempC": 26.1,
+      "windKph": 9,
+      "weatherCode": 95
     }
   },
   "scenario": {
-    "dryProb": 17,
-    "wetProb": 83,
-    "haltProb": 33
+    "dryProb": 41,
+    "wetProb": 59,
+    "haltProb": 24
   },
   "provider": "Open-Meteo"
 }
