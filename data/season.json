@@ -1,36 +1,36 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-03T22:43:49.315Z",
-  "lastCompletedRound": 15,
-  "nextRound": 16,
-  "roundsRemaining": 8,
-  "isRaceWeek": true,
+  "updatedAt": "2026-10-04T11:56:51.744Z",
+  "lastCompletedRound": 16,
+  "nextRound": 17,
+  "roundsRemaining": 7,
+  "isRaceWeek": false,
   "nextRace": {
-    "round": 16,
-    "name": "Bahrain Grand Prix in Malaysia",
-    "shortName": "Bahrain Grand Prix in Malaysia",
-    "circuitId": "sepang",
-    "circuit": "Sepang International Circuit",
-    "locality": "Kuala Lumpur",
-    "country": "Malaysia",
-    "lat": 2.76083,
-    "lon": 101.738,
-    "date": "2026-10-04",
-    "raceStartUTC": "2026-10-04T07:00:00.000Z",
-    "isSprint": false,
+    "round": 17,
+    "name": "Singapore Grand Prix",
+    "shortName": "Singapore GP",
+    "circuitId": "marina_bay",
+    "circuit": "Marina Bay Street Circuit",
+    "locality": "Marina Bay",
+    "country": "Singapore",
+    "lat": 1.2914,
+    "lon": 103.864,
+    "date": "2026-10-11",
+    "raceStartUTC": "2026-10-11T12:00:00.000Z",
+    "isSprint": true,
     "sessions": {
-      "fp1": "2026-10-02T04:30:00.000Z",
-      "fp2": "2026-10-02T08:00:00.000Z",
-      "fp3": "2026-10-03T04:30:00.000Z",
-      "qualifying": "2026-10-03T08:00:00.000Z",
-      "race": "2026-10-04T07:00:00.000Z"
+      "fp1": "2026-10-09T08:30:00.000Z",
+      "sprintQualifying": "2026-10-09T12:30:00.000Z",
+      "sprint": "2026-10-10T09:00:00.000Z",
+      "qualifying": "2026-10-10T13:00:00.000Z",
+      "race": "2026-10-11T12:00:00.000Z"
     },
-    "lockUTC": "2026-10-03T08:00:00.000Z",
-    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
+    "lockUTC": "2026-10-09T12:30:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Singapore_Grand_Prix"
   },
   "lastRace": {
-    "round": 15,
-    "name": "Azerbaijan Grand Prix",
-    "date": "2026-09-26"
+    "round": 16,
+    "name": "Bahrain Grand Prix in Malaysia",
+    "date": "2026-10-04"
   }
 }
