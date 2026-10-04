@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "throughRound": 16,
-  "updatedAt": "2026-10-04T16:37:56.753Z",
+  "updatedAt": "2026-10-04T19:55:00.676Z",
   "drivers": [
     {
       "position": 1,
@@ -13,7 +13,7 @@
       "nationality": "Italian",
       "constructor": "Mercedes",
       "constructorId": "mercedes",
-      "points": 302,
+      "points": 320,
       "wins": 8
     },
     {
@@ -39,24 +39,11 @@
       "nationality": "British",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 199,
+      "points": 214,
       "wins": 1
     },
     {
       "position": 4,
-      "code": "NOR",
-      "driverId": "norris",
-      "name": "Lando Norris",
-      "surname": "Norris",
-      "number": 1,
-      "nationality": "British",
-      "constructor": "McLaren",
-      "constructorId": "mclaren",
-      "points": 186,
-      "wins": 2
-    },
-    {
-      "position": 5,
       "code": "LEC",
       "driverId": "leclerc",
       "name": "Charles Leclerc",
@@ -65,8 +52,21 @@
       "nationality": "Monegasque",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 179,
+      "points": 191,
       "wins": 1
+    },
+    {
+      "position": 5,
+      "code": "NOR",
+      "driverId": "norris",
+      "name": "Lando Norris",
+      "surname": "Norris",
+      "number": 1,
+      "nationality": "British",
+      "constructor": "McLaren",
+      "constructorId": "mclaren",
+      "points": 188,
+      "wins": 2
     },
     {
       "position": 6,
@@ -78,8 +78,8 @@
       "nationality": "Dutch",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 163,
-      "wins": 0
+      "points": 188,
+      "wins": 1
     },
     {
       "position": 7,
@@ -91,7 +91,7 @@
       "nationality": "Australian",
       "constructor": "McLaren",
       "constructorId": "mclaren",
-      "points": 120,
+      "points": 128,
       "wins": 0
     },
     {
@@ -104,7 +104,7 @@
       "nationality": "French",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 86,
+      "points": 96,
       "wins": 0
     },
     {
@@ -117,7 +117,7 @@
       "nationality": "New Zealander",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 59,
+      "points": 65,
       "wins": 0
     },
     {
@@ -143,7 +143,7 @@
       "nationality": "British",
       "constructor": "RB F1 Team",
       "constructorId": "rb",
-      "points": 37,
+      "points": 38,
       "wins": 0
     },
     {
@@ -213,6 +213,19 @@
     },
     {
       "position": 17,
+      "code": "ALO",
+      "driverId": "alonso",
+      "name": "Fernando Alonso",
+      "surname": "Alonso",
+      "number": 14,
+      "nationality": "Spanish",
+      "constructor": "Aston Martin",
+      "constructorId": "aston_martin",
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "position": 18,
       "code": "SAI",
       "driverId": "sainz",
       "name": "Carlos Sainz",
@@ -225,7 +238,7 @@
       "wins": 0
     },
     {
-      "position": 18,
+      "position": 19,
       "code": "ALB",
       "driverId": "albon",
       "name": "Alexander Albon",
@@ -235,19 +248,6 @@
       "constructor": "Williams",
       "constructorId": "williams",
       "points": 5,
-      "wins": 0
-    },
-    {
-      "position": 19,
-      "code": "ALO",
-      "driverId": "alonso",
-      "name": "Fernando Alonso",
-      "surname": "Alonso",
-      "number": 14,
-      "nationality": "Spanish",
-      "constructor": "Aston Martin",
-      "constructorId": "aston_martin",
-      "points": 3,
       "wins": 0
     },
     {
@@ -309,7 +309,7 @@
       "constructorId": "mercedes",
       "name": "Mercedes",
       "nationality": "German",
-      "points": 538,
+      "points": 556,
       "wins": 11
     },
     {
@@ -317,7 +317,7 @@
       "constructorId": "ferrari",
       "name": "Ferrari",
       "nationality": "Italian",
-      "points": 378,
+      "points": 405,
       "wins": 2
     },
     {
@@ -325,7 +325,7 @@
       "constructorId": "mclaren",
       "name": "McLaren",
       "nationality": "British",
-      "points": 306,
+      "points": 316,
       "wins": 2
     },
     {
@@ -333,15 +333,15 @@
       "constructorId": "red_bull",
       "name": "Red Bull",
       "nationality": "Austrian",
-      "points": 263,
-      "wins": 0
+      "points": 298,
+      "wins": 1
     },
     {
       "position": 5,
       "constructorId": "rb",
       "name": "RB F1 Team",
       "nationality": "Italian",
-      "points": 83,
+      "points": 90,
       "wins": 0
     },
     {
@@ -381,7 +381,7 @@
       "constructorId": "aston_martin",
       "name": "Aston Martin",
       "nationality": "British",
-      "points": 3,
+      "points": 7,
       "wins": 0
     },
     {
