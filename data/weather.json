@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T15:48:28.909Z",
+  "updatedAt": "2026-10-06T14:05:29.279Z",
   "available": true,
   "round": 17,
   "race": "Singapore Grand Prix",
@@ -11,48 +11,48 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-10-09T08:30:00.000Z",
-      "precipProbability": 77,
-      "precipMm": 0.1,
-      "tempC": 31.6,
-      "windKph": 11.2,
-      "weatherCode": 51
+      "precipProbability": 90,
+      "precipMm": 0,
+      "tempC": 32.1,
+      "windKph": 9.7,
+      "weatherCode": 0
     },
     "sprintQualifying": {
       "startUTC": "2026-10-09T12:30:00.000Z",
-      "precipProbability": 33,
+      "precipProbability": 51,
       "precipMm": 0,
-      "tempC": 29,
-      "windKph": 2.1,
-      "weatherCode": 2
+      "tempC": 29.3,
+      "windKph": 1.4,
+      "weatherCode": 1
     },
     "sprint": {
       "startUTC": "2026-10-10T09:00:00.000Z",
-      "precipProbability": 88,
+      "precipProbability": 92,
       "precipMm": 0,
-      "tempC": 29.6,
-      "windKph": 8.3,
+      "tempC": 29,
+      "windKph": 10.7,
       "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-10-10T13:00:00.000Z",
-      "precipProbability": 42,
-      "precipMm": 0.2,
-      "tempC": 25.8,
-      "windKph": 6.3,
-      "weatherCode": 51
+      "precipProbability": 31,
+      "precipMm": 0,
+      "tempC": 27.7,
+      "windKph": 3.8,
+      "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-10-11T12:00:00.000Z",
-      "precipProbability": 75,
-      "precipMm": 0.2,
-      "tempC": 26.9,
-      "windKph": 2.4,
-      "weatherCode": 51
+      "precipProbability": 35,
+      "precipMm": 0,
+      "tempC": 27,
+      "windKph": 2.7,
+      "weatherCode": 3
     }
   },
   "scenario": {
-    "dryProb": 25,
-    "wetProb": 75,
+    "dryProb": 65,
+    "wetProb": 35,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
