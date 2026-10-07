@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-10-06T14:05:29.279Z",
+  "builtAt": "2026-10-07T14:22:27.002Z",
   "builtBy": "github-actions",
-  "commit": "fa00a2f",
+  "commit": "459babd",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "rounds": 23
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
-      "circuit": "Marina Bay Street Circuit"
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "runners": 23
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "throughRound": 16
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
+      "circuit": "Marina Bay Street Circuit"
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "assets": 33,
       "rounds": 16
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "rounds": 16
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "rounds": 16
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "rounds": 13
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-10-06T14:05:29.279Z",
+      "fetchedAt": "2026-10-07T14:22:27.002Z",
       "rounds": 9
     }
   },

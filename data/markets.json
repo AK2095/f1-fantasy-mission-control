@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T14:05:29.279Z",
+  "updatedAt": "2026-10-07T14:22:27.002Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,121 +10,121 @@
     "title": "Singapore Grand Prix: Driver Winner",
     "slug": "f1-singapore-grand-prix-winner-2026-10-11",
     "endDate": "2026-10-18T12:00:00Z",
-    "totalVolume": 7472.371338,
+    "totalVolume": 17649.398791,
     "runners": [
       {
         "name": "Max Verstappen",
-        "probability": 0.275,
-        "volume": 473.516375
+        "probability": 0.285,
+        "volume": 3468.380309
       },
       {
         "name": "Kimi Antonelli",
         "probability": 0.235,
-        "volume": 792.553639
-      },
-      {
-        "name": "Lewis Hamilton",
-        "probability": 0.13,
-        "volume": 0
+        "volume": 6104.473016
       },
       {
         "name": "Lando Norris",
-        "probability": 0.115,
-        "volume": 809.857133
+        "probability": 0.145,
+        "volume": 961.718013
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.135,
+        "volume": 571.0718340000001
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.11,
-        "volume": 0
+        "probability": 0.125,
+        "volume": 87.33333400000001
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.042,
-        "volume": 1603.439928
-      },
-      {
-        "name": "Isack Hadjar",
-        "probability": 0.0365,
-        "volume": 19.344263
-      },
-      {
-        "name": "George Russell",
-        "probability": 0.0275,
-        "volume": 3326.66
+        "probability": 0.0515,
+        "volume": 1737.1098160000001
       },
       {
         "name": "Pierre Gasly",
-        "probability": 0.009,
+        "probability": 0.046,
         "volume": 0
       },
       {
-        "name": "Franco Colapinto",
-        "probability": 0.009,
-        "volume": 0
+        "name": "Isack Hadjar",
+        "probability": 0.0395,
+        "volume": 41.985773
+      },
+      {
+        "name": "George Russell",
+        "probability": 0.0185,
+        "volume": 4230.326696
       },
       {
         "name": "Arvid Lindblad",
-        "probability": 0.009,
+        "probability": 0.014,
         "volume": 0
       },
       {
         "name": "Liam Lawson",
-        "probability": 0.009,
+        "probability": 0.014,
+        "volume": 0
+      },
+      {
+        "name": "Franco Colapinto",
+        "probability": 0.0085,
         "volume": 0
       },
       {
         "name": "Oliver Bearman",
-        "probability": 0.006,
+        "probability": 0.0055,
         "volume": 10
       },
       {
         "name": "Fernando Alonso",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Alexander Albon",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Gabriel Bortoleto",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Esteban Ocon",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Carlos Sainz Jr.",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Nico Hulkenberg",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 10
       },
       {
         "name": "Lance Stroll",
-        "probability": 0.0055,
+        "probability": 0.005,
         "volume": 171
       },
       {
         "name": "Sergio Perez",
-        "probability": 0.005,
+        "probability": 0.0045,
         "volume": 20
       },
       {
         "name": "Valtteri Bottas",
-        "probability": 0.005,
+        "probability": 0.0045,
         "volume": 171
       },
       {
         "name": "Yuki Tsunoda",
-        "probability": 0.005,
+        "probability": 0.0045,
         "volume": 15
       }
     ]
@@ -133,122 +133,122 @@
     "title": "Singapore Grand Prix: Driver Pole Position",
     "slug": "f1-singapore-grand-prix-driver-pole-position-2026-10-10",
     "endDate": "2026-10-17T13:00:00Z",
-    "totalVolume": 60,
+    "totalVolume": 287.875001,
     "runners": [
       {
+        "name": "Max Verstappen",
+        "probability": 0.275,
+        "volume": 45.833334
+      },
+      {
+        "name": "Yuki Tsunoda",
+        "probability": 0.235,
+        "volume": 10
+      },
+      {
+        "name": "Kimi Antonelli",
+        "probability": 0.21,
+        "volume": 182.041667
+      },
+      {
         "name": "Lewis Hamilton",
-        "probability": 0.48,
+        "probability": 0.15,
         "volume": 0
       },
       {
         "name": "Charles Leclerc",
-        "probability": 0.445,
+        "probability": 0.125,
         "volume": 0
       },
       {
         "name": "Lando Norris",
-        "probability": 0.445,
-        "volume": 0
-      },
-      {
-        "name": "George Russell",
-        "probability": 0.44,
+        "probability": 0.095,
         "volume": 0
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.44,
-        "volume": 0
-      },
-      {
-        "name": "Pierre Gasly",
-        "probability": 0.435,
-        "volume": 0
-      },
-      {
-        "name": "Fernando Alonso",
-        "probability": 0.435,
-        "volume": 10
-      },
-      {
-        "name": "Gabriel Bortoleto",
-        "probability": 0.435,
-        "volume": 0
-      },
-      {
-        "name": "Esteban Ocon",
-        "probability": 0.435,
-        "volume": 0
-      },
-      {
-        "name": "Franco Colapinto",
-        "probability": 0.435,
-        "volume": 0
-      },
-      {
-        "name": "Carlos Sainz Jr.",
-        "probability": 0.435,
-        "volume": 0
-      },
-      {
-        "name": "Valtteri Bottas",
-        "probability": 0.435,
-        "volume": 10
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.435,
+        "probability": 0.085,
         "volume": 0
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.435,
+        "probability": 0.05,
         "volume": 0
       },
       {
+        "name": "George Russell",
+        "probability": 0.05,
+        "volume": 0
+      },
+      {
+        "name": "Fernando Alonso",
+        "probability": 0.0105,
+        "volume": 10
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "probability": 0.0105,
+        "volume": 0
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.0105,
+        "volume": 10
+      },
+      {
+        "name": "Valtteri Bottas",
+        "probability": 0.0105,
+        "volume": 10
+      },
+      {
         "name": "Arvid Lindblad",
-        "probability": 0.435,
+        "probability": 0.0105,
         "volume": 0
       },
       {
         "name": "Liam Lawson",
-        "probability": 0.435,
+        "probability": 0.0105,
         "volume": 0
-      },
-      {
-        "name": "Yuki Tsunoda",
-        "probability": 0.435,
-        "volume": 10
       },
       {
         "name": "Alexander Albon",
-        "probability": 0.43,
+        "probability": 0.009,
         "volume": 10
       },
       {
-        "name": "Sergio Perez",
-        "probability": 0.43,
-        "volume": 10
+        "name": "Esteban Ocon",
+        "probability": 0.009,
+        "volume": 0
       },
       {
-        "name": "Lance Stroll",
-        "probability": 0.43,
-        "volume": 10
+        "name": "Franco Colapinto",
+        "probability": 0.009,
+        "volume": 0
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.009,
+        "volume": 0
       },
       {
         "name": "Nico Hulkenberg",
-        "probability": 0.425,
+        "probability": 0.009,
         "volume": 0
       },
       {
-        "name": "Max Verstappen",
-        "probability": 0.315,
+        "name": "Oliver Bearman",
+        "probability": 0.009,
         "volume": 0
       },
       {
-        "name": "Kimi Antonelli",
-        "probability": 0.13,
+        "name": "Pierre Gasly",
+        "probability": 0.0085,
         "volume": 0
+      },
+      {
+        "name": "Lance Stroll",
+        "probability": 0.0085,
+        "volume": 10
       }
     ]
   },
@@ -259,119 +259,119 @@
     "totalVolume": 50,
     "runners": [
       {
-        "name": "Pierre Gasly",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Fernando Alonso",
-        "probability": 0.495,
+        "name": "Yuki Tsunoda",
+        "probability": 0.47,
         "volume": 10
-      },
-      {
-        "name": "Alexander Albon",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Gabriel Bortoleto",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Sergio Perez",
-        "probability": 0.495,
-        "volume": 10
-      },
-      {
-        "name": "Charles Leclerc",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Esteban Ocon",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Lando Norris",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Kimi Antonelli",
-        "probability": 0.495,
-        "volume": 0
       },
       {
         "name": "Max Verstappen",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Franco Colapinto",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Carlos Sainz Jr.",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Nico Hulkenberg",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Valtteri Bottas",
-        "probability": 0.495,
-        "volume": 10
-      },
-      {
-        "name": "Lewis Hamilton",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.495,
-        "volume": 0
-      },
-      {
-        "name": "Oscar Piastri",
-        "probability": 0.495,
+        "probability": 0.155,
         "volume": 0
       },
       {
         "name": "George Russell",
-        "probability": 0.495,
+        "probability": 0.135,
         "volume": 0
       },
       {
-        "name": "Arvid Lindblad",
-        "probability": 0.495,
+        "name": "Kimi Antonelli",
+        "probability": 0.115,
+        "volume": 0
+      },
+      {
+        "name": "Charles Leclerc",
+        "probability": 0.085,
+        "volume": 0
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.085,
+        "volume": 0
+      },
+      {
+        "name": "Lando Norris",
+        "probability": 0.05,
         "volume": 0
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.495,
+        "probability": 0.045,
         "volume": 0
       },
       {
-        "name": "Liam Lawson",
-        "probability": 0.495,
+        "name": "Oscar Piastri",
+        "probability": 0.0355,
+        "volume": 0
+      },
+      {
+        "name": "Pierre Gasly",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Fernando Alonso",
+        "probability": 0.0155,
+        "volume": 10
+      },
+      {
+        "name": "Alexander Albon",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Gabriel Bortoleto",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Sergio Perez",
+        "probability": 0.0155,
+        "volume": 10
+      },
+      {
+        "name": "Esteban Ocon",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Franco Colapinto",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Carlos Sainz Jr.",
+        "probability": 0.0155,
+        "volume": 0
+      },
+      {
+        "name": "Valtteri Bottas",
+        "probability": 0.0155,
+        "volume": 10
+      },
+      {
+        "name": "Oliver Bearman",
+        "probability": 0.0155,
         "volume": 0
       },
       {
         "name": "Lance Stroll",
-        "probability": 0.495,
+        "probability": 0.0155,
         "volume": 10
       },
       {
-        "name": "Yuki Tsunoda",
-        "probability": 0.495,
-        "volume": 10
+        "name": "Arvid Lindblad",
+        "probability": 0.0145,
+        "volume": 0
+      },
+      {
+        "name": "Liam Lawson",
+        "probability": 0.014,
+        "volume": 0
+      },
+      {
+        "name": "Nico Hulkenberg",
+        "probability": 0.013,
+        "volume": 0
       }
     ]
   }
