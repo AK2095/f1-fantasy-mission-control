@@ -1,10 +1,10 @@
 {
   "season": 2026,
-  "updatedAt": "2026-10-07T14:22:27.002Z",
+  "updatedAt": "2026-10-08T12:59:40.453Z",
   "lastCompletedRound": 16,
   "nextRound": 17,
   "roundsRemaining": 7,
-  "isRaceWeek": false,
+  "isRaceWeek": true,
   "nextRace": {
     "round": 17,
     "name": "Singapore Grand Prix",
