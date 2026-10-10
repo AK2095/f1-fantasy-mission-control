@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:40:32.783Z",
+  "updatedAt": "2026-10-10T21:17:34.485Z",
   "available": true,
   "round": 17,
   "race": "Singapore Grand Prix",
@@ -37,17 +37,17 @@
       "startUTC": "2026-10-10T13:00:00.000Z",
       "precipProbability": 63,
       "precipMm": 0,
-      "tempC": 27.6,
-      "windKph": 5.5,
+      "tempC": 27.4,
+      "windKph": 2.2,
       "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-10-11T12:00:00.000Z",
       "precipProbability": 47,
-      "precipMm": 0,
-      "tempC": 27.1,
-      "windKph": 1.9,
-      "weatherCode": 3
+      "precipMm": 0.2,
+      "tempC": 28.3,
+      "windKph": 5.3,
+      "weatherCode": 51
     }
   },
   "scenario": {
