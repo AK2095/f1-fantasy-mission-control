@@ -1,58 +1,58 @@
 {
-  "updatedAt": "2026-10-11T00:43:03.899Z",
+  "updatedAt": "2026-10-11T12:17:53.984Z",
   "available": true,
-  "round": 17,
-  "race": "Singapore Grand Prix",
-  "circuit": "Marina Bay Street Circuit",
-  "locality": "Marina Bay",
-  "country": "Singapore",
-  "lat": 1.2914,
-  "lon": 103.864,
+  "round": 18,
+  "race": "United States Grand Prix",
+  "circuit": "Circuit of the Americas",
+  "locality": "Austin",
+  "country": "USA",
+  "lat": 30.1328,
+  "lon": -97.6411,
   "sessions": {
     "fp1": {
-      "startUTC": "2026-10-09T08:30:00.000Z",
-      "precipProbability": 18,
+      "startUTC": "2026-10-23T17:30:00.000Z",
+      "precipProbability": 6,
       "precipMm": 0,
-      "tempC": 32.6,
-      "windKph": 6.1,
-      "weatherCode": 2
-    },
-    "sprintQualifying": {
-      "startUTC": "2026-10-09T12:30:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 30.8,
-      "windKph": 9.3,
+      "tempC": 25.9,
+      "windKph": 14.2,
       "weatherCode": 0
     },
-    "sprint": {
-      "startUTC": "2026-10-10T09:00:00.000Z",
-      "precipProbability": 100,
-      "precipMm": 0.3,
-      "tempC": 29.4,
-      "windKph": 5.9,
-      "weatherCode": 51
+    "fp2": {
+      "startUTC": "2026-10-23T21:00:00.000Z",
+      "precipProbability": 7,
+      "precipMm": 0,
+      "tempC": 28.4,
+      "windKph": 13,
+      "weatherCode": 0
+    },
+    "fp3": {
+      "startUTC": "2026-10-24T17:30:00.000Z",
+      "precipProbability": 11,
+      "precipMm": 0,
+      "tempC": 26.2,
+      "windKph": 4.7,
+      "weatherCode": 2
     },
     "qualifying": {
-      "startUTC": "2026-10-10T13:00:00.000Z",
-      "precipProbability": 63,
+      "startUTC": "2026-10-24T21:00:00.000Z",
+      "precipProbability": 15,
       "precipMm": 0,
-      "tempC": 27.4,
-      "windKph": 2.2,
-      "weatherCode": 3
+      "tempC": 28.5,
+      "windKph": 10,
+      "weatherCode": 2
     },
     "race": {
-      "startUTC": "2026-10-11T12:00:00.000Z",
-      "precipProbability": 47,
-      "precipMm": 0.2,
-      "tempC": 28.3,
-      "windKph": 5.3,
-      "weatherCode": 51
+      "startUTC": "2026-10-25T20:00:00.000Z",
+      "precipProbability": 11,
+      "precipMm": 0,
+      "tempC": 29,
+      "windKph": 12.3,
+      "weatherCode": 2
     }
   },
   "scenario": {
-    "dryProb": 53,
-    "wetProb": 47,
+    "dryProb": 89,
+    "wetProb": 11,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
