@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T11:00:49.050Z",
+  "updatedAt": "2026-10-15T16:30:21.014Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,12 +10,12 @@
     "title": "United States Grand Prix: Driver Winner",
     "slug": "f1-united-states-grand-prix-winner-2026-10-25",
     "endDate": "2026-11-01T20:00:00Z",
-    "totalVolume": 1595.925252,
+    "totalVolume": 1774.635252,
     "runners": [
       {
         "name": "Max Verstappen",
         "probability": 0.435,
-        "volume": 233.533638
+        "volume": 412.24363800000003
       },
       {
         "name": "Kimi Antonelli",
@@ -24,7 +24,7 @@
       },
       {
         "name": "George Russell",
-        "probability": 0.09,
+        "probability": 0.085,
         "volume": 378.681819
       },
       {
@@ -44,7 +44,7 @@
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.035,
+        "probability": 0.037,
         "volume": 0
       },
       {
@@ -119,7 +119,7 @@
       },
       {
         "name": "Lance Stroll",
-        "probability": 0.0095,
+        "probability": 0.01,
         "volume": 165
       },
       {
@@ -284,17 +284,17 @@
         "volume": 0
       },
       {
-        "name": "Alexander Albon",
-        "probability": 0.48,
-        "volume": 0
-      },
-      {
         "name": "Pierre Gasly",
         "probability": 0.475,
         "volume": 0
       },
       {
         "name": "Fernando Alonso",
+        "probability": 0.475,
+        "volume": 0
+      },
+      {
+        "name": "Alexander Albon",
         "probability": 0.475,
         "volume": 0
       },
