@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T23:33:48.932Z",
+  "updatedAt": "2026-10-16T10:56:28.200Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,27 +10,27 @@
     "title": "United States Grand Prix: Driver Winner",
     "slug": "f1-united-states-grand-prix-winner-2026-10-25",
     "endDate": "2026-11-01T20:00:00Z",
-    "totalVolume": 1796.075849,
+    "totalVolume": 1992.462947,
     "runners": [
       {
         "name": "Max Verstappen",
-        "probability": 0.435,
-        "volume": 426.039093
+        "probability": 0.415,
+        "volume": 451.039094
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.255,
-        "volume": 52.184238
-      },
-      {
-        "name": "George Russell",
-        "probability": 0.085,
-        "volume": 378.681819
+        "probability": 0.25,
+        "volume": 68.571335
       },
       {
         "name": "Lewis Hamilton",
         "probability": 0.08,
         "volume": 56.363638
+      },
+      {
+        "name": "George Russell",
+        "probability": 0.08,
+        "volume": 378.681819
       },
       {
         "name": "Lando Norris",
@@ -49,13 +49,8 @@
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.021,
+        "probability": 0.0205,
         "volume": 370.36
-      },
-      {
-        "name": "Fernando Alonso",
-        "probability": 0.011,
-        "volume": 10
       },
       {
         "name": "Alexander Albon",
@@ -93,11 +88,6 @@
         "volume": 0
       },
       {
-        "name": "Valtteri Bottas",
-        "probability": 0.0105,
-        "volume": 15
-      },
-      {
         "name": "Oliver Bearman",
         "probability": 0.0105,
         "volume": 0
@@ -113,13 +103,23 @@
         "volume": 0
       },
       {
+        "name": "Fernando Alonso",
+        "probability": 0.002,
+        "volume": 165
+      },
+      {
         "name": "Sergio Perez",
-        "probability": 0.0095,
+        "probability": 0.0015,
         "volume": 209
       },
       {
+        "name": "Valtteri Bottas",
+        "probability": 0.0015,
+        "volume": 15
+      },
+      {
         "name": "Lance Stroll",
-        "probability": 0.0095,
+        "probability": 0.0015,
         "volume": 165
       },
       {
@@ -133,12 +133,12 @@
     "title": "United States Grand Prix: Driver Pole Position",
     "slug": "f1-united-states-grand-prix-driver-pole-position-2026-10-24",
     "endDate": "2026-10-31T21:00:00Z",
-    "totalVolume": 40,
+    "totalVolume": 42.173913999999996,
     "runners": [
       {
         "name": "Max Verstappen",
         "probability": 0.33,
-        "volume": 0
+        "volume": 2.173914
       },
       {
         "name": "Charles Leclerc",
@@ -163,6 +163,11 @@
       {
         "name": "George Russell",
         "probability": 0.25,
+        "volume": 0
+      },
+      {
+        "name": "Oliver Bearman",
+        "probability": 0.21,
         "volume": 0
       },
       {
@@ -239,11 +244,6 @@
         "name": "Yuki Tsunoda",
         "probability": 0.155,
         "volume": 10
-      },
-      {
-        "name": "Oliver Bearman",
-        "probability": 0.15,
-        "volume": 0
       },
       {
         "name": "Isack Hadjar",
