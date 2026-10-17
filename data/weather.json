@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T10:18:04.430Z",
+  "updatedAt": "2026-10-17T14:05:19.931Z",
   "available": true,
   "round": 18,
   "race": "United States Grand Prix",
@@ -13,41 +13,41 @@
       "startUTC": "2026-10-23T17:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 26.2,
-      "windKph": 16.8,
-      "weatherCode": 2
+      "tempC": 26.5,
+      "windKph": 17.4,
+      "weatherCode": 0
     },
     "fp2": {
       "startUTC": "2026-10-23T21:00:00.000Z",
       "precipProbability": 1,
       "precipMm": 0,
-      "tempC": 29.3,
-      "windKph": 20.2,
-      "weatherCode": 1
+      "tempC": 29.5,
+      "windKph": 20.5,
+      "weatherCode": 0
     },
     "fp3": {
       "startUTC": "2026-10-24T17:30:00.000Z",
       "precipProbability": 3,
       "precipMm": 0,
-      "tempC": 27.1,
-      "windKph": 22.8,
+      "tempC": 26.9,
+      "windKph": 16.1,
       "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-10-24T21:00:00.000Z",
       "precipProbability": 5,
       "precipMm": 0,
-      "tempC": 31.1,
-      "windKph": 21.6,
+      "tempC": 30,
+      "windKph": 23,
       "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-10-25T20:00:00.000Z",
       "precipProbability": 12,
-      "precipMm": 0.2,
-      "tempC": 23.8,
-      "windKph": 13.3,
-      "weatherCode": 51
+      "precipMm": 0,
+      "tempC": 28.4,
+      "windKph": 22.9,
+      "weatherCode": 3
     }
   },
   "scenario": {
