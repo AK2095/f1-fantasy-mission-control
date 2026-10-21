@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-10-20T12:38:44.900Z",
+  "builtAt": "2026-10-21T12:50:29.709Z",
   "builtBy": "github-actions",
-  "commit": "4410c63",
+  "commit": "0ebc368",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "rounds": 23
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
+      "circuit": "Circuit of the Americas"
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "runners": 23
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "throughRound": 17
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "assets": 33,
       "rounds": 17
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "rounds": 17
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "rounds": 17
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
-      "circuit": "Circuit of the Americas"
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "rounds": 14
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-10-20T12:38:44.900Z",
+      "fetchedAt": "2026-10-21T12:50:29.709Z",
       "rounds": 9
     }
   },
