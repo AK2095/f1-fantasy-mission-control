@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T20:25:56.013Z",
+  "updatedAt": "2026-10-22T23:54:13.107Z",
   "available": true,
   "round": 18,
   "race": "United States Grand Prix",
@@ -35,7 +35,7 @@
     },
     "qualifying": {
       "startUTC": "2026-10-24T21:00:00.000Z",
-      "precipProbability": 0,
+      "precipProbability": 1,
       "precipMm": 0,
       "tempC": 30.3,
       "windKph": 21,
