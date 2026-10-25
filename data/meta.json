@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-10-25T21:30:45.333Z",
+  "builtAt": "2026-10-25T23:54:34.957Z",
   "builtBy": "github-actions",
-  "commit": "c21c90b",
+  "commit": "1c5e8f1",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "rounds": 23
-    },
-    "markets": {
-      "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
-      "runners": 23
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "throughRound": 18
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "circuit": "Autódromo Hermanos Rodríguez"
+    },
+    "markets": {
+      "ok": true,
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
+      "runners": 23
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "assets": 33,
       "rounds": 17
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "rounds": 17
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
-      "rounds": 17
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
+      "rounds": 18
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "rounds": 14
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-10-25T21:30:45.333Z",
+      "fetchedAt": "2026-10-25T23:54:34.957Z",
       "rounds": 9
     }
   },
