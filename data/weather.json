@@ -1,58 +1,58 @@
 {
-  "updatedAt": "2026-10-25T18:13:30.078Z",
+  "updatedAt": "2026-10-25T21:30:45.333Z",
   "available": true,
-  "round": 18,
-  "race": "United States Grand Prix",
-  "circuit": "Circuit of the Americas",
-  "locality": "Austin",
-  "country": "USA",
-  "lat": 30.1328,
-  "lon": -97.6411,
+  "round": 19,
+  "race": "Mexico City Grand Prix",
+  "circuit": "Autódromo Hermanos Rodríguez",
+  "locality": "Mexico City",
+  "country": "Mexico",
+  "lat": 19.4042,
+  "lon": -99.0907,
   "sessions": {
     "fp1": {
-      "startUTC": "2026-10-23T17:30:00.000Z",
+      "startUTC": "2026-10-30T18:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 26.2,
-      "windKph": 9.9,
+      "tempC": 22,
+      "windKph": 3.1,
       "weatherCode": 0
     },
     "fp2": {
-      "startUTC": "2026-10-23T21:00:00.000Z",
-      "precipProbability": 0,
-      "precipMm": 0,
-      "tempC": 29.4,
-      "windKph": 17.6,
-      "weatherCode": 0
+      "startUTC": "2026-10-30T22:00:00.000Z",
+      "precipProbability": 9,
+      "precipMm": 0.1,
+      "tempC": 23.5,
+      "windKph": 4.8,
+      "weatherCode": 51
     },
     "fp3": {
-      "startUTC": "2026-10-24T17:30:00.000Z",
+      "startUTC": "2026-10-31T17:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 26.4,
-      "windKph": 14.7,
-      "weatherCode": 3
+      "tempC": 22,
+      "windKph": 2.3,
+      "weatherCode": 1
     },
     "qualifying": {
-      "startUTC": "2026-10-24T21:00:00.000Z",
-      "precipProbability": 0,
+      "startUTC": "2026-10-31T21:00:00.000Z",
+      "precipProbability": 24,
       "precipMm": 0,
-      "tempC": 29.6,
-      "windKph": 17.8,
-      "weatherCode": 0
+      "tempC": 24.6,
+      "windKph": 7,
+      "weatherCode": 1
     },
     "race": {
-      "startUTC": "2026-10-25T20:00:00.000Z",
-      "precipProbability": 0,
+      "startUTC": "2026-11-01T20:00:00.000Z",
+      "precipProbability": 6,
       "precipMm": 0,
-      "tempC": 27.1,
-      "windKph": 15.8,
-      "weatherCode": 3
+      "tempC": 25,
+      "windKph": 5,
+      "weatherCode": 0
     }
   },
   "scenario": {
-    "dryProb": 100,
-    "wetProb": 0,
+    "dryProb": 94,
+    "wetProb": 6,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
