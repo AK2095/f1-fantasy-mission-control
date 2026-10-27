@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T23:54:34.957Z",
+  "updatedAt": "2026-10-27T13:05:43.740Z",
   "available": true,
   "round": 19,
   "race": "Mexico City Grand Prix",
@@ -11,48 +11,48 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-10-30T18:30:00.000Z",
-      "precipProbability": 0,
+      "precipProbability": 2,
       "precipMm": 0,
-      "tempC": 22,
-      "windKph": 3.1,
-      "weatherCode": 0
+      "tempC": 22.8,
+      "windKph": 2.6,
+      "weatherCode": 1
     },
     "fp2": {
       "startUTC": "2026-10-30T22:00:00.000Z",
-      "precipProbability": 9,
+      "precipProbability": 7,
       "precipMm": 0.1,
-      "tempC": 23.5,
-      "windKph": 4.8,
+      "tempC": 24.7,
+      "windKph": 4.6,
       "weatherCode": 51
     },
     "fp3": {
       "startUTC": "2026-10-31T17:30:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 22,
-      "windKph": 2.3,
-      "weatherCode": 1
+      "tempC": 21.2,
+      "windKph": 1.9,
+      "weatherCode": 0
     },
     "qualifying": {
       "startUTC": "2026-10-31T21:00:00.000Z",
-      "precipProbability": 24,
+      "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 24.6,
-      "windKph": 7,
-      "weatherCode": 1
+      "tempC": 26.5,
+      "windKph": 6.4,
+      "weatherCode": 0
     },
     "race": {
       "startUTC": "2026-11-01T20:00:00.000Z",
-      "precipProbability": 6,
+      "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 25,
-      "windKph": 5,
+      "tempC": 26.2,
+      "windKph": 7.9,
       "weatherCode": 0
     }
   },
   "scenario": {
-    "dryProb": 94,
-    "wetProb": 6,
+    "dryProb": 100,
+    "wetProb": 0,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
