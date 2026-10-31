@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T16:57:37.726Z",
+  "updatedAt": "2026-10-31T20:25:38.657Z",
   "provider": "f1fantasytools.com",
   "note": "Official fantasy prices and per-round scoring. Derived metrics (avgPoints, stdev, sharpe, pointsPerMillion, momentum) are computed here, not published by the source.",
   "rounds": 18,
@@ -671,11 +671,11 @@
       "momentum": -3.1
     },
     {
-      "code": "OCO",
-      "id": "HAA_OCO",
+      "code": "HIR",
+      "id": "HAA_HIR",
       "type": "driver",
       "color": "#ffffff",
-      "price": 10.1,
+      "price": 6,
       "perRound": [
         13,
         24,
@@ -700,12 +700,12 @@
       "avgPoints": 11.39,
       "stdev": 6.88,
       "sharpe": 1.66,
-      "pointsPerMillion": 1.13,
+      "pointsPerMillion": 1.9,
       "worstRound": -10,
       "bestRound": 24,
       "negativeRounds": 1,
-      "last2Avg": 9.5,
-      "momentum": -1.9
+      "last2Avg": null,
+      "momentum": null
     },
     {
       "code": "LIN",
