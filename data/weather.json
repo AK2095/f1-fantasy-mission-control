@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T11:50:54.481Z",
+  "updatedAt": "2026-10-31T16:57:37.726Z",
   "available": true,
   "round": 19,
   "race": "Mexico City Grand Prix",
@@ -30,23 +30,23 @@
       "precipProbability": 0,
       "precipMm": 0,
       "tempC": 22.1,
-      "windKph": 3.5,
+      "windKph": 4.8,
       "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-10-31T21:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 26.9,
-      "windKph": 8.2,
+      "tempC": 27,
+      "windKph": 8.8,
       "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-11-01T20:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 25.4,
-      "windKph": 9.6,
+      "tempC": 26.1,
+      "windKph": 7.6,
       "weatherCode": 2
     }
   },
