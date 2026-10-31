@@ -1,7 +1,7 @@
 {
   "season": 2026,
-  "throughRound": 18,
-  "updatedAt": "2026-10-31T20:25:38.657Z",
+  "throughRound": 19,
+  "updatedAt": "2026-10-31T23:58:04.852Z",
   "drivers": [
     {
       "position": 1,
@@ -299,6 +299,17 @@
       "nationality": "Mexican",
       "constructor": "Cadillac F1 Team",
       "constructorId": "cadillac",
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "position": 24,
+      "driverId": "ryo_hirakawa",
+      "name": "Ryo Hirakawa",
+      "surname": "Hirakawa",
+      "number": null,
+      "constructor": "Haas F1 Team",
+      "constructorId": "haas",
       "points": 0,
       "wins": 0
     }
