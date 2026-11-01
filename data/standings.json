@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "throughRound": 19,
-  "updatedAt": "2026-11-01T12:50:16.029Z",
+  "updatedAt": "2026-11-01T18:17:22.569Z",
   "drivers": [
     {
       "position": 1,
@@ -304,10 +304,12 @@
     },
     {
       "position": 24,
+      "code": "HIR",
       "driverId": "ryo_hirakawa",
       "name": "Ryo Hirakawa",
       "surname": "Hirakawa",
-      "number": null,
+      "number": 50,
+      "nationality": "Japanese",
       "constructor": "Haas F1 Team",
       "constructorId": "haas",
       "points": 0,
