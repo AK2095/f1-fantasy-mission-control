@@ -1,36 +1,36 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-01T18:17:22.569Z",
-  "lastCompletedRound": 18,
-  "nextRound": 19,
-  "roundsRemaining": 5,
-  "isRaceWeek": true,
+  "updatedAt": "2026-11-03T14:57:16.756Z",
+  "lastCompletedRound": 19,
+  "nextRound": 20,
+  "roundsRemaining": 4,
+  "isRaceWeek": false,
   "nextRace": {
-    "round": 19,
-    "name": "Mexico City Grand Prix",
-    "shortName": "Mexico City GP",
-    "circuitId": "rodriguez",
-    "circuit": "Autódromo Hermanos Rodríguez",
-    "locality": "Mexico City",
-    "country": "Mexico",
-    "lat": 19.4042,
-    "lon": -99.0907,
-    "date": "2026-11-01",
-    "raceStartUTC": "2026-11-01T20:00:00.000Z",
+    "round": 20,
+    "name": "Brazilian Grand Prix",
+    "shortName": "Brazilian GP",
+    "circuitId": "interlagos",
+    "circuit": "Autódromo José Carlos Pace",
+    "locality": "São Paulo",
+    "country": "Brazil",
+    "lat": -23.7036,
+    "lon": -46.6997,
+    "date": "2026-11-08",
+    "raceStartUTC": "2026-11-08T17:00:00.000Z",
     "isSprint": false,
     "sessions": {
-      "fp1": "2026-10-30T18:30:00.000Z",
-      "fp2": "2026-10-30T22:00:00.000Z",
-      "fp3": "2026-10-31T17:30:00.000Z",
-      "qualifying": "2026-10-31T21:00:00.000Z",
-      "race": "2026-11-01T20:00:00.000Z"
+      "fp1": "2026-11-06T15:30:00.000Z",
+      "fp2": "2026-11-06T19:00:00.000Z",
+      "fp3": "2026-11-07T14:30:00.000Z",
+      "qualifying": "2026-11-07T18:00:00.000Z",
+      "race": "2026-11-08T17:00:00.000Z"
     },
-    "lockUTC": "2026-10-31T21:00:00.000Z",
-    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix"
+    "lockUTC": "2026-11-07T18:00:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix"
   },
   "lastRace": {
-    "round": 18,
-    "name": "United States Grand Prix",
-    "date": "2026-10-25"
+    "round": 19,
+    "name": "Mexico City Grand Prix",
+    "date": "2026-11-01"
   }
 }

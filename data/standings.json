@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "throughRound": 19,
-  "updatedAt": "2026-11-01T18:17:22.569Z",
+  "updatedAt": "2026-11-03T14:57:16.756Z",
   "drivers": [
     {
       "position": 1,
@@ -13,20 +13,20 @@
       "nationality": "Italian",
       "constructor": "Mercedes",
       "constructorId": "mercedes",
-      "points": 365,
+      "points": 380,
       "wins": 9
     },
     {
       "position": 2,
-      "code": "RUS",
-      "driverId": "russell",
-      "name": "George Russell",
-      "surname": "Russell",
-      "number": 63,
-      "nationality": "British",
-      "constructor": "Mercedes",
-      "constructorId": "mercedes",
-      "points": 242,
+      "code": "VER",
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "surname": "Verstappen",
+      "number": 3,
+      "nationality": "Dutch",
+      "constructor": "Red Bull",
+      "constructorId": "red_bull",
+      "points": 261,
       "wins": 3
     },
     {
@@ -39,21 +39,21 @@
       "nationality": "British",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 241,
+      "points": 259,
       "wins": 1
     },
     {
       "position": 4,
-      "code": "VER",
-      "driverId": "max_verstappen",
-      "name": "Max Verstappen",
-      "surname": "Verstappen",
-      "number": 3,
-      "nationality": "Dutch",
-      "constructor": "Red Bull",
-      "constructorId": "red_bull",
-      "points": 236,
-      "wins": 2
+      "code": "RUS",
+      "driverId": "russell",
+      "name": "George Russell",
+      "surname": "Russell",
+      "number": 63,
+      "nationality": "British",
+      "constructor": "Mercedes",
+      "constructorId": "mercedes",
+      "points": 250,
+      "wins": 3
     },
     {
       "position": 5,
@@ -65,7 +65,7 @@
       "nationality": "Monegasque",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 233,
+      "points": 245,
       "wins": 1
     },
     {
@@ -78,7 +78,7 @@
       "nationality": "British",
       "constructor": "McLaren",
       "constructorId": "mclaren",
-      "points": 211,
+      "points": 221,
       "wins": 2
     },
     {
@@ -104,7 +104,7 @@
       "nationality": "French",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 105,
+      "points": 107,
       "wins": 0
     },
     {
@@ -117,7 +117,7 @@
       "nationality": "New Zealander",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 77,
+      "points": 83,
       "wins": 0
     },
     {
@@ -174,6 +174,19 @@
     },
     {
       "position": 14,
+      "code": "BOR",
+      "driverId": "bortoleto",
+      "name": "Gabriel Bortoleto",
+      "surname": "Bortoleto",
+      "number": 5,
+      "nationality": "Brazilian",
+      "constructor": "Audi",
+      "constructorId": "audi",
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "position": 15,
       "code": "HUL",
       "driverId": "hulkenberg",
       "name": "Nico Hülkenberg",
@@ -183,19 +196,6 @@
       "constructor": "Audi",
       "constructorId": "audi",
       "points": 13,
-      "wins": 0
-    },
-    {
-      "position": 15,
-      "code": "BOR",
-      "driverId": "bortoleto",
-      "name": "Gabriel Bortoleto",
-      "surname": "Bortoleto",
-      "number": 5,
-      "nationality": "Brazilian",
-      "constructor": "Audi",
-      "constructorId": "audi",
-      "points": 10,
       "wins": 0
     },
     {
@@ -265,6 +265,19 @@
     },
     {
       "position": 21,
+      "code": "HIR",
+      "driverId": "ryo_hirakawa",
+      "name": "Ryo Hirakawa",
+      "surname": "Hirakawa",
+      "number": 50,
+      "nationality": "Japanese",
+      "constructor": "Haas F1 Team",
+      "constructorId": "haas",
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "position": 22,
       "code": "STR",
       "driverId": "stroll",
       "name": "Lance Stroll",
@@ -277,7 +290,7 @@
       "wins": 0
     },
     {
-      "position": 22,
+      "position": 23,
       "code": "BOT",
       "driverId": "bottas",
       "name": "Valtteri Bottas",
@@ -290,7 +303,7 @@
       "wins": 0
     },
     {
-      "position": 23,
+      "position": 24,
       "code": "PER",
       "driverId": "perez",
       "name": "Sergio Pérez",
@@ -301,19 +314,6 @@
       "constructorId": "cadillac",
       "points": 0,
       "wins": 0
-    },
-    {
-      "position": 24,
-      "code": "HIR",
-      "driverId": "ryo_hirakawa",
-      "name": "Ryo Hirakawa",
-      "surname": "Hirakawa",
-      "number": 50,
-      "nationality": "Japanese",
-      "constructor": "Haas F1 Team",
-      "constructorId": "haas",
-      "points": 0,
-      "wins": 0
     }
   ],
   "constructors": [
@@ -322,7 +322,7 @@
       "constructorId": "mercedes",
       "name": "Mercedes",
       "nationality": "German",
-      "points": 607,
+      "points": 630,
       "wins": 12
     },
     {
@@ -330,7 +330,7 @@
       "constructorId": "ferrari",
       "name": "Ferrari",
       "nationality": "Italian",
-      "points": 474,
+      "points": 504,
       "wins": 2
     },
     {
@@ -338,15 +338,15 @@
       "constructorId": "red_bull",
       "name": "Red Bull",
       "nationality": "Austrian",
-      "points": 355,
-      "wins": 2
+      "points": 382,
+      "wins": 3
     },
     {
       "position": 4,
       "constructorId": "mclaren",
       "name": "McLaren",
       "nationality": "British",
-      "points": 355,
+      "points": 365,
       "wins": 2
     },
     {
@@ -354,7 +354,7 @@
       "constructorId": "rb",
       "name": "RB F1 Team",
       "nationality": "Italian",
-      "points": 102,
+      "points": 108,
       "wins": 0
     },
     {
@@ -370,7 +370,7 @@
       "constructorId": "haas",
       "name": "Haas F1 Team",
       "nationality": "American",
-      "points": 30,
+      "points": 31,
       "wins": 0
     },
     {
@@ -378,7 +378,7 @@
       "constructorId": "audi",
       "name": "Audi",
       "nationality": "German",
-      "points": 23,
+      "points": 27,
       "wins": 0
     },
     {
