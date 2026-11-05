@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T15:17:55.944Z",
+  "updatedAt": "2026-11-05T14:12:37.631Z",
   "trainedFromRound": 1,
   "firstTestedRound": 4,
   "lastTestedRound": 19,
@@ -86,7 +86,7 @@
           "scored": 255,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -100,7 +100,7 @@
           "squad": [
             "LEC",
             "RUS",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -113,7 +113,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -148,7 +148,7 @@
           "scored": 207,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "SAI",
             "PER",
             "ALB",
@@ -162,7 +162,7 @@
           "squad": [
             "LEC",
             "RUS",
-            "HIR",
+            "CAM",
             "SAI",
             "COL",
             "MER",
@@ -175,7 +175,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -223,7 +223,7 @@
           "scored": 176,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -237,7 +237,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "SAI",
             "COL",
             "MER",
@@ -250,7 +250,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -263,7 +263,7 @@
           "squad": [
             "ANT",
             "LAW",
-            "HIR",
+            "CAM",
             "LIN",
             "ALO",
             "MER",
@@ -298,7 +298,7 @@
           "scored": 130,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "GAS",
             "PER",
             "ALB",
@@ -311,7 +311,7 @@
           "scored": 139,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "GAS",
             "SAI",
             "COL",
@@ -325,7 +325,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -373,7 +373,7 @@
           "scored": 215,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -386,7 +386,7 @@
           "scored": 167,
           "squad": [
             "HAM",
-            "HIR",
+            "CAM",
             "GAS",
             "SAI",
             "COL",
@@ -400,7 +400,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -448,7 +448,7 @@
           "scored": 273,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -462,7 +462,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -475,7 +475,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -487,7 +487,7 @@
           "scored": 313,
           "squad": [
             "LEC",
-            "HIR",
+            "CAM",
             "BOR",
             "COL",
             "BEA",
@@ -523,7 +523,7 @@
           "scored": 181,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -537,7 +537,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -550,7 +550,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -598,7 +598,7 @@
           "scored": 193,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -612,7 +612,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -625,7 +625,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -686,7 +686,7 @@
           "scored": 186,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -700,7 +700,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -713,7 +713,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -774,7 +774,7 @@
           "scored": 360,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -788,7 +788,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -801,7 +801,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -862,7 +862,7 @@
           "scored": 168,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -876,7 +876,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "GAS",
             "COL",
             "MER",
@@ -889,7 +889,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -963,7 +963,7 @@
           "scored": 91,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "GAS",
             "BOR",
             "COL",
@@ -977,7 +977,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -1038,7 +1038,7 @@
           "scored": 239,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -1052,7 +1052,7 @@
           "squad": [
             "ANT",
             "LAW",
-            "HIR",
+            "CAM",
             "LIN",
             "BOR",
             "MER",
@@ -1065,7 +1065,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -1126,7 +1126,7 @@
           "scored": 182,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -1140,7 +1140,7 @@
           "squad": [
             "ANT",
             "LAW",
-            "HIR",
+            "CAM",
             "BOR",
             "COL",
             "MER",
@@ -1153,7 +1153,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -1166,7 +1166,7 @@
           "squad": [
             "VER",
             "LEC",
-            "HIR",
+            "CAM",
             "BEA",
             "ALO",
             "FER",
@@ -1214,7 +1214,7 @@
           "scored": 179,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "COL",
             "BEA",
             "PER",
@@ -1228,7 +1228,7 @@
           "squad": [
             "ANT",
             "LAW",
-            "HIR",
+            "CAM",
             "LIN",
             "BOR",
             "MER",
@@ -1241,7 +1241,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -1302,7 +1302,7 @@
           "scored": 221,
           "squad": [
             "ANT",
-            "HIR",
+            "CAM",
             "BOR",
             "BEA",
             "PER",
@@ -1316,7 +1316,7 @@
           "squad": [
             "ANT",
             "LAW",
-            "HIR",
+            "CAM",
             "LIN",
             "BOR",
             "MER",
@@ -1329,7 +1329,7 @@
           "squad": [
             "ANT",
             "LEC",
-            "HIR",
+            "CAM",
             "LIN",
             "SAI",
             "VRB",
@@ -1342,7 +1342,7 @@
           "squad": [
             "HAM",
             "LAW",
-            "HIR",
+            "CAM",
             "PER",
             "ALB",
             "FER",
