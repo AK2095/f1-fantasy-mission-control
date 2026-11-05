@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T14:12:37.631Z",
+  "updatedAt": "2026-11-05T21:20:46.772Z",
   "provider": "f1fantasytools.com",
   "note": "Official fantasy prices and per-round scoring. Derived metrics (avgPoints, stdev, sharpe, pointsPerMillion, momentum) are computed here, not published by the source.",
   "rounds": 19,
@@ -693,7 +693,7 @@
       "id": "HAA_CAM",
       "type": "driver",
       "color": "#ffffff",
-      "price": 6.6,
+      "price": 6,
       "perRound": [
         13,
         24,
@@ -719,7 +719,7 @@
       "avgPoints": 11.95,
       "stdev": 7.1,
       "sharpe": 1.68,
-      "pointsPerMillion": 1.81,
+      "pointsPerMillion": 1.99,
       "worstRound": -10,
       "bestRound": 24,
       "negativeRounds": 1,
