@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T02:01:29.282Z",
+  "updatedAt": "2026-11-06T13:53:05.146Z",
   "available": true,
   "pending": false,
   "reason": null,
@@ -10,37 +10,37 @@
     "title": "Brazilian Grand Prix: Driver Winner",
     "slug": "f1-brazilian-grand-prix-winner-2026-11-08",
     "endDate": "2026-11-15T17:00:00Z",
-    "totalVolume": 12561.344253,
+    "totalVolume": 14608.967493999999,
     "runners": [
       {
         "name": "Max Verstappen",
-        "probability": 0.41,
-        "volume": 1642.929826
+        "probability": 0.415,
+        "volume": 1687.9060200000001
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.255,
-        "volume": 4254.828708999999
+        "probability": 0.235,
+        "volume": 4285.320905
       },
       {
         "name": "Lewis Hamilton",
         "probability": 0.115,
-        "volume": 3432.918637
+        "volume": 4628.183254
       },
       {
         "name": "Charles Leclerc",
         "probability": 0.105,
-        "volume": 364.12359000000004
+        "volume": 459.30541100000005
       },
       {
         "name": "Lando Norris",
-        "probability": 0.065,
-        "volume": 2585.842989999999
+        "probability": 0.075,
+        "volume": 3190.1325479999996
       },
       {
         "name": "George Russell",
-        "probability": 0.065,
-        "volume": 250.71428699999998
+        "probability": 0.055,
+        "volume": 328.133142
       },
       {
         "name": "Oscar Piastri",
@@ -49,7 +49,7 @@
       },
       {
         "name": "Isack Hadjar",
-        "probability": 0.0105,
+        "probability": 0.0095,
         "volume": 14.004
       },
       {
@@ -133,36 +133,36 @@
     "title": "Brazilian Grand Prix: Driver Pole Position",
     "slug": "f1-brazilian-grand-prix-driver-pole-position-2026-11-07",
     "endDate": "2026-11-14T18:00:00Z",
-    "totalVolume": 62.906954999999996,
+    "totalVolume": 84.182511,
     "runners": [
       {
         "name": "Max Verstappen",
-        "probability": 0.34,
+        "probability": 0.355,
         "volume": 4.651163
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.265,
+        "probability": 0.255,
         "volume": 5
       },
       {
+        "name": "Lewis Hamilton",
+        "probability": 0.15,
+        "volume": 23.055556
+      },
+      {
         "name": "Yuki Tsunoda",
-        "probability": 0.2,
+        "probability": 0.145,
         "volume": 0
       },
       {
         "name": "Esteban Ocon",
-        "probability": 0.175,
+        "probability": 0.13,
         "volume": 0
       },
       {
-        "name": "Lewis Hamilton",
-        "probability": 0.14,
-        "volume": 17.5
-      },
-      {
         "name": "Charles Leclerc",
-        "probability": 0.115,
+        "probability": 0.105,
         "volume": 14.1
       },
       {
@@ -172,17 +172,12 @@
       },
       {
         "name": "Lando Norris",
-        "probability": 0.06,
-        "volume": 13.239125
-      },
-      {
-        "name": "Isack Hadjar",
-        "probability": 0.0255,
-        "volume": 0
+        "probability": 0.065,
+        "volume": 28.959125
       },
       {
         "name": "Oscar Piastri",
-        "probability": 0.021,
+        "probability": 0.0215,
         "volume": 0
       },
       {
@@ -241,6 +236,11 @@
         "volume": 0
       },
       {
+        "name": "Isack Hadjar",
+        "probability": 0.0195,
+        "volume": 0
+      },
+      {
         "name": "Liam Lawson",
         "probability": 0.0195,
         "volume": 0
@@ -269,18 +269,18 @@
         "volume": 0
       },
       {
-        "name": "Lewis Hamilton",
-        "probability": 0.465,
-        "volume": 0
-      },
-      {
         "name": "Max Verstappen",
-        "probability": 0.18,
+        "probability": 0.175,
         "volume": 0
       },
       {
         "name": "Kimi Antonelli",
-        "probability": 0.165,
+        "probability": 0.155,
+        "volume": 0
+      },
+      {
+        "name": "Lewis Hamilton",
+        "probability": 0.085,
         "volume": 0
       },
       {
@@ -294,12 +294,12 @@
         "volume": 0
       },
       {
-        "name": "Isack Hadjar",
-        "probability": 0.06,
+        "name": "Lando Norris",
+        "probability": 0.055,
         "volume": 0
       },
       {
-        "name": "Lando Norris",
+        "name": "Isack Hadjar",
         "probability": 0.055,
         "volume": 0
       },
