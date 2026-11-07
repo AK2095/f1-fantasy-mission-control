@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T17:57:28.889Z",
+  "updatedAt": "2026-11-07T21:42:24.401Z",
   "available": true,
   "round": 20,
   "race": "Brazilian Grand Prix",
@@ -28,25 +28,25 @@
     "fp3": {
       "startUTC": "2026-11-07T14:30:00.000Z",
       "precipProbability": 23,
-      "precipMm": 0.2,
-      "tempC": 28.5,
-      "windKph": 16.6,
-      "weatherCode": 51
+      "precipMm": 0,
+      "tempC": 28,
+      "windKph": 13,
+      "weatherCode": 3
     },
     "qualifying": {
       "startUTC": "2026-11-07T18:00:00.000Z",
       "precipProbability": 80,
-      "precipMm": 1.2,
-      "tempC": 24.4,
-      "windKph": 16.4,
-      "weatherCode": 55
+      "precipMm": 0.7,
+      "tempC": 23.5,
+      "windKph": 11.9,
+      "weatherCode": 53
     },
     "race": {
       "startUTC": "2026-11-08T17:00:00.000Z",
       "precipProbability": 95,
       "precipMm": 0.2,
-      "tempC": 16.1,
-      "windKph": 16.8,
+      "tempC": 16.3,
+      "windKph": 15.8,
       "weatherCode": 51
     }
   },
