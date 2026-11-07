@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T13:53:05.146Z",
+  "updatedAt": "2026-11-07T00:40:07.129Z",
   "available": true,
   "round": 20,
   "race": "Brazilian Grand Prix",
@@ -11,48 +11,48 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-11-06T15:30:00.000Z",
-      "precipProbability": 22,
-      "precipMm": 0.2,
-      "tempC": 25.2,
-      "windKph": 2,
-      "weatherCode": 51
+      "precipProbability": 65,
+      "precipMm": 0,
+      "tempC": 25.3,
+      "windKph": 0.4,
+      "weatherCode": 2
     },
     "fp2": {
       "startUTC": "2026-11-06T19:00:00.000Z",
-      "precipProbability": 59,
+      "precipProbability": 83,
       "precipMm": 0.1,
-      "tempC": 22.8,
-      "windKph": 11.2,
+      "tempC": 22.3,
+      "windKph": 11.3,
       "weatherCode": 51
     },
     "fp3": {
       "startUTC": "2026-11-07T14:30:00.000Z",
-      "precipProbability": 25,
-      "precipMm": 0,
-      "tempC": 28,
-      "windKph": 20.3,
-      "weatherCode": 1
+      "precipProbability": 13,
+      "precipMm": 0.1,
+      "tempC": 28.8,
+      "windKph": 18.5,
+      "weatherCode": 51
     },
     "qualifying": {
       "startUTC": "2026-11-07T18:00:00.000Z",
-      "precipProbability": 76,
-      "precipMm": 0.2,
-      "tempC": 26.4,
-      "windKph": 15.8,
-      "weatherCode": 51
+      "precipProbability": 80,
+      "precipMm": 1.7,
+      "tempC": 24.1,
+      "windKph": 20.5,
+      "weatherCode": 95
     },
     "race": {
       "startUTC": "2026-11-08T17:00:00.000Z",
-      "precipProbability": 95,
-      "precipMm": 0.2,
-      "tempC": 16.5,
-      "windKph": 18,
+      "precipProbability": 99,
+      "precipMm": 0.3,
+      "tempC": 16.3,
+      "windKph": 19.9,
       "weatherCode": 51
     }
   },
   "scenario": {
-    "dryProb": 5,
-    "wetProb": 95,
+    "dryProb": 1,
+    "wetProb": 99,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
