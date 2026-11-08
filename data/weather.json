@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T18:14:47.469Z",
+  "updatedAt": "2026-11-08T22:40:44.898Z",
   "available": true,
   "round": 21,
   "race": "Las Vegas Grand Prix",
@@ -11,7 +11,7 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-11-20T00:30:00.000Z",
-      "precipProbability": 6,
+      "precipProbability": 10,
       "precipMm": 0,
       "tempC": 14.1,
       "windKph": 7.9,
@@ -19,7 +19,7 @@
     },
     "fp2": {
       "startUTC": "2026-11-20T04:00:00.000Z",
-      "precipProbability": 6,
+      "precipProbability": 12,
       "precipMm": 0,
       "tempC": 13.4,
       "windKph": 5.6,
@@ -27,7 +27,7 @@
     },
     "fp3": {
       "startUTC": "2026-11-21T00:30:00.000Z",
-      "precipProbability": 13,
+      "precipProbability": 10,
       "precipMm": 0,
       "tempC": 16.1,
       "windKph": 7.8,
@@ -43,7 +43,7 @@
     },
     "race": {
       "startUTC": "2026-11-22T04:00:00.000Z",
-      "precipProbability": 10,
+      "precipProbability": 3,
       "precipMm": 0,
       "tempC": 15.5,
       "windKph": 5,
@@ -51,8 +51,8 @@
     }
   },
   "scenario": {
-    "dryProb": 90,
-    "wetProb": 10,
+    "dryProb": 97,
+    "wetProb": 3,
     "haltProb": 0
   },
   "provider": "Open-Meteo"

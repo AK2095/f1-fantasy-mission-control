@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "throughRound": 20,
-  "updatedAt": "2026-11-08T18:14:47.469Z",
+  "updatedAt": "2026-11-08T22:40:44.898Z",
   "drivers": [
     {
       "position": 1,
@@ -13,7 +13,7 @@
       "nationality": "Italian",
       "constructor": "Mercedes",
       "constructorId": "mercedes",
-      "points": 380,
+      "points": 390,
       "wins": 9
     },
     {
@@ -26,24 +26,11 @@
       "nationality": "Dutch",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 261,
+      "points": 279,
       "wins": 3
     },
     {
       "position": 3,
-      "code": "HAM",
-      "driverId": "hamilton",
-      "name": "Lewis Hamilton",
-      "surname": "Hamilton",
-      "number": 44,
-      "nationality": "British",
-      "constructor": "Ferrari",
-      "constructorId": "ferrari",
-      "points": 259,
-      "wins": 1
-    },
-    {
-      "position": 4,
       "code": "RUS",
       "driverId": "russell",
       "name": "George Russell",
@@ -52,8 +39,21 @@
       "nationality": "British",
       "constructor": "Mercedes",
       "constructorId": "mercedes",
-      "points": 250,
+      "points": 262,
       "wins": 3
+    },
+    {
+      "position": 4,
+      "code": "HAM",
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "surname": "Hamilton",
+      "number": 44,
+      "nationality": "British",
+      "constructor": "Ferrari",
+      "constructorId": "ferrari",
+      "points": 261,
+      "wins": 1
     },
     {
       "position": 5,
@@ -65,7 +65,7 @@
       "nationality": "Monegasque",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 245,
+      "points": 251,
       "wins": 1
     },
     {
@@ -78,8 +78,8 @@
       "nationality": "British",
       "constructor": "McLaren",
       "constructorId": "mclaren",
-      "points": 221,
-      "wins": 2
+      "points": 246,
+      "wins": 3
     },
     {
       "position": 7,
@@ -91,7 +91,7 @@
       "nationality": "Australian",
       "constructor": "McLaren",
       "constructorId": "mclaren",
-      "points": 144,
+      "points": 152,
       "wins": 0
     },
     {
@@ -104,7 +104,7 @@
       "nationality": "French",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 107,
+      "points": 122,
       "wins": 0
     },
     {
@@ -117,7 +117,7 @@
       "nationality": "New Zealander",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 83,
+      "points": 87,
       "wins": 0
     },
     {
@@ -195,7 +195,7 @@
       "nationality": "German",
       "constructor": "Audi",
       "constructorId": "audi",
-      "points": 13,
+      "points": 14,
       "wins": 0
     },
     {
@@ -333,7 +333,7 @@
       "constructorId": "mercedes",
       "name": "Mercedes",
       "nationality": "German",
-      "points": 630,
+      "points": 652,
       "wins": 12
     },
     {
@@ -341,7 +341,7 @@
       "constructorId": "ferrari",
       "name": "Ferrari",
       "nationality": "Italian",
-      "points": 504,
+      "points": 512,
       "wins": 2
     },
     {
@@ -349,7 +349,7 @@
       "constructorId": "red_bull",
       "name": "Red Bull",
       "nationality": "Austrian",
-      "points": 382,
+      "points": 415,
       "wins": 3
     },
     {
@@ -357,15 +357,15 @@
       "constructorId": "mclaren",
       "name": "McLaren",
       "nationality": "British",
-      "points": 365,
-      "wins": 2
+      "points": 398,
+      "wins": 3
     },
     {
       "position": 5,
       "constructorId": "rb",
       "name": "RB F1 Team",
       "nationality": "Italian",
-      "points": 108,
+      "points": 112,
       "wins": 0
     },
     {
@@ -389,7 +389,7 @@
       "constructorId": "audi",
       "name": "Audi",
       "nationality": "German",
-      "points": 27,
+      "points": 28,
       "wins": 0
     },
     {
