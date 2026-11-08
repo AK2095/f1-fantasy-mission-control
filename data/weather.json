@@ -1,58 +1,58 @@
 {
-  "updatedAt": "2026-11-08T01:09:54.051Z",
+  "updatedAt": "2026-11-08T18:14:47.469Z",
   "available": true,
-  "round": 20,
-  "race": "Brazilian Grand Prix",
-  "circuit": "Autódromo José Carlos Pace",
-  "locality": "São Paulo",
-  "country": "Brazil",
-  "lat": -23.7036,
-  "lon": -46.6997,
+  "round": 21,
+  "race": "Las Vegas Grand Prix",
+  "circuit": "Las Vegas Strip Street Circuit",
+  "locality": "Las Vegas",
+  "country": "USA",
+  "lat": 36.1147,
+  "lon": -115.173,
   "sessions": {
     "fp1": {
-      "startUTC": "2026-11-06T15:30:00.000Z",
-      "precipProbability": 65,
+      "startUTC": "2026-11-20T00:30:00.000Z",
+      "precipProbability": 6,
       "precipMm": 0,
-      "tempC": 25.3,
-      "windKph": 0.4,
-      "weatherCode": 2
+      "tempC": 14.1,
+      "windKph": 7.9,
+      "weatherCode": 3
     },
     "fp2": {
-      "startUTC": "2026-11-06T19:00:00.000Z",
-      "precipProbability": 82,
-      "precipMm": 0.1,
-      "tempC": 22.3,
-      "windKph": 11.3,
-      "weatherCode": 51
+      "startUTC": "2026-11-20T04:00:00.000Z",
+      "precipProbability": 6,
+      "precipMm": 0,
+      "tempC": 13.4,
+      "windKph": 5.6,
+      "weatherCode": 3
     },
     "fp3": {
-      "startUTC": "2026-11-07T14:30:00.000Z",
-      "precipProbability": 62,
+      "startUTC": "2026-11-21T00:30:00.000Z",
+      "precipProbability": 13,
       "precipMm": 0,
-      "tempC": 28,
-      "windKph": 13,
+      "tempC": 16.1,
+      "windKph": 7.8,
       "weatherCode": 3
     },
     "qualifying": {
-      "startUTC": "2026-11-07T18:00:00.000Z",
-      "precipProbability": 100,
-      "precipMm": 0.7,
-      "tempC": 23.5,
-      "windKph": 11.9,
-      "weatherCode": 53
+      "startUTC": "2026-11-21T04:00:00.000Z",
+      "precipProbability": 6,
+      "precipMm": 0,
+      "tempC": 15.4,
+      "windKph": 1.8,
+      "weatherCode": 3
     },
     "race": {
-      "startUTC": "2026-11-08T17:00:00.000Z",
-      "precipProbability": 97,
-      "precipMm": 0.2,
-      "tempC": 16.3,
-      "windKph": 15.8,
-      "weatherCode": 51
+      "startUTC": "2026-11-22T04:00:00.000Z",
+      "precipProbability": 10,
+      "precipMm": 0,
+      "tempC": 15.5,
+      "windKph": 5,
+      "weatherCode": 0
     }
   },
   "scenario": {
-    "dryProb": 3,
-    "wetProb": 97,
+    "dryProb": 90,
+    "wetProb": 10,
     "haltProb": 0
   },
   "provider": "Open-Meteo"

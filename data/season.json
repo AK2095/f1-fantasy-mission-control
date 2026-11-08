@@ -1,36 +1,36 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-08T01:09:54.051Z",
-  "lastCompletedRound": 19,
-  "nextRound": 20,
-  "roundsRemaining": 4,
-  "isRaceWeek": true,
+  "updatedAt": "2026-11-08T18:14:47.469Z",
+  "lastCompletedRound": 20,
+  "nextRound": 21,
+  "roundsRemaining": 3,
+  "isRaceWeek": false,
   "nextRace": {
-    "round": 20,
-    "name": "Brazilian Grand Prix",
-    "shortName": "Brazilian GP",
-    "circuitId": "interlagos",
-    "circuit": "Autódromo José Carlos Pace",
-    "locality": "São Paulo",
-    "country": "Brazil",
-    "lat": -23.7036,
-    "lon": -46.6997,
-    "date": "2026-11-08",
-    "raceStartUTC": "2026-11-08T17:00:00.000Z",
+    "round": 21,
+    "name": "Las Vegas Grand Prix",
+    "shortName": "Las Vegas GP",
+    "circuitId": "vegas",
+    "circuit": "Las Vegas Strip Street Circuit",
+    "locality": "Las Vegas",
+    "country": "USA",
+    "lat": 36.1147,
+    "lon": -115.173,
+    "date": "2026-11-22",
+    "raceStartUTC": "2026-11-22T04:00:00.000Z",
     "isSprint": false,
     "sessions": {
-      "fp1": "2026-11-06T15:30:00.000Z",
-      "fp2": "2026-11-06T19:00:00.000Z",
-      "fp3": "2026-11-07T14:30:00.000Z",
-      "qualifying": "2026-11-07T18:00:00.000Z",
-      "race": "2026-11-08T17:00:00.000Z"
+      "fp1": "2026-11-20T00:30:00.000Z",
+      "fp2": "2026-11-20T04:00:00.000Z",
+      "fp3": "2026-11-21T00:30:00.000Z",
+      "qualifying": "2026-11-21T04:00:00.000Z",
+      "race": "2026-11-22T04:00:00.000Z"
     },
-    "lockUTC": "2026-11-07T18:00:00.000Z",
-    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix"
+    "lockUTC": "2026-11-21T04:00:00.000Z",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix"
   },
   "lastRace": {
-    "round": 19,
-    "name": "Mexico City Grand Prix",
-    "date": "2026-11-01"
+    "round": 20,
+    "name": "Brazilian Grand Prix",
+    "date": "2026-11-08"
   }
 }
