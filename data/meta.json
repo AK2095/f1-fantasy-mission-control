@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-11-07T21:42:24.401Z",
+  "builtAt": "2026-11-08T01:09:54.051Z",
   "builtBy": "github-actions",
-  "commit": "40ed178",
+  "commit": "0964a51",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "rounds": 23
-    },
-    "markets": {
-      "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
-      "runners": 23
-    },
-    "assets": {
-      "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
-      "assets": 33,
-      "rounds": 19
     },
     "weather": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "circuit": "Autódromo José Carlos Pace"
+    },
+    "markets": {
+      "ok": true,
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
+      "runners": 23
     },
     "standings": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
-      "throughRound": 19
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
+      "throughRound": 20
+    },
+    "assets": {
+      "ok": true,
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
+      "assets": 33,
+      "rounds": 19
     },
     "prices": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "rounds": 19
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "rounds": 19
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "rounds": 16
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-11-07T21:42:24.401Z",
+      "fetchedAt": "2026-11-08T01:09:54.051Z",
       "rounds": 9
     }
   },
