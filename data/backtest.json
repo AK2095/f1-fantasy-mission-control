@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-08T22:40:44.898Z",
+  "updatedAt": "2026-11-09T17:20:59.036Z",
   "trainedFromRound": 1,
   "firstTestedRound": 4,
-  "lastTestedRound": 19,
+  "lastTestedRound": 20,
   "cap": 113.1,
   "labels": {
     "points": "Optimiser · points",
@@ -15,64 +15,64 @@
   },
   "totals": {
     "points": {
-      "total": 3394,
-      "perRound": 212.1,
-      "rounds": 16,
+      "total": 3469,
+      "perRound": 204.1,
+      "rounds": 17,
+      "cost": 113.1,
+      "overCap": false,
+      "comparable": true,
+      "shareOfCeiling": 66.5
+    },
+    "sharpe": {
+      "total": 2937,
+      "perRound": 172.8,
+      "rounds": 17,
       "cost": 112.5,
       "overCap": false,
       "comparable": true,
-      "shareOfCeiling": 69.3
-    },
-    "sharpe": {
-      "total": 2735,
-      "perRound": 170.9,
-      "rounds": 16,
-      "cost": 113.1,
-      "overCap": false,
-      "comparable": true,
-      "shareOfCeiling": 55.8
+      "shareOfCeiling": 56.3
     },
     "expensive": {
-      "total": 2035,
-      "perRound": 127.2,
-      "rounds": 16,
+      "total": 2956,
+      "perRound": 173.9,
+      "rounds": 17,
       "cost": 113.1,
       "overCap": false,
       "comparable": true,
-      "shareOfCeiling": 41.6
+      "shareOfCeiling": 56.7
     },
     "held4": {
-      "total": 4301,
-      "perRound": 286.7,
-      "rounds": 15,
-      "cost": 191.2,
+      "total": 4644,
+      "perRound": 290.3,
+      "rounds": 16,
+      "cost": 191.6,
       "overCap": true,
       "comparable": false,
-      "shareOfCeiling": 93.7
+      "shareOfCeiling": 94.6
     },
     "held10": {
-      "total": 2252,
-      "perRound": 250.2,
-      "rounds": 9,
-      "cost": 125,
+      "total": 2506,
+      "perRound": 250.6,
+      "rounds": 10,
+      "cost": 125.4,
       "overCap": true,
       "comparable": false,
       "shareOfCeiling": 81.7
     },
     "field": {
-      "total": 2031.1,
-      "perRound": 126.9,
-      "rounds": 16,
+      "total": 2186.1,
+      "perRound": 128.6,
+      "rounds": 17,
       "cost": null,
       "overCap": false,
       "comparable": true,
-      "shareOfCeiling": 41.5
+      "shareOfCeiling": 41.9
     },
     "oracle": {
-      "total": 4897,
-      "perRound": 306.1,
-      "rounds": 16,
-      "cost": 108.1,
+      "total": 5218,
+      "perRound": 306.9,
+      "rounds": 17,
+      "cost": 109.1,
       "overCap": false,
       "comparable": true,
       "shareOfCeiling": 100
@@ -83,17 +83,17 @@
       "round": 4,
       "results": {
         "points": {
-          "scored": 255,
+          "scored": 234,
           "squad": [
             "ANT",
             "CAM",
-            "COL",
+            "GAS",
             "BEA",
             "PER",
             "MER",
             "FER"
           ],
-          "cost": 112.5
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 226,
@@ -106,18 +106,18 @@
             "MER",
             "FER"
           ],
-          "cost": 113.1
+          "cost": 112.5
         },
         "expensive": {
-          "scored": 90,
+          "scored": 219,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -132,7 +132,7 @@
             "MER",
             "MCL"
           ],
-          "cost": 108.1
+          "cost": 109.1
         },
         "field": {
           "scored": 155.6,
@@ -145,17 +145,17 @@
       "round": 5,
       "results": {
         "points": {
-          "scored": 207,
+          "scored": 225,
           "squad": [
             "ANT",
             "CAM",
             "SAI",
+            "BEA",
             "PER",
-            "ALB",
             "MER",
             "FER"
           ],
-          "cost": 111.5
+          "cost": 112.5
         },
         "sharpe": {
           "scored": 153,
@@ -168,18 +168,18 @@
             "MER",
             "CAD"
           ],
-          "cost": 111
+          "cost": 109.4
         },
         "expensive": {
-          "scored": 125,
+          "scored": 186,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -194,7 +194,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.9
+          "cost": 112.1
         },
         "held4": {
           "scored": 256,
@@ -207,7 +207,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 113,
@@ -220,11 +220,11 @@
       "round": 6,
       "results": {
         "points": {
-          "scored": 176,
+          "scored": 172,
           "squad": [
             "ANT",
             "CAM",
-            "COL",
+            "SAI",
             "BEA",
             "PER",
             "MER",
@@ -243,18 +243,18 @@
             "MER",
             "CAD"
           ],
-          "cost": 111.2
+          "cost": 109.8
         },
         "expensive": {
-          "scored": 126,
+          "scored": 217,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -269,7 +269,7 @@
             "MER",
             "VRB"
           ],
-          "cost": 111.7
+          "cost": 111.2
         },
         "held4": {
           "scored": 151,
@@ -282,7 +282,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 68.1,
@@ -305,7 +305,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.1
+          "cost": 112.5
         },
         "sharpe": {
           "scored": 139,
@@ -318,33 +318,33 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.7
+          "cost": 107.8
         },
         "expensive": {
-          "scored": 137,
+          "scored": 47,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
         "oracle": {
-          "scored": 285,
+          "scored": 287,
           "squad": [
             "HAM",
+            "CAM",
             "GAS",
             "SAI",
-            "BOR",
             "PER",
             "FER",
             "MCL"
           ],
-          "cost": 113
+          "cost": 112.7
         },
         "held4": {
           "scored": 197,
@@ -357,7 +357,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 96.6,
@@ -370,17 +370,17 @@
       "round": 8,
       "results": {
         "points": {
-          "scored": 215,
+          "scored": 205,
           "squad": [
             "ANT",
             "CAM",
-            "COL",
+            "GAS",
             "BEA",
             "PER",
             "MER",
             "FER"
           ],
-          "cost": 112.5
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 167,
@@ -393,18 +393,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 108.2
+          "cost": 105.3
         },
         "expensive": {
-          "scored": 97,
+          "scored": 197,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -419,7 +419,7 @@
             "MER",
             "RED"
           ],
-          "cost": 113.1
+          "cost": 111.9
         },
         "held4": {
           "scored": 313,
@@ -432,7 +432,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 111.5,
@@ -445,17 +445,17 @@
       "round": 9,
       "results": {
         "points": {
-          "scored": 276,
+          "scored": 269,
           "squad": [
             "ANT",
             "CAM",
-            "BOR",
-            "COL",
+            "GAS",
+            "BEA",
             "PER",
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 269,
@@ -468,18 +468,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 229,
+          "scored": 189,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -490,11 +490,11 @@
             "CAM",
             "GAS",
             "COL",
-            "PER",
+            "STR",
             "MER",
             "FER"
           ],
-          "cost": 113.1
+          "cost": 111.9
         },
         "held4": {
           "scored": 362,
@@ -507,7 +507,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 173.6,
@@ -520,17 +520,17 @@
       "round": 10,
       "results": {
         "points": {
-          "scored": 180,
+          "scored": 163,
           "squad": [
-            "ANT",
+            "HAM",
             "CAM",
-            "BOR",
+            "GAS",
             "COL",
             "PER",
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 112.6
         },
         "sharpe": {
           "scored": 129,
@@ -543,18 +543,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 137,
+          "scored": 117,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -562,14 +562,14 @@
           "scored": 286,
           "squad": [
             "HAD",
-            "SAI",
             "BOR",
+            "SAI",
             "COL",
             "BEA",
             "RED",
             "MCL"
           ],
-          "cost": 110
+          "cost": 109.6
         },
         "held4": {
           "scored": 284,
@@ -582,7 +582,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "field": {
           "scored": 137.8,
@@ -605,7 +605,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 171,
@@ -618,18 +618,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 116,
+          "scored": 237,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -644,7 +644,7 @@
             "FER",
             "AST"
           ],
-          "cost": 112.7
+          "cost": 112.4
         },
         "held4": {
           "scored": 306,
@@ -657,7 +657,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 257,
@@ -670,7 +670,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 140.3,
@@ -683,17 +683,17 @@
       "round": 12,
       "results": {
         "points": {
-          "scored": 204,
+          "scored": 180,
           "squad": [
             "ANT",
             "CAM",
-            "BOR",
             "COL",
-            "PER",
+            "BEA",
+            "ALB",
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 112.5
         },
         "sharpe": {
           "scored": 135,
@@ -706,18 +706,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 120,
+          "scored": 174,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -725,14 +725,14 @@
           "scored": 261,
           "squad": [
             "NOR",
+            "GAS",
             "COL",
             "PER",
-            "ALB",
             "ALO",
             "MER",
-            "MCL"
+            "FER"
           ],
-          "cost": 112.7
+          "cost": 112.9
         },
         "held4": {
           "scored": 344,
@@ -745,7 +745,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 217,
@@ -758,7 +758,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 111.2,
@@ -781,7 +781,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 310,
@@ -794,29 +794,29 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 168,
+          "scored": 350,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
         "oracle": {
-          "scored": 457,
+          "scored": 451,
           "squad": [
             "ANT",
-            "CAM",
-            "BOR",
+            "HUL",
             "PER",
             "ALB",
+            "BOT",
             "MER",
             "MCL"
           ],
@@ -833,7 +833,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 383,
@@ -846,7 +846,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 218.5,
@@ -869,7 +869,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 146,
@@ -882,18 +882,18 @@
             "MER",
             "ALP"
           ],
-          "cost": 110.9
+          "cost": 109.2
         },
         "expensive": {
-          "scored": 63,
+          "scored": 112,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -908,7 +908,7 @@
             "MER",
             "RED"
           ],
-          "cost": 113
+          "cost": 112.8
         },
         "held4": {
           "scored": 266,
@@ -921,7 +921,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 177,
@@ -934,7 +934,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 83.6,
@@ -947,41 +947,41 @@
       "round": 15,
       "results": {
         "points": {
-          "scored": 220,
+          "scored": 178,
           "squad": [
             "ANT",
             "CAM",
-            "BOR",
             "COL",
-            "PER",
+            "BEA",
+            "ALB",
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 112.5
         },
         "sharpe": {
-          "scored": 91,
+          "scored": 84,
           "squad": [
             "ANT",
+            "LAW",
             "CAM",
             "GAS",
-            "BOR",
             "COL",
             "MER",
             "ALP"
           ],
-          "cost": 108.1
+          "cost": 111.7
         },
         "expensive": {
-          "scored": 63,
+          "scored": 108,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -996,7 +996,7 @@
             "MER",
             "RED"
           ],
-          "cost": 112.8
+          "cost": 112.1
         },
         "held4": {
           "scored": 265,
@@ -1009,7 +1009,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 264,
@@ -1022,7 +1022,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 96.4,
@@ -1045,7 +1045,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 235,
@@ -1058,18 +1058,18 @@
             "MER",
             "VRB"
           ],
-          "cost": 112.1
+          "cost": 112.8
         },
         "expensive": {
-          "scored": 248,
+          "scored": 182,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -1084,7 +1084,7 @@
             "FER",
             "RED"
           ],
-          "cost": 112.3
+          "cost": 112.6
         },
         "held4": {
           "scored": 273,
@@ -1097,7 +1097,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 273,
@@ -1110,7 +1110,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 192.1,
@@ -1133,7 +1133,7 @@
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 105,
@@ -1146,33 +1146,33 @@
             "MER",
             "VRB"
           ],
-          "cost": 109.7
+          "cost": 110.4
         },
         "expensive": {
-          "scored": 95,
+          "scored": 97,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
         "oracle": {
-          "scored": 263,
+          "scored": 269,
           "squad": [
             "VER",
             "LEC",
             "CAM",
+            "HUL",
             "BEA",
-            "ALO",
             "FER",
             "HAA"
           ],
-          "cost": 112.1
+          "cost": 113
         },
         "held4": {
           "scored": 273,
@@ -1185,7 +1185,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 196,
@@ -1198,7 +1198,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 92,
@@ -1211,17 +1211,17 @@
       "round": 18,
       "results": {
         "points": {
-          "scored": 179,
+          "scored": 181,
           "squad": [
             "ANT",
             "CAM",
             "COL",
             "BEA",
-            "PER",
+            "ALO",
             "MER",
             "FER"
           ],
-          "cost": 112.5
+          "cost": 112.9
         },
         "sharpe": {
           "scored": 169,
@@ -1234,18 +1234,18 @@
             "MER",
             "VRB"
           ],
-          "cost": 112.8
+          "cost": 112.3
         },
         "expensive": {
-          "scored": 128,
+          "scored": 204,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -1260,7 +1260,7 @@
             "FER",
             "AUD"
           ],
-          "cost": 111.4
+          "cost": 112.7
         },
         "held4": {
           "scored": 337,
@@ -1273,7 +1273,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 270,
@@ -1286,7 +1286,7 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 127.3,
@@ -1299,17 +1299,17 @@
       "round": 19,
       "results": {
         "points": {
-          "scored": 245,
+          "scored": 204,
           "squad": [
             "ANT",
             "CAM",
-            "BOR",
-            "COL",
+            "GAS",
+            "BEA",
             "PER",
             "MER",
             "FER"
           ],
-          "cost": 112.7
+          "cost": 113.1
         },
         "sharpe": {
           "scored": 171,
@@ -1322,18 +1322,18 @@
             "MER",
             "VRB"
           ],
-          "cost": 112.8
+          "cost": 112.3
         },
         "expensive": {
-          "scored": 93,
+          "scored": 154,
           "squad": [
-            "LEC",
-            "PIA",
+            "ANT",
+            "HAM",
             "LAW",
-            "LIN",
-            "SAI",
-            "VRB",
-            "ALP"
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
           ],
           "cost": 113.1
         },
@@ -1348,7 +1348,7 @@
             "FER",
             "RED"
           ],
-          "cost": 111
+          "cost": 112.9
         },
         "held4": {
           "scored": 255,
@@ -1361,7 +1361,7 @@
             "NOR",
             "PIA"
           ],
-          "cost": 191.2
+          "cost": 191.6
         },
         "held10": {
           "scored": 215,
@@ -1374,10 +1374,98 @@
             "BOR",
             "HUL"
           ],
-          "cost": 125
+          "cost": 125.4
         },
         "field": {
           "scored": 113.5,
+          "squad": [],
+          "cost": null
+        }
+      }
+    },
+    {
+      "round": 20,
+      "results": {
+        "points": {
+          "scored": 221,
+          "squad": [
+            "ANT",
+            "CAM",
+            "BOR",
+            "COL",
+            "PER",
+            "MER",
+            "FER"
+          ],
+          "cost": 113.1
+        },
+        "sharpe": {
+          "scored": 209,
+          "squad": [
+            "HAM",
+            "HAD",
+            "LAW",
+            "CAM",
+            "BOR",
+            "FER",
+            "VRB"
+          ],
+          "cost": 112.5
+        },
+        "expensive": {
+          "scored": 166,
+          "squad": [
+            "ANT",
+            "HAM",
+            "LAW",
+            "BOR",
+            "ALB",
+            "MER",
+            "AST"
+          ],
+          "cost": 113.1
+        },
+        "oracle": {
+          "scored": 319,
+          "squad": [
+            "VER",
+            "HAD",
+            "LIN",
+            "GAS",
+            "PER",
+            "RED",
+            "AUD"
+          ],
+          "cost": 112.8
+        },
+        "held4": {
+          "scored": 343,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "LEC",
+            "RUS",
+            "NOR",
+            "PIA"
+          ],
+          "cost": 191.6
+        },
+        "held10": {
+          "scored": 254,
+          "squad": [
+            "MER",
+            "FER",
+            "ANT",
+            "LAW",
+            "LIN",
+            "BOR",
+            "HUL"
+          ],
+          "cost": 125.4
+        },
+        "field": {
+          "scored": 155,
           "squad": [],
           "cost": null
         }

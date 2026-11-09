@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "throughRound": 20,
-  "updatedAt": "2026-11-08T22:40:44.898Z",
+  "updatedAt": "2026-11-09T17:20:59.036Z",
   "drivers": [
     {
       "position": 1,
@@ -65,7 +65,7 @@
       "nationality": "Monegasque",
       "constructor": "Ferrari",
       "constructorId": "ferrari",
-      "points": 251,
+      "points": 249,
       "wins": 1
     },
     {
@@ -117,7 +117,7 @@
       "nationality": "New Zealander",
       "constructor": "Red Bull",
       "constructorId": "red_bull",
-      "points": 87,
+      "points": 89,
       "wins": 0
     },
     {
@@ -341,7 +341,7 @@
       "constructorId": "ferrari",
       "name": "Ferrari",
       "nationality": "Italian",
-      "points": 512,
+      "points": 510,
       "wins": 2
     },
     {
@@ -365,7 +365,7 @@
       "constructorId": "rb",
       "name": "RB F1 Team",
       "nationality": "Italian",
-      "points": 112,
+      "points": 114,
       "wins": 0
     },
     {
