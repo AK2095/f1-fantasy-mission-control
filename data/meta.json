@@ -1,52 +1,52 @@
 {
-  "builtAt": "2026-11-09T17:20:59.036Z",
+  "builtAt": "2026-11-10T15:30:02.173Z",
   "builtBy": "github-actions",
-  "commit": "d30315e",
+  "commit": "30dc797",
   "sources": {
     "calendar": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "rounds": 23
-    },
-    "weather": {
-      "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
-      "circuit": "Las Vegas Strip Street Circuit"
-    },
-    "standings": {
-      "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
-      "throughRound": 20
     },
     "markets": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "runners": 23
     },
-    "prices": {
+    "standings": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
-      "rounds": 20
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
+      "throughRound": 20
     },
     "assets": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "assets": 33,
+      "rounds": 20
+    },
+    "weather": {
+      "ok": true,
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
+      "circuit": "Las Vegas Strip Street Circuit"
+    },
+    "prices": {
+      "ok": true,
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "rounds": 20
     },
     "results": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "rounds": 20
     },
     "backtest": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "rounds": 17
     },
     "headToHead": {
       "ok": true,
-      "fetchedAt": "2026-11-09T17:20:59.036Z",
+      "fetchedAt": "2026-11-10T15:30:02.173Z",
       "rounds": 9
     }
   },

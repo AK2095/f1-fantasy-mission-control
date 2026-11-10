@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updatedAt": "2026-11-09T17:20:59.036Z",
+  "updatedAt": "2026-11-10T15:30:02.173Z",
   "rounds": [
     {
       "round": 1,
@@ -5823,6 +5823,7 @@
         },
         {
           "position": 20,
+          "code": "CAM",
           "name": "Rafael Camara",
           "constructor": "Haas F1 Team",
           "constructorId": "haas",
