@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T22:55:06.154Z",
+  "updatedAt": "2026-11-15T19:36:58.916Z",
   "available": true,
   "round": 21,
   "race": "Las Vegas Grand Prix",
@@ -11,48 +11,48 @@
   "sessions": {
     "fp1": {
       "startUTC": "2026-11-20T00:30:00.000Z",
-      "precipProbability": 39,
+      "precipProbability": 43,
       "precipMm": 0,
-      "tempC": 17.5,
-      "windKph": 20.6,
-      "weatherCode": 2
+      "tempC": 9.7,
+      "windKph": 7.6,
+      "weatherCode": 3
     },
     "fp2": {
       "startUTC": "2026-11-20T04:00:00.000Z",
-      "precipProbability": 42,
-      "precipMm": 0,
-      "tempC": 14.5,
-      "windKph": 27.4,
-      "weatherCode": 3
+      "precipProbability": 43,
+      "precipMm": 0.3,
+      "tempC": 10.3,
+      "windKph": 4.2,
+      "weatherCode": 51
     },
     "fp3": {
       "startUTC": "2026-11-21T00:30:00.000Z",
-      "precipProbability": 10,
+      "precipProbability": 1,
       "precipMm": 0,
-      "tempC": 15.9,
-      "windKph": 6.8,
+      "tempC": 15.2,
+      "windKph": 10.5,
       "weatherCode": 0
     },
     "qualifying": {
       "startUTC": "2026-11-21T04:00:00.000Z",
-      "precipProbability": 3,
+      "precipProbability": 1,
       "precipMm": 0,
-      "tempC": 15,
-      "windKph": 7.8,
-      "weatherCode": 3
+      "tempC": 13.5,
+      "windKph": 11.3,
+      "weatherCode": 0
     },
     "race": {
       "startUTC": "2026-11-22T04:00:00.000Z",
-      "precipProbability": 1,
+      "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 15.7,
-      "windKph": 4.1,
+      "tempC": 14.3,
+      "windKph": 6.7,
       "weatherCode": 1
     }
   },
   "scenario": {
-    "dryProb": 99,
-    "wetProb": 1,
+    "dryProb": 100,
+    "wetProb": 0,
     "haltProb": 0
   },
   "provider": "Open-Meteo"
