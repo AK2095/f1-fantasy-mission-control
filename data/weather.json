@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T15:00:28.921Z",
+  "updatedAt": "2026-11-20T22:31:19.157Z",
   "available": true,
   "round": 21,
   "race": "Las Vegas Grand Prix",
@@ -27,27 +27,27 @@
     },
     "fp3": {
       "startUTC": "2026-11-21T00:30:00.000Z",
-      "precipProbability": 2,
+      "precipProbability": 1,
       "precipMm": 0,
-      "tempC": 14.7,
-      "windKph": 8.1,
+      "tempC": 14.2,
+      "windKph": 6.9,
       "weatherCode": 0
     },
     "qualifying": {
       "startUTC": "2026-11-21T04:00:00.000Z",
-      "precipProbability": 2,
+      "precipProbability": 6,
       "precipMm": 0,
-      "tempC": 10.1,
-      "windKph": 8.2,
+      "tempC": 11.2,
+      "windKph": 6.7,
       "weatherCode": 3
     },
     "race": {
       "startUTC": "2026-11-22T04:00:00.000Z",
       "precipProbability": 0,
       "precipMm": 0,
-      "tempC": 7.8,
-      "windKph": 7.9,
-      "weatherCode": 2
+      "tempC": 7.3,
+      "windKph": 8.9,
+      "weatherCode": 3
     }
   },
   "scenario": {
